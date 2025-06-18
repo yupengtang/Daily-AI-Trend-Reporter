@@ -1,0 +1,71 @@
+name: 🌱 Daily MLE/SDE Blog Generator (GMI API)
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  generate_blog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate blog post using GMI API
+        env:
+          GMI_API_KEY: ${{ secrets.GMI_API_KEY }}
+        run: |
+          TODAY=$(date +'%Y-%m-%d')
+          FILENAME="_posts/${TODAY}-frontier.md"
+
+          PROMPT="Generate a concise, non-repetitive technical digest (150 words max) for today on a new frontier topic in MLE or SDE. Format like this:\n
+          🗓️ Date: 2025-06-17\n
+          🎯 Topic: <One-Line Title>\n
+          📌 Summary: <Clear, technical paragraph>\n
+          🔑 Keywords: <three comma-separated terms>\n"
+
+          PAYLOAD=$(jq -n --arg model "deepseek-ai/DeepSeek-R1" --arg prompt "$PROMPT" '{
+            model: $model,
+            messages: [
+              {"role": "system", "content": "You are a helpful AI assistant and technical blog writer."},
+              {"role": "user", "content": $prompt}
+            ],
+            temperature: 0.3,
+            max_tokens: 1024
+          }')
+
+          RESPONSE=$(curl -s https://api.gmi-serving.com/v1/chat/completions \
+            -H "Authorization: Bearer $GMI_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD")
+
+          CONTENT=$(echo "$RESPONSE" | python3 -c "import sys, json; print(json.load(sys.stdin)['choices'][0]['message']['content'])")
+          TOPIC=$(echo "$CONTENT" | grep '^🎯 Topic:' | sed 's/🎯 Topic: //')
+
+          mkdir -p memory
+          touch memory/topics_seen.txt
+
+          if grep -Fxq "$TOPIC" memory/topics_seen.txt; then
+            echo "❌ Duplicate topic: $TOPIC"
+            exit 0
+          fi
+
+          echo "$TOPIC" >> memory/topics_seen.txt
+
+          echo "---" > $FILENAME
+          echo "layout: post" >> $FILENAME
+          echo "title: 🌱 $TOPIC" >> $FILENAME
+          echo "date: $TODAY" >> $FILENAME
+          echo "---" >> $FILENAME
+          echo "" >> $FILENAME
+          echo "$CONTENT" >> $FILENAME

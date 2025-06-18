@@ -27,7 +27,7 @@ jobs:
           GMI_API_KEY: ${{ secrets.GMI_API_KEY }}
         run: |
           for i in 1 2 3; do
-            DELAY=$(shuf -i 600-4800 -n 1)  # Delay between 10 and 80 minutes
+            DELAY=$(shuf -i 888-18888 -n 1)  # Delay between 888 and 18888 seconds
             echo "⏱️ Sleeping $DELAY seconds before post $i..."
             sleep $DELAY
             python3 .github/scripts/generate_blog.py || echo "⚠️ Skipped post $i (duplicate or error)"

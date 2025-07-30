@@ -4,7 +4,7 @@ Automatically generated daily technical digest on MLE/SDE frontiers using GitHub
 
 ## 🚀 Features
 
-- **Daily Auto-Update**: Scheduled generation via GitHub Actions
+- **Daily Auto-Update**: Scheduled generation via GitHub Actions (3 times per day with random intervals)
 - **Focused Daily Digest**: Summarizes the latest 6 research papers from [Hugging Face Papers](https://huggingface.co/papers)
 - **Individual Paper Summaries**: Each paper gets its own 2-3 sentence summary
 - **Direct Paper Links**: Includes links to original papers for further reading
@@ -36,13 +36,13 @@ Add the following secret in your GitHub repository Settings > Secrets and variab
 
 ### Schedule Settings
 
-Currently set to run daily at UTC 12:00 (8:00 PM Beijing Time), generating 3 articles per day with random intervals.
+Currently set to run daily at UTC 4:00 (12:00 AM Beijing Time), generating 3 articles per day with random intervals between 888-18888 seconds.
 
 To modify frequency, edit the cron expression in `.github/workflows/daily_blog.yml`:
 
 ```yaml
 schedule:
-  - cron: '0 12 * * *'  # Daily at 12:00 UTC
+  - cron: '0 4 * * *'  # Daily at 4:00 UTC
 ```
 
 ### Model Configuration
@@ -63,8 +63,12 @@ Daily-AI-Trend-Reporter/
 │   └── scripts/
 │       └── generate_blog.py        # Content generation script
 ├── _posts/                         # Generated blog posts
+├── _layouts/                       # Jekyll layout templates
+├── _includes/                      # Jekyll include templates
 ├── _config.yml                     # Jekyll configuration
 ├── index.md                        # Homepage
+├── test_api.py                     # API connection test script
+├── test_paper_fetch.py             # Paper fetching test script
 └── requirements.txt                # Python dependencies
 ```
 
@@ -81,6 +85,7 @@ pip install -r requirements.txt
 ```bash
 export HF_TOKEN="your-token-here"
 python3 test_api.py  # Test API connection and paper fetching
+python3 test_paper_fetch.py  # Test paper fetching specifically
 python3 .github/scripts/generate_blog.py  # Test content generation with latest papers
 ```
 
@@ -100,7 +105,7 @@ Each daily digest follows a consistent structure:
 
 ### Common Issues
 
-1. **API Errors**: Check if `GITHUB_TOKEN` is correctly set with `models:read` permission
+1. **API Errors**: Check if `HF_TOKEN` is correctly set with `models:read` permission
 2. **Paper Fetching Issues**: Check network connection to Hugging Face
 3. **Generation Failures**: Check API limits and network connectivity
 

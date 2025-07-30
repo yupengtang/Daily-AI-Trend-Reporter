@@ -4,3 +4,10 @@ theme: minima
 markdown: kramdown
 plugins:
   - jekyll-feed
+
+# RSS Feed configuration
+feed:
+  path: feed.xml
+  limit: 10
+  categories:
+  - posts

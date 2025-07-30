@@ -4,6 +4,7 @@ layout: home
 
 Welcome to the **Daily AI Trend Reporter** - your comprehensive source for the latest AI/ML research developments!
 
+
 ## 📊 What We Do
 
 We provide daily summaries of the latest research papers from [Hugging Face Papers](https://huggingface.co/papers). Each daily digest includes:

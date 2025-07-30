@@ -25,10 +25,12 @@ def test_paper_fetching():
                     papers = response.json()
                     if papers and isinstance(papers, list):
                         print(f"✅ Successfully fetched {len(papers)} papers from {endpoint}")
-                        print(f"📄 Latest 6 papers for focused digest:")
-                        for i, paper in enumerate(papers[:6], 1):  # Show first 6 papers
+                        print(f"📄 Latest 10 papers for focused digest:")
+                        for i, paper in enumerate(papers[:10], 1):  # Show first 10 papers
                             title = paper.get('title', 'Unknown')
+                            url = paper.get('url', 'https://huggingface.co/papers')
                             print(f"  {i}. {title}")
+                            print(f"     🔗 {url}")
                         return True
             except Exception as e:
                 print(f"⚠️ Failed to fetch from {endpoint}: {e}")
@@ -36,23 +38,35 @@ def test_paper_fetching():
         
         # Fallback: try to scrape from the papers page
         try:
-            response = requests.get("https://huggingface.co/papers", timeout=15)
+            # Try to get papers from the specific date page first
+            response = requests.get("https://huggingface.co/papers/date/2025-07-29", timeout=15)
+            if response.status_code != 200:
+                # Fallback to general papers page
+                response = requests.get("https://huggingface.co/papers", timeout=15)
+            
             if response.status_code == 200:
                 content = response.text
-                title_pattern = r'<h[1-6][^>]*>([^<]+)</h[1-6]>'
-                titles = re.findall(title_pattern, content)
                 
-                clean_titles = []
-                for title in titles[:10]:
-                    title = title.strip()
-                    if len(title) > 10 and len(title) < 200:
-                        clean_titles.append(title)
+                # Look for paper links with titles (most accurate method)
+                paper_with_title_pattern = r'<a[^>]*href="/papers/([^"]+)"[^>]*>([^<]+)</a>'
+                papers_with_titles = re.findall(paper_with_title_pattern, content)
                 
-                if clean_titles:
-                    print(f"✅ Successfully extracted {len(clean_titles)} papers from HTML")
-                    print(f"📄 Latest 6 papers for focused digest:")
-                    for i, title in enumerate(clean_titles[:6], 1):  # Show first 6 papers
-                        print(f"  {i}. {title}")
+                clean_papers = []
+                if papers_with_titles:
+                    for i, (paper_id, title) in enumerate(papers_with_titles[:10]):
+                        title = title.strip()
+                        if len(title) > 10 and len(title) < 200:
+                            clean_papers.append({
+                                'title': title,
+                                'url': f"https://huggingface.co/papers/{paper_id}"
+                            })
+                
+                if clean_papers:
+                    print(f"✅ Successfully extracted {len(clean_papers)} papers from HTML")
+                    print(f"📄 Latest 10 papers for focused digest:")
+                    for i, paper in enumerate(clean_papers[:10], 1):  # Show first 10 papers
+                        print(f"  {i}. {paper['title']}")
+                        print(f"     🔗 {paper['url']}")
                     return True
         except Exception as e:
             print(f"⚠️ Failed to scrape papers page: {e}")

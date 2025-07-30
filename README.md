@@ -5,9 +5,10 @@ Automatically generated daily technical digest on MLE/SDE frontiers using GitHub
 ## 🚀 Features
 
 - **Daily Auto-Update**: Scheduled generation via GitHub Actions (3 times per day with random intervals)
-- **Focused Daily Digest**: Summarizes the latest 6 research papers from [Hugging Face Papers](https://huggingface.co/papers)
+- **Focused Daily Digest**: Summarizes the latest 10 research papers from [Hugging Face Papers](https://huggingface.co/papers)
 - **Individual Paper Summaries**: Each paper gets its own 2-3 sentence summary
-- **Direct Paper Links**: Includes links to original papers for further reading
+- **Direct Paper Links**: Includes specific links to original papers (e.g., https://huggingface.co/papers/2507.21990) for further reading
+- **Auto-Generated Keywords**: Keywords are automatically generated based on the day's research papers
 - **Consistent Format**: Uniform structure across all daily posts
 - **Static Website**: Beautiful GitHub Pages site using Jekyll
 
@@ -51,7 +52,7 @@ Currently using `openai/gpt-4.1` model. To change models, edit the `MODEL` varia
 
 ### Paper Source Configuration
 
-The system automatically fetches the latest 6 papers from [Hugging Face Papers](https://huggingface.co/papers) and generates individual summaries for each paper. Each summary includes the paper title, direct link to the original paper, and a concise 2-3 sentence summary focusing on key innovations and practical impact.
+The system automatically fetches the latest 10 papers from [Hugging Face Papers](https://huggingface.co/papers) and generates individual summaries for each paper. Each summary includes the paper title, specific direct link to the original paper (e.g., https://huggingface.co/papers/2507.21990), and a concise 2-3 sentence summary focusing on key innovations and practical impact. Keywords are automatically generated based on the day's research papers to reflect current trends.
 
 ## 📁 Project Structure
 
@@ -95,7 +96,7 @@ Each daily digest follows a consistent structure:
 
 - **🗓️ Date**: Publication date
 - **🎯 Topic**: Daily AI Research Digest
-- **📌 Today's Latest Research Papers**: List of 6 latest papers, each with:
+- **📌 Today's Latest Research Papers**: List of 10 latest papers, each with:
   - **Paper Title**: Full research paper title
   - **🔗 Read Paper**: Direct link to original paper
   - **📋 Summary**: 2-3 sentence technical summary

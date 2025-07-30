@@ -12,8 +12,8 @@ HF_TOKEN = os.getenv("HF_TOKEN")  # Changed from GITHUB_TOKEN
 ENDPOINT = "https://models.github.ai/inference"
 MODEL = "openai/gpt-4.1"
 
-# Number of papers to summarize each day (set to a high number to get all)
-PAPERS_PER_DAY = 50  # Increased to capture all latest papers
+# Number of papers to summarize each day (reduced to 6)
+PAPERS_PER_DAY = 6  # Changed from 50 to 6
 
 def fetch_latest_papers():
     """Fetch the latest papers from Hugging Face Papers"""
@@ -73,14 +73,14 @@ def fetch_latest_papers():
         return []
 
 def get_latest_papers():
-    """Get all the latest papers from Hugging Face Papers"""
+    """Get the latest 6 papers from Hugging Face Papers"""
     papers = fetch_latest_papers()
     
     if not papers:
         print("⚠️ Could not fetch papers, using fallback topic generation")
         return []
     
-    # Return all available papers (up to the limit)
+    # Return the latest 6 papers
     selected_papers = papers[:PAPERS_PER_DAY]
     print(f"📄 Selected {len(selected_papers)} latest papers:")
     for i, paper in enumerate(selected_papers, 1):
@@ -204,7 +204,7 @@ async def generate_blog_post():
         f.write("---\n\n")
         f.write(content.strip() + "\n")
     
-    print(f"✅ Generated comprehensive daily digest: {filename}")
+    print(f"✅ Generated daily digest: {filename}")
     if latest_papers:
         print(f"📄 Based on {len(latest_papers)} latest papers with individual summaries")
     return filename

@@ -5,7 +5,7 @@ Automatically generated daily technical digest on MLE/SDE frontiers using GitHub
 ## 🚀 Features
 
 - **Daily Auto-Update**: Scheduled generation via GitHub Actions
-- **Comprehensive Daily Digest**: Summarizes ALL latest research papers from [Hugging Face Papers](https://huggingface.co/papers)
+- **Focused Daily Digest**: Summarizes the latest 6 research papers from [Hugging Face Papers](https://huggingface.co/papers)
 - **Individual Paper Summaries**: Each paper gets its own 2-3 sentence summary
 - **Direct Paper Links**: Includes links to original papers for further reading
 - **Consistent Format**: Uniform structure across all daily posts
@@ -51,7 +51,7 @@ Currently using `openai/gpt-4.1` model. To change models, edit the `MODEL` varia
 
 ### Paper Source Configuration
 
-The system automatically fetches ALL latest papers from [Hugging Face Papers](https://huggingface.co/papers) and generates individual summaries for each paper. Each summary includes the paper title, authors, direct link to the original paper, and a concise 2-3 sentence summary focusing on key innovations and practical impact.
+The system automatically fetches the latest 6 papers from [Hugging Face Papers](https://huggingface.co/papers) and generates individual summaries for each paper. Each summary includes the paper title, direct link to the original paper, and a concise 2-3 sentence summary focusing on key innovations and practical impact.
 
 ## 📁 Project Structure
 
@@ -90,7 +90,7 @@ Each daily digest follows a consistent structure:
 
 - **🗓️ Date**: Publication date
 - **🎯 Topic**: Daily AI Research Digest
-- **📌 Today's Latest Research Papers**: List of ALL latest papers, each with:
+- **📌 Today's Latest Research Papers**: List of 6 latest papers, each with:
   - **Paper Title**: Full research paper title
   - **🔗 Read Paper**: Direct link to original paper
   - **📋 Summary**: 2-3 sentence technical summary

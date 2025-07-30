@@ -11,8 +11,8 @@ Welcome to the **Daily AI Research Digest** - your comprehensive source for the 
 
 We provide daily summaries of the latest research papers from [Hugging Face Papers](https://huggingface.co/papers). Each daily digest includes:
 
-- **📅 Daily Updates**: Fresh content every day at 8:00 PM Beijing Time
-- **📚 Complete Coverage**: Summarizes ALL latest research papers
+- **📅 Daily Updates**: Fresh content every day at 9:00 PM PDT
+- **📚 Focused Coverage**: Summarizes the latest 6 research papers
 - **🔗 Direct Links**: Easy access to original papers
 - **📋 Individual Summaries**: 2-3 sentence summaries for each paper
 - **🎯 Focused Content**: Latest in MLE/SDE frontiers

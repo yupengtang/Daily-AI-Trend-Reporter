@@ -2,7 +2,7 @@ name: 🌱 Daily AI Frontier - 3 Random Times
 
 on:
   schedule:
-    - cron: '0 12 * * *'  # Run daily at 12:00 UTC (8:00 PM Beijing Time)
+    - cron: '0 4 * * *'  # Run daily at 4:00 UTC (9:00 PM PDT)
   workflow_dispatch:      # Allow manual trigger too
 
 jobs:

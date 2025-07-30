@@ -9,7 +9,7 @@ Automatically generated daily technical digest on MLE/SDE frontiers using GitHub
 - **Individual Paper Summaries**: Each paper gets its own 2-3 sentence summary
 - **Direct Paper Links**: Includes specific links to original papers (e.g., https://huggingface.co/papers/2507.21990) for further reading
 - **Auto-Generated Keywords**: Keywords are automatically generated based on the day's research papers
-- **Interactive AI Assistant**: Each post includes a real AI assistant powered by GitHub Models API for asking questions about the day's research papers
+- **Weekly Research Reports**: Every Sunday, generates a comprehensive technical analysis by a senior research scientist
 - **Consistent Format**: Uniform structure across all daily posts
 - **Static Website**: Beautiful GitHub Pages site using Jekyll
 
@@ -53,7 +53,7 @@ Currently using `openai/gpt-4.1` model. To change models, edit the `MODEL` varia
 
 ### Paper Source Configuration
 
-The system automatically fetches the latest 10 papers from [Hugging Face Papers](https://huggingface.co/papers) and generates individual summaries for each paper. Each summary includes the paper title, specific direct link to the original paper (e.g., https://huggingface.co/papers/2507.21990), and a concise 2-3 sentence summary focusing on key innovations and practical impact. Keywords are automatically generated based on the day's research papers to reflect current trends.
+The system automatically fetches the latest 10 papers from [Hugging Face Papers](https://huggingface.co/papers) and generates individual summaries for each paper. Each summary includes the paper title, specific direct link to the original paper (e.g., https://huggingface.co/papers/2507.21990), and a concise 2-3 sentence summary focusing on key innovations and practical impact. Keywords are automatically generated based on the day's research papers to reflect current trends. Additionally, every Sunday, the system generates a comprehensive weekly research report written by a senior research scientist, providing deep technical analysis and insights.
 
 ## 📁 Project Structure
 

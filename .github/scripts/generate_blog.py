@@ -241,151 +241,6 @@ async def generate_blog_post():
             content += f"🔗 [Read Paper]({paper['url']})\n"
             content += f"📋 Summary: {paper['summary']}\n\n"
         
-        # Add AI Assistant section
-        content += "---\n\n"
-        content += "## 🤖 AI Research Assistant\n\n"
-        content += "Ask me anything about today's research papers! I can help you understand the key concepts, methodologies, and implications of these studies.\n\n"
-        content += "**Available papers for discussion:**\n"
-        for i, paper in enumerate(paper_summaries, 1):
-            content += f"{i}. {paper['title']}\n"
-        
-        content += "\n<div id=\"ai-assistant\">\n"
-        content += "  <div id=\"chat-container\">\n"
-        content += "    <div id=\"chat-messages\"></div>\n"
-        content += "    <div id=\"input-container\">\n"
-        content += "      <input type=\"text\" id=\"user-input\" placeholder=\"Ask about today's research papers...\" />\n"
-        content += "      <button onclick=\"sendMessage()\">Send</button>\n"
-        content += "    </div>\n"
-        content += "  </div>\n"
-        content += "</div>\n\n"
-        
-        # Add JavaScript for AI Assistant
-        content += "<script>\n"
-        content += "// AI Assistant functionality with real API\n"
-        content += "let chatMessages = [];\n\n"
-        content += "async function sendMessage() {\n"
-        content += "  const input = document.getElementById('user-input');\n"
-        content += "  const message = input.value.trim();\n"
-        content += "  \n"
-        content += "  if (message) {\n"
-        content += "    addMessage('user', message);\n"
-        content += "    input.value = '';\n"
-        content += "    \n"
-        content += "    // Show typing indicator\n"
-        content += "    const typingDiv = document.createElement('div');\n"
-        content += "    typingDiv.className = 'message assistant-message';\n"
-        content += "    typingDiv.innerHTML = '<strong>AI Assistant:</strong> <em>Thinking...</em>';\n"
-        content += "    document.getElementById('chat-messages').appendChild(typingDiv);\n"
-        content += "    \n"
-        content += "    try {\n"
-        content += "      const response = await callAIAPI(message);\n"
-        content += "      // Remove typing indicator\n"
-        content += "      typingDiv.remove();\n"
-        content += "      addMessage('assistant', response);\n"
-        content += "    } catch (error) {\n"
-        content += "      // Remove typing indicator\n"
-        content += "      typingDiv.remove();\n"
-        content += "      addMessage('assistant', 'Sorry, I encountered an error. Please try again.');\n"
-        content += "    }\n"
-        content += "  }\n"
-        content += "}\n\n"
-        content += "async function callAIAPI(userMessage) {\n"
-        content += "  const papers = [\n"
-        for i, paper in enumerate(paper_summaries, 1):
-            content += f"    '{{i}}. {paper['title']}',\n"
-        content += "  ];\n"
-        content += "  \n"
-        content += "  const prompt = `You are an AI research assistant. A user is asking about today's research papers. Here are the papers:\\n\\n${papers.join('\\n')}\\n\\nUser question: ${userMessage}\\n\\nPlease provide a helpful, accurate response based on the research papers. Focus on explaining concepts, methodologies, and implications. Keep your response concise but informative.`;\n"
-        content += "  \n"
-        content += "  const response = await fetch('/api/ai-assistant', {\n"
-        content += "    method: 'POST',\n"
-        content += "    headers: {\n"
-        content += "      'Content-Type': 'application/json',\n"
-        content += "    },\n"
-        content += "    body: JSON.stringify({\n"
-        content += "      message: userMessage,\n"
-        content += "      papers: papers,\n"
-        content += "      prompt: prompt\n"
-        content += "    })\n"
-        content += "  });\n"
-        content += "  \n"
-        content += "  if (response.ok) {\n"
-        content += "    const data = await response.json();\n"
-        content += "    return data.response;\n"
-        content += "  } else {\n"
-        content += "    throw new Error('API call failed');\n"
-        content += "  }\n"
-        content += "}\n\n"
-        content += "function addMessage(sender, text) {\n"
-        content += "  const messagesContainer = document.getElementById('chat-messages');\n"
-        content += "  const messageDiv = document.createElement('div');\n"
-        content += "  messageDiv.className = `message ${sender}-message`;\n"
-        content += "  messageDiv.innerHTML = `<strong>${sender === 'user' ? 'You' : 'AI Assistant'}:</strong> ${text}`;\n"
-        content += "  messagesContainer.appendChild(messageDiv);\n"
-        content += "  messagesContainer.scrollTop = messagesContainer.scrollHeight;\n"
-        content += "}\n\n"
-        content += "// Enter key support\n"
-        content += "document.getElementById('user-input').addEventListener('keypress', function(e) {\n"
-        content += "  if (e.key === 'Enter') {\n"
-        content += "    sendMessage();\n"
-        content += "  }\n"
-        content += "});\n"
-        content += "</script>\n\n"
-        
-        # Add CSS styles
-        content += "<style>\n"
-        content += "#ai-assistant {\n"
-        content += "  margin-top: 2rem;\n"
-        content += "  border: 1px solid #ddd;\n"
-        content += "  border-radius: 8px;\n"
-        content += "  padding: 1rem;\n"
-        content += "}\n\n"
-        content += "#chat-container {\n"
-        content += "  max-width: 100%;\n"
-        content += "}\n\n"
-        content += "#chat-messages {\n"
-        content += "  height: 300px;\n"
-        content += "  overflow-y: auto;\n"
-        content += "  border: 1px solid #eee;\n"
-        content += "  padding: 1rem;\n"
-        content += "  margin-bottom: 1rem;\n"
-        content += "  background: #f9f9f9;\n"
-        content += "}\n\n"
-        content += ".message {\n"
-        content += "  margin-bottom: 0.5rem;\n"
-        content += "  padding: 0.5rem;\n"
-        content += "  border-radius: 4px;\n"
-        content += "}\n\n"
-        content += ".user-message {\n"
-        content += "  background: #e3f2fd;\n"
-        content += "  text-align: right;\n"
-        content += "}\n\n"
-        content += ".assistant-message {\n"
-        content += "  background: #f1f8e9;\n"
-        content += "}\n\n"
-        content += "#input-container {\n"
-        content += "  display: flex;\n"
-        content += "  gap: 0.5rem;\n"
-        content += "}\n\n"
-        content += "#user-input {\n"
-        content += "  flex: 1;\n"
-        content += "  padding: 0.5rem;\n"
-        content += "  border: 1px solid #ddd;\n"
-        content += "  border-radius: 4px;\n"
-        content += "}\n\n"
-        content += "button {\n"
-        content += "  padding: 0.5rem 1rem;\n"
-        content += "  background: #007cba;\n"
-        content += "  color: white;\n"
-        content += "  border: none;\n"
-        content += "  border-radius: 4px;\n"
-        content += "  cursor: pointer;\n"
-        content += "}\n\n"
-        content += "button:hover {\n"
-        content += "  background: #005a87;\n"
-        content += "}\n"
-        content += "</style>"
-    
     else:
         # Fallback to general topic generation
         prompt = (
@@ -449,10 +304,121 @@ async def generate_blog_post():
         print(f"📄 Based on {len(latest_papers)} latest papers with individual summaries")
     return filename
 
+async def generate_weekly_report():
+    """Generate a weekly research report on Sundays"""
+    today = datetime.date.today()
+    
+    # Check if it's Sunday
+    if today.weekday() != 6:  # 6 = Sunday
+        print("📅 Not Sunday, skipping weekly report generation")
+        return None
+    
+    print("📊 Generating weekly research report...")
+    
+    # Get all posts from this week (Monday to Sunday)
+    week_posts = []
+    week_start = today - datetime.timedelta(days=6)  # Monday
+    
+    for i in range(7):
+        date = week_start + datetime.timedelta(days=i)  # Monday to Sunday
+        filename = f"_posts/{date.strftime('%Y-%m-%d')}-daily-ai-research-digest.md"
+        if os.path.exists(filename):
+            with open(filename, 'r', encoding='utf-8') as f:
+                content = f.read()
+                week_posts.append({
+                    'date': date.strftime('%Y-%m-%d'),
+                    'content': content
+                })
+    
+    if not week_posts:
+        print("⚠️ No posts found for this week")
+        return None
+    
+    # Create weekly report prompt
+    weekly_prompt = (
+        f"You are a very senior research scientist with 20+ years of experience in AI/ML who has published extensively in top-tier conferences and journals. "
+        f"Write a comprehensive weekly research report analyzing this week's AI research papers.\n\n"
+        f"Week: {today.strftime('%Y-%m-%d')}\n"
+        f"Total posts: {len(week_posts)}\n\n"
+        f"Write the report in a natural, conversational style that reflects your deep expertise and personal insights. "
+        f"Use first-person perspective and share your genuine thoughts about the research. "
+        f"Be enthusiastic about promising developments, concerned about challenges, and thoughtful about implications.\n\n"
+        f"Structure your report with these sections:\n"
+        f"1. **Executive Summary**: Start with your overall impression of the week's research and what excites you most\n"
+        f"2. **Technical Trends Analysis**: Discuss the main research directions you observe, using phrases like 'I've been particularly impressed by...' and 'What strikes me most is...'\n"
+        f"3. **Key Innovations and Breakthroughs**: Highlight the most significant technical breakthroughs with your personal assessment\n"
+        f"4. **Methodological Insights**: Share your deep technical insights about novel approaches\n"
+        f"5. **Practical Implications**: Discuss real-world applications and impact from your perspective\n"
+        f"6. **Future Directions**: Predict where these research areas are heading based on your experience\n"
+        f"7. **Technical Recommendations**: Provide specific recommendations for researchers and practitioners\n"
+        f"8. **Conclusion**: End with your overall assessment of the field's direction\n\n"
+        f"Use natural language, personal insights, and expert judgment throughout. "
+        f"Express genuine excitement about promising work, concern about challenges, and thoughtful analysis of implications. "
+        f"Make it sound like a senior researcher sharing their weekly thoughts with colleagues.\n\n"
+        f"Weekly Posts:\n"
+    )
+    
+    for i, post in enumerate(week_posts, 1):
+        weekly_prompt += f"\n--- Day {i} ({post['date']}) ---\n{post['content']}\n"
+    
+    # Create client for weekly report
+    client = ModelClient(
+        ENDPOINT,
+        AzureKeyCredential(HF_TOKEN),
+    )
+    
+    # Make API request for weekly report
+    weekly_response = await client.path("/chat/completions").post({
+        "body": {
+            "messages": [
+                {"role": "system", "content": "You are a very senior research scientist with 20+ years of experience in AI/ML who has published extensively in top-tier conferences and journals. You write in a natural, conversational style that reflects deep expertise and personal insights. You use first-person perspective, share genuine thoughts about research, express enthusiasm for promising developments, show concern about challenges, and provide thoughtful analysis of implications. Your writing style is like a senior researcher sharing weekly thoughts with colleagues - natural, insightful, and personally engaged with the research."},
+                {"role": "user", "content": weekly_prompt}
+            ],
+            "temperature": 0.4,
+            "max_tokens": 2000,
+            "model": MODEL
+        }
+    })
+    
+    if weekly_response.status_code == 200:
+        weekly_data = weekly_response.json()
+        weekly_content = weekly_data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
+        
+        # Calculate week start (Monday) for filename and title
+        week_start = today - datetime.timedelta(days=6)
+        
+        # Generate weekly report filename using week range
+        weekly_filename = f"_posts/{week_start.strftime('%Y-%m-%d')}-to-{today.strftime('%Y-%m-%d')}-weekly-ai-research-report.md"
+        
+        # Save weekly report
+        with open(weekly_filename, "w", encoding="utf-8") as f:
+            f.write("---\n")
+            f.write(f"layout: post\n")
+            f.write(f"title: \"Weekly AI Research Report - {week_start.strftime('%B %d')} to {today.strftime('%B %d, %Y')}\"\n")
+            f.write(f"date: {today.strftime('%Y-%m-%d')}\n")
+            f.write("category: weekly-report\n")
+            f.write("---\n\n")
+            f.write(weekly_content.strip() + "\n")
+        
+        print(f"✅ Generated weekly report: {weekly_filename}")
+        return weekly_filename
+    else:
+        print(f"❌ Weekly report generation failed: {weekly_response.status_code}")
+        return None
+
 # Run the async function
 if __name__ == "__main__":
     if not HF_TOKEN:  # Changed from GITHUB_TOKEN
         print("❌ HF_TOKEN environment variable not set")
         exit(1)
     
-    asyncio.run(generate_blog_post())
+    # Generate daily blog post
+    daily_result = asyncio.run(generate_blog_post())
+    
+    # Generate weekly report on Sundays
+    weekly_result = asyncio.run(generate_weekly_report())
+    
+    if daily_result:
+        print(f"✅ Daily digest generated: {daily_result}")
+    if weekly_result:
+        print(f"✅ Weekly report generated: {weekly_result}")

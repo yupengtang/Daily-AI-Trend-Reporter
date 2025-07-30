@@ -1,5 +1,5 @@
-title: "Daily AI Research Digest"
-description: "Automatically generated daily digest on MLE/SDE frontiers using GitHub Models API"
+title: "Daily AI Trend Reporter"
+description: "Automatically updated daily AI research digest"
 theme: minima
 markdown: kramdown
 plugins:

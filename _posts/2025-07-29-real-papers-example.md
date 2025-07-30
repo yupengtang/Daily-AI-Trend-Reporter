@@ -75,10 +75,10 @@ Ask me anything about today's research papers! I can help you understand the key
 </div>
 
 <script>
-// AI Assistant functionality
+// AI Assistant functionality with real API
 let chatMessages = [];
 
-function sendMessage() {
+async function sendMessage() {
   const input = document.getElementById('user-input');
   const message = input.value.trim();
   
@@ -86,11 +86,58 @@ function sendMessage() {
     addMessage('user', message);
     input.value = '';
     
-    // Simulate AI response (in real implementation, this would call an API)
-    setTimeout(() => {
-      const response = generateAIResponse(message);
+    // Show typing indicator
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'message assistant-message';
+    typingDiv.innerHTML = '<strong>AI Assistant:</strong> <em>Thinking...</em>';
+    document.getElementById('chat-messages').appendChild(typingDiv);
+    
+    try {
+      const response = await callAIAPI(message);
+      // Remove typing indicator
+      typingDiv.remove();
       addMessage('assistant', response);
-    }, 1000);
+    } catch (error) {
+      // Remove typing indicator
+      typingDiv.remove();
+      addMessage('assistant', 'Sorry, I encountered an error. Please try again.');
+    }
+  }
+}
+
+async function callAIAPI(userMessage) {
+  const papers = [
+    '1. Agentic Reinforced Policy Optimization',
+    '2. A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence',
+    '3. ARC-Hunyuan-Video-7B: Structured Video Comprehension of Real-World Shorts',
+    '4. Rep-MTL: Unleashing the Power of Representation-level Task Saliency for Multi-Task Learning',
+    '5. SmallThinker: A Family of Efficient Large Language Models Natively Trained for Local Deployment',
+    '6. Reconstructing 4D Spatial Intelligence: A Survey',
+    '7. Geometric-Mean Policy Optimization',
+    '8. Diversity-Enhanced Reasoning for Subjective Questions',
+    '9. Region-based Cluster Discrimination for Visual Representation Learning',
+    '10. GPT-IMAGE-EDIT-1.5M: A Million-Scale, GPT-Generated Image Dataset'
+  ];
+  
+  const prompt = `You are an AI research assistant. A user is asking about today's research papers. Here are the papers:\n\n${papers.join('\n')}\n\nUser question: ${userMessage}\n\nPlease provide a helpful, accurate response based on the research papers. Focus on explaining concepts, methodologies, and implications. Keep your response concise but informative.`;
+  
+  const response = await fetch('/api/ai-assistant', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      message: userMessage,
+      papers: papers,
+      prompt: prompt
+    })
+  });
+  
+  if (response.ok) {
+    const data = await response.json();
+    return data.response;
+  } else {
+    throw new Error('API call failed');
   }
 }
 
@@ -101,17 +148,6 @@ function addMessage(sender, text) {
   messageDiv.innerHTML = `<strong>${sender === 'user' ? 'You' : 'AI Assistant'}:</strong> ${text}`;
   messagesContainer.appendChild(messageDiv);
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
-}
-
-function generateAIResponse(userMessage) {
-  // This would be replaced with actual API call to AI model
-  const responses = [
-    "Based on today's research papers, I can help explain the key concepts and methodologies. What specific aspect would you like to know more about?",
-    "That's an interesting question about the research! Let me analyze the relevant papers and provide you with detailed insights.",
-    "I can see you're interested in the technical details. Let me break down the key findings from these studies for you.",
-    "Great question! The research papers today cover several important areas in AI. Let me explain the connections and implications."
-  ];
-  return responses[Math.floor(Math.random() * responses.length)];
 }
 
 // Enter key support

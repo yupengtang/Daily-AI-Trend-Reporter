@@ -1,13 +1,16 @@
 title: "Daily AI Trend Reporter"
 description: "Automatically updated daily AI research digest"
+url: "https://yupengtang.github.io"
+baseurl: "/Daily-AI-Trend-Reporter"
 theme: minima
 markdown: kramdown
-plugins:
-  - jekyll-feed
+# plugins:
+#   - jekyll-feed
 
 # RSS Feed configuration
-feed:
-  path: feed.xml
-  limit: 10
-  categories:
-  - posts
+# feed:
+#   path: feed.xml
+#   limit: 10
+#   categories:
+#   - posts
+#   format: rss2

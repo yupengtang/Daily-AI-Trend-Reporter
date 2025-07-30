@@ -2,18 +2,21 @@
 layout: home
 ---
 
-📈 Welcome to the **Daily AI Trend Reporter** - your comprehensive source for the latest AI/ML research developments!
+# Daily AI Trend Reporter
 
+**Your premier source for cutting-edge AI/ML research trends**
 
-We provide daily summaries of the latest research papers from [Hugging Face Papers](https://huggingface.co/papers). 
+We curate the most impactful research papers from arXiv, focusing on emerging trends in artificial intelligence and machine learning.
 
-Stay updated with cutting-edge developments in:
-- **Machine Learning Engineering (MLE)**
-- **Software Development Engineering (SDE)**
-- **Computer Vision & NLP**
-- **AI Model Optimization**
-- **Research Applications**
+## Research Areas
+
+- **Large Language Models & Foundation Models**
+- **Computer Vision & Image Generation**
+- **Reinforcement Learning & Optimization**
+- **Scientific AI & Mathematical Reasoning**
+- **Multimodal & Cross-Modal Learning**
+- **AI Safety & Alignment**
 
 ---
 
-**📅 Starting from July 29th, 2025** - Join us in exploring the frontiers of AI research!
+**📅 Join us in exploring the frontiers of AI research!**

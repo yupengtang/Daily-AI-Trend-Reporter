@@ -2,7 +2,7 @@ name: 🌱 Daily AI Frontier - 3 Random Times
 
 on:
   schedule:
-    - cron: '0 12 * * *'  # Run daily at 12:00 UTC (5:00 AM PDT)
+    - cron: '0 12 * * *'  # Run daily at 12:00 UTC (8:00 PM Beijing Time)
   workflow_dispatch:      # Allow manual trigger too
 
 jobs:
@@ -20,11 +20,11 @@ jobs:
           python-version: '3.10'
 
       - name: Install Python dependencies
-        run: pip install requests
+        run: pip install -r requirements.txt
 
-      - name: Run 3 GMI-based blog generations with random delays
+      - name: Run 3 GitHub Models-based blog generations with random delays
         env:
-          GMI_API_KEY: ${{ secrets.GMI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           for i in 1 2 3; do
             DELAY=$(shuf -i 888-18888 -n 1)  # Delay between 888 and 18888 seconds

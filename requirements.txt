@@ -1,0 +1,4 @@
+azure-rest-ai-inference
+azure-core-auth
+azure-core-sse
+requests 

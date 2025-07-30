@@ -195,11 +195,15 @@ async def generate_blog_post():
     safe_title = "daily-ai-research-digest"
     filename = f"_posts/{today}-{safe_title}.md"
     
+    # Format date for title (e.g., "July 29, 2024")
+    date_obj = datetime.date.today()
+    formatted_date = date_obj.strftime("%B %d, %Y")
+    
     # Save content to markdown file
     with open(filename, "w", encoding="utf-8") as f:
         f.write("---\n")
         f.write(f"layout: post\n")
-        f.write(f"title: \"🌱 Daily AI Research Digest\"\n")
+        f.write(f"title: \"Daily AI Research Papers - {formatted_date}\"\n")
         f.write(f"date: {today}\n")
         f.write("---\n\n")
         f.write(content.strip() + "\n")

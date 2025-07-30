@@ -17,7 +17,7 @@ Automatically generated daily technical digest on MLE/SDE frontiers using GitHub
 
 Add the following secret in your GitHub repository Settings > Secrets and variables > Actions:
 
-- **Name**: `GITHUB_TOKEN`
+- **Name**: `HF_TOKEN`
 - **Value**: Your GitHub Personal Access Token (requires `models:read` permission)
 
 ### 2. Enable GitHub Pages
@@ -79,7 +79,7 @@ pip install -r requirements.txt
 ### Local Testing
 
 ```bash
-export GITHUB_TOKEN="your-token-here"
+export HF_TOKEN="your-token-here"
 python3 test_api.py  # Test API connection and paper fetching
 python3 .github/scripts/generate_blog.py  # Test content generation with latest papers
 ```

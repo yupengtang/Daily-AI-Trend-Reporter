@@ -8,7 +8,7 @@ from azure.rest.ai_inference import ModelClient
 from azure.core.credentials import AzureKeyCredential
 
 # Set API configuration
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+HF_TOKEN = os.getenv("HF_TOKEN")  # Changed from GITHUB_TOKEN
 ENDPOINT = "https://models.github.ai/inference"
 MODEL = "openai/gpt-4.1"
 
@@ -111,7 +111,7 @@ async def generate_blog_post():
             # Create client for this request
             client = ModelClient(
                 ENDPOINT,
-                AzureKeyCredential(GITHUB_TOKEN),
+                AzureKeyCredential(HF_TOKEN),  # Changed from GITHUB_TOKEN
             )
             
             # Make API request for individual summary
@@ -170,7 +170,7 @@ async def generate_blog_post():
         # Create client
         client = ModelClient(
             ENDPOINT,
-            AzureKeyCredential(GITHUB_TOKEN),
+            AzureKeyCredential(HF_TOKEN),  # Changed from GITHUB_TOKEN
         )
         
         # Make API request
@@ -214,8 +214,8 @@ async def generate_blog_post():
 
 # Run the async function
 if __name__ == "__main__":
-    if not GITHUB_TOKEN:
-        print("❌ GITHUB_TOKEN environment variable not set")
+    if not HF_TOKEN:  # Changed from GITHUB_TOKEN
+        print("❌ HF_TOKEN environment variable not set")
         exit(1)
     
     asyncio.run(generate_blog_post())

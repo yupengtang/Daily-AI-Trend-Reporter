@@ -30,10 +30,10 @@ async def test_api():
     """Test the GitHub Models API connection"""
     
     # Get token from environment
-    token = os.getenv("GITHUB_TOKEN")
+    token = os.getenv("HF_TOKEN")  # Changed from GITHUB_TOKEN
     if not token:
-        print("❌ GITHUB_TOKEN environment variable not set")
-        print("Please set it with: export GITHUB_TOKEN='your-token-here'")
+        print("❌ HF_TOKEN environment variable not set")
+        print("Please set it with: export HF_TOKEN='your-token-here'")
         return False
     
     # Create client

@@ -1,9 +1,8 @@
 ---
 layout: home
-title: Daily AI Research Digest
 ---
 
-Welcome to the **Daily AI Research Digest** - your comprehensive source for the latest AI/ML research developments!
+Welcome to the **Daily AI Trend Reporter** - your comprehensive source for the latest AI/ML research developments!
 
 ## 📊 What We Do
 
@@ -34,4 +33,4 @@ In the fast-paced world of AI research, staying current is crucial. Our daily di
 
 ---
 
-**📅 Starting from July 30th, 2024** - Join us in exploring the frontiers of AI research!
+**📅 Starting from July 29th, 2025** - Join us in exploring the frontiers of AI research!

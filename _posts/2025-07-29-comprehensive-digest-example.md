@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Daily AI Research Papers - July 29, 2024"
-date: 2024-07-29
+title: "Daily AI Research Papers - July 29, 2025"
+date: 2025-07-29
 ---
 
 🗓️ Date: 2024-07-29  

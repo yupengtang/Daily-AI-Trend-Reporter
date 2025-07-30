@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "🌱 Daily AI Research Digest"
-date: 2024-07-30
+date: 2024-07-29
 ---
 
-🗓️ Date: 2024-07-30  
+🗓️ Date: 2024-07-29  
 🎯 Topic: Daily AI Research Digest  
 
 📌 Today's Latest Research Papers (6 papers):

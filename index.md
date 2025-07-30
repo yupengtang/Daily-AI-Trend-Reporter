@@ -2,9 +2,7 @@
 layout: home
 ---
 
-# Daily AI Trend Reporter
-
-**Your premier source for cutting-edge AI/ML research trends**
+**📈 Welcome to the Daily AI Trend Reporter - your comprehensive source for the latest AI/ML research developments!**
 
 We curate the most impactful research papers from arXiv, focusing on emerging trends in artificial intelligence and machine learning.
 

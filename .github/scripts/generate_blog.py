@@ -343,7 +343,7 @@ async def generate_weekly_report():
         f"Write the report in a natural, conversational style that reflects your deep expertise and personal insights. "
         f"Use first-person perspective and share your genuine thoughts about the research. "
         f"Be enthusiastic about promising developments, concerned about challenges, and thoughtful about implications.\n\n"
-        f"Structure your report with these sections:\n"
+        f"Structure your report with these sections (start directly with Executive Summary, no main title):\n"
         f"1. **Executive Summary**: Start with your overall impression of the week's research and what excites you most\n"
         f"2. **Technical Trends Analysis**: Discuss the main research directions you observe, using phrases like 'I've been particularly impressed by...' and 'What strikes me most is...'\n"
         f"3. **Key Innovations and Breakthroughs**: Highlight the most significant technical breakthroughs with your personal assessment\n"
@@ -371,7 +371,7 @@ async def generate_weekly_report():
     weekly_response = await client.path("/chat/completions").post({
         "body": {
             "messages": [
-                {"role": "system", "content": "You are a very senior research scientist with 20+ years of experience in AI/ML who has published extensively in top-tier conferences and journals. You write in a natural, conversational style that reflects deep expertise and personal insights. You use first-person perspective, share genuine thoughts about research, express enthusiasm for promising developments, show concern about challenges, and provide thoughtful analysis of implications. Your writing style is like a senior researcher sharing weekly thoughts with colleagues - natural, insightful, and personally engaged with the research."},
+                {"role": "system", "content": "You are a very senior research scientist with 20+ years of experience in AI/ML who has published extensively in top-tier conferences and journals. You write in a natural, conversational style that reflects deep expertise and personal insights. You use first-person perspective, share genuine thoughts about research, express enthusiasm for promising developments, show concern about challenges, and provide thoughtful analysis of implications. Your writing style is like a senior researcher sharing weekly thoughts with colleagues - natural, insightful, and personally engaged with the research. Do NOT include a main title at the beginning - start directly with the Executive Summary section."},
                 {"role": "user", "content": weekly_prompt}
             ],
             "temperature": 0.4,
@@ -388,13 +388,13 @@ async def generate_weekly_report():
         week_start = today - datetime.timedelta(days=6)
         
         # Generate weekly report filename using week range
-        weekly_filename = f"_posts/{week_start.strftime('%Y-%m-%d')}-to-{today.strftime('%Y-%m-%d')}-weekly-ai-research-report.md"
+        weekly_filename = f"_posts/{week_start.strftime('%Y-%m-%d')}-to-{today.strftime('%Y-%m-%d')}-weekly-report.md"
         
         # Save weekly report
         with open(weekly_filename, "w", encoding="utf-8") as f:
             f.write("---\n")
             f.write(f"layout: post\n")
-            f.write(f"title: \"Weekly AI Research Report - {week_start.strftime('%B %d')} to {today.strftime('%B %d, %Y')}\"\n")
+            f.write(f"title: \"Weekly Report - {week_start.strftime('%B %d')} to {today.strftime('%B %d, %Y')}\"\n")
             f.write(f"date: {today.strftime('%Y-%m-%d')}\n")
             f.write("category: weekly-report\n")
             f.write("---\n\n")

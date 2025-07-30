@@ -92,7 +92,6 @@ Each daily digest follows a consistent structure:
 - **🎯 Topic**: Daily AI Research Digest
 - **📌 Today's Latest Research Papers**: List of ALL latest papers, each with:
   - **Paper Title**: Full research paper title
-  - **📝 Authors**: List of authors
   - **🔗 Read Paper**: Direct link to original paper
   - **📋 Summary**: 2-3 sentence technical summary
 - **🔑 Keywords**: Relevant AI/ML keywords

@@ -103,7 +103,6 @@ async def generate_blog_post():
             summary_prompt = (
                 f"Generate a brief 2-3 sentence summary for this research paper:\n"
                 f"Title: {paper['title']}\n"
-                f"Authors: {', '.join(paper['authors'])}\n"
                 f"Abstract: {paper['abstract'][:200]}...\n\n"
                 f"Focus on the key innovation and practical impact. Keep it concise and technical."
             )
@@ -135,7 +134,6 @@ async def generate_blog_post():
             
             paper_summaries.append({
                 'title': paper['title'],
-                'authors': paper['authors'],
                 'summary': summary,
                 'url': paper.get('url', 'https://huggingface.co/papers')
             })
@@ -147,11 +145,10 @@ async def generate_blog_post():
         
         for i, paper in enumerate(paper_summaries, 1):
             content += f"**{i}. {paper['title']}**\n"
-            content += f"📝 Authors: {', '.join(paper['authors'])}\n"
             content += f"🔗 [Read Paper]({paper['url']})\n"
             content += f"📋 Summary: {paper['summary']}\n\n"
         
-        content += f"🔑 Keywords: AI research, machine learning, deep learning, computer vision, natural language processing"
+        content += f"🔑 Keywords: AI research, machine learning, deep learning, computer vision, natural language processing, model optimization, edge computing, autonomous systems"
         
     else:
         # Fallback to general topic generation

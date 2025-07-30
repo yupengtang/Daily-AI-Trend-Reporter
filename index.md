@@ -3,8 +3,37 @@ layout: home
 title: 🌟 Daily AI Trend Reporter
 ---
 
-Welcome to the Daily Digest of MLE/SDE frontiers!
+# 🌟 Daily AI Research Digest
 
-This project automatically generates concise technical summaries of cutting-edge topics in Machine Learning Engineering (MLE) and Software Development Engineering (SDE), starting from July 30th, 2024.
+Welcome to the **Daily AI Research Digest** - your comprehensive source for the latest AI/ML research developments!
 
-Each post contains a focused analysis of frontier technologies, keeping you updated with the latest developments in AI and software engineering.
+## 📊 What We Do
+
+We provide daily summaries of the latest research papers from [Hugging Face Papers](https://huggingface.co/papers). Each daily digest includes:
+
+- **📅 Daily Updates**: Fresh content every day at 8:00 PM Beijing Time
+- **📚 Complete Coverage**: Summarizes ALL latest research papers
+- **🔗 Direct Links**: Easy access to original papers
+- **📋 Individual Summaries**: 2-3 sentence summaries for each paper
+- **🎯 Focused Content**: Latest in MLE/SDE frontiers
+
+## 🚀 Latest Research Trends
+
+Stay updated with cutting-edge developments in:
+- **Machine Learning Engineering (MLE)**
+- **Software Development Engineering (SDE)**
+- **Computer Vision & NLP**
+- **AI Model Optimization**
+- **Research Applications**
+
+## 📈 Why This Matters
+
+In the fast-paced world of AI research, staying current is crucial. Our daily digests help you:
+- **Save Time**: Get comprehensive summaries in minutes
+- **Stay Informed**: Never miss important research breakthroughs
+- **Discover Trends**: See patterns across multiple papers
+- **Access Sources**: Direct links to original research
+
+---
+
+**📅 Starting from July 30th, 2024** - Join us in exploring the frontiers of AI research!

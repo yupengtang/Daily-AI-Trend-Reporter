@@ -4,9 +4,6 @@ title: "Daily AI Research Papers - July 29, 2025"
 date: 2025-07-29
 ---
 
-🗓️ Date: 2024-07-29  
-🎯 Topic: Daily AI Research Digest  
-
 📌 Today's Latest Research Papers (6 papers):
 
 **1. Agentic Reinforced Policy Optimization**  

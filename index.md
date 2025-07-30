@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 🌟 Daily AI Trend Reporter
+title: Daily AI Research Digest
 ---
 
 Welcome to the **Daily AI Research Digest** - your comprehensive source for the latest AI/ML research developments!

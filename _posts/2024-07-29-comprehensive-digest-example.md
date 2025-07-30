@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🌱 Daily AI Research Digest"
+title: "Latest AI Research Papers - July 29, 2024"
 date: 2024-07-29
 ---
 

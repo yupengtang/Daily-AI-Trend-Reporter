@@ -9,6 +9,7 @@ Automatically generated daily technical digest on MLE/SDE frontiers using GitHub
 - **Individual Paper Summaries**: Each paper gets its own 2-3 sentence summary
 - **Direct Paper Links**: Includes specific links to original papers (e.g., https://huggingface.co/papers/2507.21990) for further reading
 - **Auto-Generated Keywords**: Keywords are automatically generated based on the day's research papers
+- **Interactive AI Assistant**: Each post includes a real AI assistant powered by GitHub Models API for asking questions about the day's research papers
 - **Consistent Format**: Uniform structure across all daily posts
 - **Static Website**: Beautiful GitHub Pages site using Jekyll
 

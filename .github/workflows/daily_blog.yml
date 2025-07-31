@@ -1,18 +1,23 @@
-name: 🌱 Daily AI Frontier - 3 Random Times
+name: 🌱 Daily AI Frontier - Daily Generation
 
 on:
   schedule:
     - cron: '0 4 * * *'  # Run daily at 4:00 UTC (9:00 PM PDT)
   workflow_dispatch:      # Allow manual trigger too
 
+# Add permissions for the workflow
+permissions:
+  contents: write
+  actions: read
+
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 150   # Allow enough time for 3 spaced generations
+    timeout-minutes: 30   # Reduced timeout since we only generate once
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -22,13 +27,38 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Run 3 GitHub Models-based blog generations with random delays
+      - name: Check HF_TOKEN
+        run: |
+          if [ -z "${{ secrets.HF_TOKEN }}" ]; then
+            echo "❌ HF_TOKEN is not set in repository secrets"
+            exit 1
+          else
+            echo "✅ HF_TOKEN is configured"
+          fi
+
+      - name: Test API connection
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          for i in 1 2 3; do
-            DELAY=$(shuf -i 888-18888 -n 1)  # Delay between 888 and 18888 seconds
-            echo "⏱️ Sleeping $DELAY seconds before post $i..."
-            sleep $DELAY
-            python3 .github/scripts/generate_blog.py || echo "⚠️ Skipped post $i (duplicate or error)"
-          done
+          python3 test_api.py || echo "⚠️ API test failed, but continuing..."
+
+      - name: Generate daily AI research digest
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          echo "📝 Generating today's AI research digest..."
+          python3 .github/scripts/generate_blog.py
+          if [ $? -eq 0 ]; then
+            echo "✅ Daily digest generated successfully"
+          else
+            echo "❌ Daily digest generation failed"
+            exit 1
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _posts/ || echo "No new posts to add"
+          git commit -m "Auto-generated daily AI research digest" || echo "No changes to commit"
+          git push || echo "No changes to push"

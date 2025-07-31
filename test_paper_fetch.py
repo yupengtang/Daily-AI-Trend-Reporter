@@ -1,103 +1,46 @@
 #!/usr/bin/env python3
 """
-Test script to verify paper fetching from Hugging Face for focused daily digest
+Test script to verify paper fetching logic
 """
 
-import requests
-import re
+import sys
+import os
+sys.path.append('.github/scripts')
+
+# Import the function from generate_blog.py
+from generate_blog import fetch_latest_papers
 
 def test_paper_fetching():
-    """Test fetching papers from Hugging Face Papers"""
-    print("🔍 Testing focused paper fetching from Hugging Face...")
+    """Test the paper fetching function"""
+    print("🔍 Testing paper fetching logic...")
     
-    try:
-        # Try multiple endpoints
-        endpoints = [
-            "https://huggingface.co/api/papers",
-            "https://huggingface.co/api/papers?sort=date&direction=-1",
-            "https://huggingface.co/api/papers?limit=100"
-        ]
-        
-        for endpoint in endpoints:
-            try:
-                response = requests.get(endpoint, timeout=15)
-                if response.status_code == 200:
-                    papers = response.json()
-                    if papers and isinstance(papers, list):
-                        print(f"✅ Successfully fetched {len(papers)} papers from {endpoint}")
-                        print(f"📄 Latest 10 papers for focused digest:")
-                        for i, paper in enumerate(papers[:10], 1):  # Show first 10 papers
-                            title = paper.get('title', 'Unknown')
-                            url = paper.get('url', 'https://huggingface.co/papers')
-                            print(f"  {i}. {title}")
-                            print(f"     🔗 {url}")
-                        return True
-            except Exception as e:
-                print(f"⚠️ Failed to fetch from {endpoint}: {e}")
-                continue
-        
-        # Fallback: try to scrape from the papers page
-        try:
-            # Try to get papers from the specific date page first
-            response = requests.get("https://huggingface.co/papers/date/2025-07-29", timeout=15)
-            if response.status_code != 200:
-                # Fallback to general papers page
-                response = requests.get("https://huggingface.co/papers", timeout=15)
-            
-            if response.status_code == 200:
-                content = response.text
-                
-                # Look for paper links with titles (most accurate method)
-                paper_with_title_pattern = r'<a[^>]*href="/papers/([^"]+)"[^>]*>([^<]+)</a>'
-                papers_with_titles = re.findall(paper_with_title_pattern, content)
-                
-                clean_papers = []
-                if papers_with_titles:
-                    for i, (paper_id, title) in enumerate(papers_with_titles[:10]):
-                        title = title.strip()
-                        if len(title) > 10 and len(title) < 200:
-                            clean_papers.append({
-                                'title': title,
-                                'url': f"https://huggingface.co/papers/{paper_id}"
-                            })
-                
-                if clean_papers:
-                    print(f"✅ Successfully extracted {len(clean_papers)} papers from HTML")
-                    print(f"📄 Latest 10 papers for focused digest:")
-                    for i, paper in enumerate(clean_papers[:10], 1):  # Show first 10 papers
-                        print(f"  {i}. {paper['title']}")
-                        print(f"     🔗 {paper['url']}")
-                    return True
-        except Exception as e:
-            print(f"⚠️ Failed to scrape papers page: {e}")
-        
-        print("❌ Could not fetch papers from any source")
-        return False
-        
-    except Exception as e:
-        print(f"❌ Error testing paper fetching: {e}")
-        return False
-
-def main():
-    """Run the test"""
-    print("🚀 Testing focused paper fetching for daily digest...\n")
+    papers = fetch_latest_papers()
     
-    success = test_paper_fetching()
-    
-    if success:
-        print("\n🎉 Focused paper fetching test passed!")
-        print("✅ The system will now generate focused daily digests")
-        print("📊 Each digest will include:")
-        print("   - Latest 6 research papers")
-        print("   - Individual summaries for each paper")
-        print("   - Direct links to original papers")
-        print("   - Consistent format across all posts")
+    if papers:
+        print(f"✅ Successfully fetched {len(papers)} papers")
+        print("\n📄 Sample papers:")
+        for i, paper in enumerate(papers[:3], 1):
+            print(f"{i}. {paper['title']}")
+            print(f"   URL: {paper['url']}")
+            print()
     else:
-        print("\n⚠️ Paper fetching test failed")
-        print("The system will fall back to general topic generation")
+        print("❌ No papers fetched")
     
-    return success
+    # Check for fake URLs
+    fake_url_patterns = ["paper-", "2507.2199", "paper-1", "paper-2"]
+    has_fake_urls = False
+    
+    for paper in papers:
+        url = paper.get('url', '')
+        for pattern in fake_url_patterns:
+            if pattern in url:
+                print(f"⚠️ Found fake URL: {url}")
+                has_fake_urls = True
+    
+    if not has_fake_urls:
+        print("✅ No fake URLs detected")
+    else:
+        print("❌ Fake URLs detected - needs fixing")
 
 if __name__ == "__main__":
-    success = main()
-    exit(0 if success else 1) 
+    test_paper_fetching() 

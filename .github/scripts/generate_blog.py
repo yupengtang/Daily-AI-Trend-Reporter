@@ -313,7 +313,7 @@ async def generate_blog_post():
         for i, paper in enumerate(paper_summaries, 1):
             content += f"**{i}. {paper['title']}**\n"
             content += f"🔗 [Read Paper]({paper['url']})\n"
-            content += f"📋 **Summary**: {paper['summary']}\n\n"
+            content += f"📋 Summary: {paper['summary']}\n\n"
         
     else:
         # Fallback to general topic generation

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - July 29, 2025"
 date: 2025-07-29
 ---
 
-🔑 Keywords: reinforcement learning, policy optimization, self-evolving agents, video comprehension, multi-task learning, large language models, spatial intelligence, geometric optimization, reasoning, visual representation, image editing
+**🔑 Keywords**: reinforcement learning, policy optimization, self-evolving agents, video comprehension, multi-task learning, large language models, spatial intelligence, geometric optimization, reasoning, visual representation, image editing
 
 **1. Agentic Reinforced Policy Optimization**  
 🔗 [Read Paper](https://huggingface.co/papers/2507.19849)  

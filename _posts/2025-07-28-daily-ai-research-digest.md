@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - July 28, 2025"
 date: 2025-07-28
 ---
 
-🔑 Keywords: diffusion models, test-time adaptation, LLM quantization, GUI agents, multimodal compression, error analysis, prompt evolution, autonomous driving, AI risk management, video communication, semantic segmentation
+**🔑 Keywords**: diffusion models, test-time adaptation, LLM quantization, GUI agents, multimodal compression, error analysis, prompt evolution, autonomous driving, AI risk management, video communication, semantic segmentation
 
 **1. Deep Researcher with Test-Time Diffusion**  
 🔗 [Read Paper](https://huggingface.co/papers/2507.16075)  

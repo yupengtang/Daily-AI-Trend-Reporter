@@ -311,8 +311,8 @@ async def generate_blog_post():
         content = f"**🔑 Keywords**: {keywords}\n\n"
         
         for i, paper in enumerate(paper_summaries, 1):
-            content += f"**{i}. {paper['title']}**\n\n"
-            content += f"🔗 [Read Paper]({paper['url']})\n\n"
+            content += f"**{i}. {paper['title']}**  \n"
+            content += f"🔗 [Read Paper]({paper['url']})  \n"
             content += f"📋 Summary: {paper['summary']}\n\n"
         
     else:

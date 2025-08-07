@@ -82,12 +82,14 @@ def test_file_naming():
     
     # Test daily post naming
     daily_date = datetime.date(2025, 1, 20)
-    daily_filename = f"_posts/{daily_date.strftime('%Y-%m-%d')}-daily-ai-research-digest.md"
+    weekday = daily_date.strftime("%A").lower()
+    daily_filename = f"_posts/{daily_date.strftime('%Y-%m-%d')}-{weekday}-daily-ai-research-digest.md"
     print(f"Daily post filename: {daily_filename}")
     
     # Test technical deep dive naming
     deep_dive_date = datetime.date(2025, 1, 26)
-    deep_dive_filename = f"_posts/{deep_dive_date.strftime('%Y-%m-%d')}-technical-deep-dive.md"
+    weekday = deep_dive_date.strftime("%A").lower()
+    deep_dive_filename = f"_posts/{deep_dive_date.strftime('%Y-%m-%d')}-{weekday}-technical-deep-dive.md"
     print(f"Technical deep dive filename: {deep_dive_filename}")
     
     print("✅ File naming conventions correct")

@@ -40,7 +40,7 @@ Add the following secret in your GitHub repository Settings > Secrets and variab
 
 ### Schedule Settings
 
-Currently set to run daily at UTC 4:00 (12:00 AM Beijing Time), with smart weekly scheduling:
+Currently set to run daily at UTC 14:00 (7:00 AM PDT, 10:00 PM CST), with smart weekly scheduling:
 
 - **Monday-Friday**: Generate individual daily posts
 - **Saturday**: Generate Monday-Friday daily posts (batch mode)
@@ -50,7 +50,7 @@ To modify frequency, edit the cron expression in `.github/workflows/daily_blog.y
 
 ```yaml
 schedule:
-  - cron: '0 4 * * *'  # Daily at 4:00 UTC
+  - cron: '0 14 * * *'  # Daily at 14:00 UTC
 ```
 
 ### Model Configuration
@@ -71,8 +71,8 @@ Daily-AI-Trend-Reporter/
 │   └── scripts/
 │       └── generate_blog.py        # Content generation script
 ├── _posts/                         # Generated blog posts
-│   ├── YYYY-MM-DD-daily-ai-research-digest.md    # Daily posts
-│   └── YYYY-MM-DD-technical-deep-dive.md         # Sunday technical deep dives
+│   ├── YYYY-MM-DD-weekday-daily-ai-research-digest.md    # Daily posts
+│   └── YYYY-MM-DD-weekday-technical-deep-dive.md         # Sunday technical deep dives
 ├── _layouts/                       # Jekyll layout templates
 ├── _includes/                      # Jekyll include templates
 ├── _config.yml                     # Jekyll configuration
@@ -106,6 +106,7 @@ python3 batch_generate.py  # Test batch generation with new strategy
 
 Each daily digest follows a consistent structure:
 
+- **📅 Title**: "Daily AI Research Papers - [Weekday], [Month Day, Year]" (e.g., "Daily AI Research Papers - Thursday, August 07, 2025")
 - **🔑 Keywords**: Relevant AI/ML keywords
 - **📋 Today's Latest Research Papers**: List of 10 latest papers, each with:
   - **Paper Title**: Full research paper title
@@ -116,6 +117,7 @@ Each daily digest follows a consistent structure:
 
 Every Sunday generates a comprehensive technical deep dive:
 
+- **📅 Title**: "Technical Deep Dive - [Start Date] to [End Date] ([Weekday])" (e.g., "Technical Deep Dive - August 04 to August 09, 2025 (Sunday)")
 - **Introduction**: Why the research is groundbreaking and exciting
 - **Technical Background**: Theoretical foundation
 - **Core Innovation**: Deep dive into key technical contribution
@@ -177,4 +179,22 @@ Every Sunday, the system analyzes the week's research papers and selects the mos
 - Mathematical formulations where relevant
 - Future research directions
 
-This new strategy ensures consistent content generation while providing valuable technical depth for readers interested in implementation details. 
+This new strategy ensures consistent content generation while providing valuable technical depth for readers interested in implementation details.
+
+## 🕐 Time Schedule
+
+### Current Schedule
+
+| Time Zone | Time | Description |
+|-----------|------|-------------|
+| **UTC** | 2:00 PM | Standard time |
+| **Pacific Time (PDT)** | 7:00 AM | Pacific Daylight Time |
+| **China Time (CST)** | 10:00 PM | China Standard Time |
+| **Eastern Time (EDT)** | 10:00 AM | Eastern Daylight Time |
+
+### Time Logic
+
+- **Trigger Time**: Daily at 2:00 PM UTC
+- **Content Generation**: Uses `datetime.date.today()` for current date
+- **File Naming**: `YYYY-MM-DD-weekday-daily-ai-research-digest.md`
+- **User Experience**: Users see content for the current date at appropriate local times 

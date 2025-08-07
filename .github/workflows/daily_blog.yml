@@ -2,7 +2,7 @@ name: 🌱 Daily AI Frontier - Daily Generation
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # Run daily at 4:00 UTC (9:00 PM PDT)
+    - cron: '0 14 * * *'  # Run daily at 14:00 UTC (7:00 AM PDT, 10:00 PM CST)
   workflow_dispatch:      # Allow manual trigger too
 
 # Add permissions for the workflow

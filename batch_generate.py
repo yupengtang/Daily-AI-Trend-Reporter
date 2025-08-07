@@ -352,18 +352,21 @@ async def generate_daily_post(target_date: datetime.date) -> Optional[str]:
             print("❌ API call failed")
             return None
     
-    # Generate safe filename
+    # Generate safe filename with weekday
+    weekday = target_date.strftime("%A")  # Get weekday name (Monday, Tuesday, etc.)
     safe_title = "daily-ai-research-digest"
-    filename = f"_posts/{date_str}-{safe_title}.md"
+    filename = f"_posts/{date_str}-{weekday.lower()}-{safe_title}.md"
     
-    # Format date for title (e.g., "July 29, 2024")
+    # Format date for title with weekday (e.g., "Monday, July 29, 2024")
+    weekday = target_date.strftime("%A")  # Get weekday name (Monday, Tuesday, etc.)
     formatted_date = target_date.strftime("%B %d, %Y")
+    title_with_weekday = f"Daily AI Research Papers - {weekday}, {formatted_date}"
     
     # Save content to markdown file
     with open(filename, "w", encoding="utf-8") as f:
         f.write("---\n")
         f.write(f"layout: post\n")
-        f.write(f"title: \"Daily AI Research Papers - {formatted_date}\"\n")
+        f.write(f"title: \"{title_with_weekday}\"\n")
         f.write(f"date: {date_str}\n")
         f.write("---\n\n")
         f.write(content.strip() + "\n")
@@ -380,7 +383,8 @@ async def generate_technical_deep_dive(week_start: datetime.date, week_end: date
     
     current_date = week_start
     while current_date <= week_end:
-        filename = f"_posts/{current_date.strftime('%Y-%m-%d')}-daily-ai-research-digest.md"
+        weekday = current_date.strftime("%A").lower()
+        filename = f"_posts/{current_date.strftime('%Y-%m-%d')}-{weekday}-daily-ai-research-digest.md"
         
         if os.path.exists(filename):
             with open(filename, 'r', encoding='utf-8') as f:
@@ -389,9 +393,9 @@ async def generate_technical_deep_dive(week_start: datetime.date, week_end: date
                     'date': current_date.strftime('%Y-%m-%d'),
                     'content': content
                 })
-                print(f"  📄 Found daily post: {current_date.strftime('%Y-%m-%d')}")
+                print(f"  📄 Found daily post: {current_date.strftime('%Y-%m-%d')} ({weekday})")
         else:
-            print(f"  ⚠️ Missing daily post: {current_date.strftime('%Y-%m-%d')}")
+            print(f"  ⚠️ Missing daily post: {current_date.strftime('%Y-%m-%d')} ({weekday})")
         
         current_date += datetime.timedelta(days=1)
     
@@ -434,14 +438,15 @@ async def generate_technical_deep_dive(week_start: datetime.date, week_end: date
         deep_dive_data = deep_dive_response.json()
         deep_dive_content = deep_dive_data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
         
-        # Generate technical deep dive filename
-        deep_dive_filename = f"_posts/{week_end.strftime('%Y-%m-%d')}-technical-deep-dive.md"
+        # Generate technical deep dive filename with weekday
+        weekday = week_end.strftime("%A")  # Get weekday name
+        deep_dive_filename = f"_posts/{week_end.strftime('%Y-%m-%d')}-{weekday.lower()}-technical-deep-dive.md"
         
         # Save technical deep dive
         with open(deep_dive_filename, "w", encoding="utf-8") as f:
             f.write("---\n")
             f.write(f"layout: post\n")
-            f.write(f"title: \"Technical Deep Dive - {week_start.strftime('%B %d')} to {week_end.strftime('%B %d, %Y')}\"\n")
+            f.write(f"title: \"Technical Deep Dive - {week_start.strftime('%B %d')} to {week_end.strftime('%B %d, %Y')} ({weekday})\"\n")
             f.write(f"date: {week_end.strftime('%Y-%m-%d')}\n")
             f.write("category: technical-deep-dive\n")
             f.write("---\n\n")
@@ -462,7 +467,8 @@ async def generate_weekly_report(week_start: datetime.date, week_end: datetime.d
     
     current_date = week_start
     while current_date <= week_end:
-        filename = f"_posts/{current_date.strftime('%Y-%m-%d')}-daily-ai-research-digest.md"
+        weekday = current_date.strftime("%A").lower()
+        filename = f"_posts/{current_date.strftime('%Y-%m-%d')}-{weekday}-daily-ai-research-digest.md"
         
         if os.path.exists(filename):
             with open(filename, 'r', encoding='utf-8') as f:
@@ -471,9 +477,9 @@ async def generate_weekly_report(week_start: datetime.date, week_end: datetime.d
                     'date': current_date.strftime('%Y-%m-%d'),
                     'content': content
                 })
-                print(f"  📄 Found daily post: {current_date.strftime('%Y-%m-%d')}")
+                print(f"  📄 Found daily post: {current_date.strftime('%Y-%m-%d')} ({weekday})")
         else:
-            print(f"  ⚠️ Missing daily post: {current_date.strftime('%Y-%m-%d')}")
+            print(f"  ⚠️ Missing daily post: {current_date.strftime('%Y-%m-%d')} ({weekday})")
         
         current_date += datetime.timedelta(days=1)
     

@@ -47,7 +47,7 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           echo "📝 Generating today's AI research digest..."
-          python3 .github/scripts/generate_blog.py
+          python3 batch_generate.py
           if [ $? -eq 0 ]; then
             echo "✅ Daily digest generated successfully"
           else
@@ -55,10 +55,41 @@ jobs:
             exit 1
           fi
 
+      - name: Check for generated files
+        run: |
+          echo "📁 Checking for generated files..."
+          ls -la _posts/ || echo "No _posts directory found"
+          find _posts/ -name "*.md" -newer .github/workflows/daily_blog.yml 2>/dev/null || echo "No new files found"
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          
+          # Add all changes in _posts directory
           git add _posts/ || echo "No new posts to add"
-          git commit -m "Auto-generated daily AI research digest" || echo "No changes to commit"
-          git push || echo "No changes to push"
+          
+          # Check if there are any changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            # Get list of new files for commit message
+            NEW_FILES=$(git diff --staged --name-only | grep "_posts/" | head -5)
+            COMMIT_MSG="Auto-generated daily AI research digest"
+            if [ ! -z "$NEW_FILES" ]; then
+              COMMIT_MSG="Auto-generated: $(echo "$NEW_FILES" | tr '\n' ' ')"
+            fi
+            
+            git commit -m "$COMMIT_MSG"
+            echo "✅ Changes committed: $COMMIT_MSG"
+            
+            # Push changes
+            git push
+            echo "✅ Changes pushed to repository"
+          fi
+
+      - name: Verify deployment
+        run: |
+          echo "🔍 Verifying deployment..."
+          echo "Generated files should now be available on the website"
+          echo "Check the Actions tab for any errors"

@@ -4,12 +4,14 @@ Automatically generated daily technical digest on MLE/SDE frontiers using GitHub
 
 ## 🚀 Features
 
-- **Daily Auto-Update**: Scheduled generation via GitHub Actions (once per day at 4:00 UTC)
+- **Smart Weekly Schedule**: 
+  - **Saturday**: Generate Monday-Friday daily posts
+  - **Sunday**: Generate technical deep dive post with detailed code examples
 - **Focused Daily Digest**: Summarizes the latest 10 research papers from [Hugging Face Papers](https://huggingface.co/papers)
 - **Individual Paper Summaries**: Each paper gets its own 2-3 sentence summary
 - **Direct Paper Links**: Includes specific links to original papers (e.g., https://huggingface.co/papers/2507.14111) for further reading
 - **Auto-Generated Keywords**: Keywords are automatically generated based on the day's research papers
-- **Weekly Research Reports**: Every Sunday, generates a comprehensive technical analysis by a senior research scientist
+- **Technical Deep Dives**: Every Sunday, generates comprehensive technical analysis with detailed code implementations
 - **Consistent Format**: Uniform structure across all daily posts
 - **Static Website**: Beautiful GitHub Pages site using Jekyll
 
@@ -38,7 +40,11 @@ Add the following secret in your GitHub repository Settings > Secrets and variab
 
 ### Schedule Settings
 
-Currently set to run daily at UTC 4:00 (12:00 AM Beijing Time), generating 1 article per day.
+Currently set to run daily at UTC 4:00 (12:00 AM Beijing Time), with smart weekly scheduling:
+
+- **Monday-Friday**: Generate individual daily posts
+- **Saturday**: Generate Monday-Friday daily posts (batch mode)
+- **Sunday**: Generate technical deep dive post
 
 To modify frequency, edit the cron expression in `.github/workflows/daily_blog.yml`:
 
@@ -49,11 +55,11 @@ schedule:
 
 ### Model Configuration
 
-Currently using `openai/gpt-4.1` model. To change models, edit the `MODEL` variable in `.github/scripts/generate_blog.py`.
+Currently using `openai/gpt-4o-mini` model. To change models, edit the `MODEL` variable in `batch_generate.py`.
 
 ### Paper Source Configuration
 
-The system automatically fetches the latest 10 papers from [Hugging Face Papers](https://huggingface.co/papers) and generates individual summaries for each paper. Each summary includes the paper title, specific direct link to the original paper (e.g., https://huggingface.co/papers/2507.14111), and a concise 2-3 sentence summary focusing on key innovations and practical impact. Keywords are automatically generated based on the day's research papers to reflect current trends. Additionally, every Sunday, the system generates a comprehensive weekly research report written by a senior research scientist, providing deep technical analysis and insights.
+The system automatically fetches the latest 10 papers from [Hugging Face Papers](https://huggingface.co/papers) and generates individual summaries for each paper. Each summary includes the paper title, specific direct link to the original paper (e.g., https://huggingface.co/papers/2507.14111), and a concise 2-3 sentence summary focusing on key innovations and practical impact. Keywords are automatically generated based on the day's research papers to reflect current trends.
 
 ## 📁 Project Structure
 
@@ -65,10 +71,13 @@ Daily-AI-Trend-Reporter/
 │   └── scripts/
 │       └── generate_blog.py        # Content generation script
 ├── _posts/                         # Generated blog posts
+│   ├── YYYY-MM-DD-daily-ai-research-digest.md    # Daily posts
+│   └── YYYY-MM-DD-technical-deep-dive.md         # Sunday technical deep dives
 ├── _layouts/                       # Jekyll layout templates
 ├── _includes/                      # Jekyll include templates
 ├── _config.yml                     # Jekyll configuration
 ├── index.md                        # Homepage
+├── batch_generate.py               # Batch generation script with new strategy
 ├── test_api.py                     # API connection test script
 ├── test_paper_fetch.py             # Paper fetching test script
 └── requirements.txt                # Python dependencies
@@ -88,20 +97,31 @@ pip install -r requirements.txt
 export HF_TOKEN="your-token-here"
 python3 test_api.py  # Test API connection and paper fetching
 python3 test_paper_fetch.py  # Test paper fetching specifically
-python3 .github/scripts/generate_blog.py  # Test content generation with latest papers
+python3 batch_generate.py  # Test batch generation with new strategy
 ```
 
 ## 📝 Article Format
 
+### Daily Digest Format
+
 Each daily digest follows a consistent structure:
 
-- **🗓️ Date**: Publication date
-- **🎯 Topic**: Daily AI Research Digest
-- **📌 Today's Latest Research Papers**: List of 10 latest papers, each with:
+- **🔑 Keywords**: Relevant AI/ML keywords
+- **📋 Today's Latest Research Papers**: List of 10 latest papers, each with:
   - **Paper Title**: Full research paper title
   - **🔗 Read Paper**: Direct link to original paper
   - **📋 Summary**: 2-3 sentence technical summary
-- **🔑 Keywords**: Relevant AI/ML keywords
+
+### Technical Deep Dive Format (Sundays)
+
+Every Sunday generates a comprehensive technical deep dive:
+
+- **Introduction**: Why the research is groundbreaking and exciting
+- **Technical Background**: Theoretical foundation
+- **Core Innovation**: Deep dive into key technical contribution
+- **Implementation**: Detailed, well-commented Python code examples
+- **Practical Applications**: Real-world use cases
+- **Future Implications**: Broader impact and research directions
 
 ## 🛠️ Troubleshooting
 
@@ -137,4 +157,24 @@ Welcome to submit Issues and Pull Requests to improve this project!
 
 ## 📅 Start Date
 
-This project is configured to start generating content from July 30th, 2025. 
+This project is configured to start generating content from July 30th, 2025.
+
+## 🔄 New Publishing Strategy
+
+### Weekly Schedule
+
+- **Monday-Friday**: Individual daily posts with latest research papers
+- **Saturday**: Batch generation of Monday-Friday daily posts
+- **Sunday**: Technical deep dive post with detailed code implementations
+
+### Technical Deep Dives
+
+Every Sunday, the system analyzes the week's research papers and selects the most frontier, attractive, and useful topic for a comprehensive technical deep dive. These posts include:
+
+- Detailed technical explanations
+- Complete Python code implementations with comprehensive comments
+- Real-world application examples
+- Mathematical formulations where relevant
+- Future research directions
+
+This new strategy ensures consistent content generation while providing valuable technical depth for readers interested in implementation details. 

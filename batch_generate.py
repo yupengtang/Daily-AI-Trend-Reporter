@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Batch generation script for Daily AI Trend Reporter
-Generates posts for a specified date range including weekly reports
+Generates posts for a specified date range including weekly reports and technical deep dives
 """
 
 import os
@@ -371,6 +371,88 @@ async def generate_daily_post(target_date: datetime.date) -> Optional[str]:
     print(f"✅ Generated daily digest: {filename}")
     return filename
 
+async def generate_technical_deep_dive(week_start: datetime.date, week_end: datetime.date) -> Optional[str]:
+    """Generate technical deep dive post for the most interesting research from the week"""
+    print(f"🔬 Generating technical deep dive for {week_start} to {week_end}...")
+    
+    # Get posts from this week
+    week_posts = []
+    
+    current_date = week_start
+    while current_date <= week_end:
+        filename = f"_posts/{current_date.strftime('%Y-%m-%d')}-daily-ai-research-digest.md"
+        
+        if os.path.exists(filename):
+            with open(filename, 'r', encoding='utf-8') as f:
+                content = f.read()
+                week_posts.append({
+                    'date': current_date.strftime('%Y-%m-%d'),
+                    'content': content
+                })
+                print(f"  📄 Found daily post: {current_date.strftime('%Y-%m-%d')}")
+        else:
+            print(f"  ⚠️ Missing daily post: {current_date.strftime('%Y-%m-%d')}")
+        
+        current_date += datetime.timedelta(days=1)
+    
+    if not week_posts:
+        print("⚠️ No posts found for this week")
+        return None
+    
+    # Create technical deep dive prompt
+    deep_dive_prompt = (
+        f"You are a senior AI researcher and technical writer with deep expertise in machine learning, deep learning, and AI systems. "
+        f"Based on the research papers from this week ({week_start.strftime('%Y-%m-%d')} to {week_end.strftime('%Y-%m-%d')}), "
+        f"identify the MOST FRONTIER, MOST ATTRACTIVE, and MOST USEFUL research topic. "
+        f"Then write a comprehensive technical deep dive that includes:\n\n"
+        f"1. **Introduction**: Explain why this research is groundbreaking and exciting\n"
+        f"2. **Technical Background**: Provide the necessary theoretical foundation\n"
+        f"3. **Core Innovation**: Deep dive into the key technical contribution\n"
+        f"4. **Implementation**: Provide detailed, well-commented code examples in Python\n"
+        f"5. **Practical Applications**: Show real-world use cases\n"
+        f"6. **Future Implications**: Discuss the broader impact\n\n"
+        f"Requirements:\n"
+        f"- Choose the MOST exciting and practical research from the week\n"
+        f"- Include detailed Python code with comprehensive comments\n"
+        f"- Make the code educational and implementable\n"
+        f"- Focus on cutting-edge techniques (transformers, diffusion models, RL, etc.)\n"
+        f"- Include mathematical formulations where relevant\n"
+        f"- Make it highly engaging and attractive to readers\n\n"
+        f"Weekly Posts:\n"
+    )
+    
+    for i, post in enumerate(week_posts, 1):
+        deep_dive_prompt += f"\n--- Day {i} ({post['date']}) ---\n{post['content']}\n"
+    
+    # Call API for technical deep dive
+    deep_dive_response = await call_ai_api([
+        {"role": "system", "content": "You are a senior AI researcher and technical writer with deep expertise in machine learning, deep learning, and AI systems. You write engaging, technically accurate content with detailed code examples and comprehensive explanations. You focus on the most cutting-edge and practical research, making complex concepts accessible while maintaining technical depth."},
+        {"role": "user", "content": deep_dive_prompt}
+    ], max_tokens=3000, temperature=0.4)
+    
+    if deep_dive_response and deep_dive_response.status_code == 200:
+        deep_dive_data = deep_dive_response.json()
+        deep_dive_content = deep_dive_data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
+        
+        # Generate technical deep dive filename
+        deep_dive_filename = f"_posts/{week_end.strftime('%Y-%m-%d')}-technical-deep-dive.md"
+        
+        # Save technical deep dive
+        with open(deep_dive_filename, "w", encoding="utf-8") as f:
+            f.write("---\n")
+            f.write(f"layout: post\n")
+            f.write(f"title: \"Technical Deep Dive - {week_start.strftime('%B %d')} to {week_end.strftime('%B %d, %Y')}\"\n")
+            f.write(f"date: {week_end.strftime('%Y-%m-%d')}\n")
+            f.write("category: technical-deep-dive\n")
+            f.write("---\n\n")
+            f.write(deep_dive_content.strip() + "\n")
+        
+        print(f"✅ Generated technical deep dive: {deep_dive_filename}")
+        return deep_dive_filename
+    else:
+        print(f"❌ Technical deep dive generation failed: {deep_dive_response.status_code if deep_dive_response else 'No response'}")
+        return None
+
 async def generate_weekly_report(week_start: datetime.date, week_end: datetime.date) -> Optional[str]:
     """Generate weekly report for a specific week"""
     print(f"📊 Generating weekly report for {week_start} to {week_end}...")
@@ -461,8 +543,11 @@ async def generate_weekly_report(week_start: datetime.date, week_end: datetime.d
         return None
 
 async def batch_generate(start_date: datetime.date, end_date: datetime.date) -> None:
-    """Generate posts for the entire date range"""
+    """Generate posts for the entire date range with new strategy"""
     print(f"🚀 Starting batch generation from {start_date} to {end_date}...")
+    print("📅 New Strategy:")
+    print("  - Saturday: Generate Monday-Friday daily posts")
+    print("  - Sunday: Generate technical deep dive post")
     
     generated_files = []
     current_date = start_date
@@ -470,17 +555,33 @@ async def batch_generate(start_date: datetime.date, end_date: datetime.date) -> 
     while current_date <= end_date:
         print(f"\n📅 Processing {current_date}...")
         
-        # Generate daily post
-        daily_file = await generate_daily_post(current_date)
-        if daily_file:
-            generated_files.append(daily_file)
+        # Check if it's Saturday (weekday 5)
+        if current_date.weekday() == 5:  # Saturday
+            print("🗓️ Saturday detected - generating Monday-Friday daily posts...")
+            
+            # Generate daily posts for Monday to Friday
+            for i in range(5):
+                target_date = current_date - datetime.timedelta(days=5-i)  # Monday to Friday
+                daily_file = await generate_daily_post(target_date)
+                if daily_file:
+                    generated_files.append(daily_file)
         
-        # Generate weekly report on Sundays
-        if current_date.weekday() == 6:  # Sunday
-            week_start = current_date - datetime.timedelta(days=6)
-            weekly_file = await generate_weekly_report(week_start, current_date)
-            if weekly_file:
-                generated_files.append(weekly_file)
+        # Check if it's Sunday (weekday 6)
+        elif current_date.weekday() == 6:  # Sunday
+            print("🔬 Sunday detected - generating technical deep dive...")
+            
+            # Generate technical deep dive for the week
+            week_start = current_date - datetime.timedelta(days=6)  # Monday
+            week_end = current_date - datetime.timedelta(days=1)    # Friday
+            deep_dive_file = await generate_technical_deep_dive(week_start, week_end)
+            if deep_dive_file:
+                generated_files.append(deep_dive_file)
+        
+        # For other days, generate normal daily posts
+        else:
+            daily_file = await generate_daily_post(current_date)
+            if daily_file:
+                generated_files.append(daily_file)
         
         current_date += datetime.timedelta(days=1)
     
@@ -492,6 +593,10 @@ async def batch_generate(start_date: datetime.date, end_date: datetime.date) -> 
 def main():
     """Main function"""
     print("🌟 Daily AI Trend Reporter - Batch Generator")
+    print("=" * 50)
+    print("📅 New Strategy:")
+    print("  - Saturday: Generate Monday-Friday daily posts")
+    print("  - Sunday: Generate technical deep dive post")
     print("=" * 50)
     
     # Check API keys

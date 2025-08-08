@@ -5,7 +5,7 @@ Automatically generated daily technical digest on MLE/SDE frontiers using GitHub
 ## 🚀 Features
 
 - **Smart Weekly Schedule**: 
-  - **Saturday**: Generate Monday-Friday daily posts
+  - **Saturday**: Generate weekly report (Monday-Friday summary)
   - **Sunday**: Generate technical deep dive post with detailed code examples
 - **Focused Daily Digest**: Summarizes the latest 10 research papers from [Hugging Face Papers](https://huggingface.co/papers)
 - **Individual Paper Summaries**: Each paper gets its own 2-3 sentence summary
@@ -43,7 +43,7 @@ Add the following secret in your GitHub repository Settings > Secrets and variab
 Currently set to run daily at UTC 14:00 (7:00 AM PDT, 10:00 PM CST), with smart weekly scheduling:
 
 - **Monday-Friday**: Generate individual daily posts
-- **Saturday**: Generate Monday-Friday daily posts (batch mode)
+- **Saturday**: Generate weekly report (Monday-Friday summary) (batch mode)
 - **Sunday**: Generate technical deep dive post
 
 To modify frequency, edit the cron expression in `.github/workflows/daily_blog.yml`:
@@ -166,12 +166,12 @@ This project is configured to start generating content from July 30th, 2025.
 ### Weekly Schedule
 
 - **Monday-Friday**: Individual daily posts with latest research papers
-- **Saturday**: Batch generation of Monday-Friday daily posts
+- **Saturday**: Generate weekly report summarizing Monday-Friday research
 - **Sunday**: Technical deep dive post with detailed code implementations
 
 ### Technical Deep Dives
 
-Every Sunday, the system analyzes the week's research papers and selects the most frontier, attractive, and useful topic for a comprehensive technical deep dive. These posts include:
+Every Sunday, the system analyzes Saturday's weekly report and selects the most frontier, attractive, and useful topic for a comprehensive technical deep dive. These posts include:
 
 - Detailed technical explanations
 - Complete Python code implementations with comprehensive comments

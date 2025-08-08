@@ -375,39 +375,26 @@ async def generate_daily_post(target_date: datetime.date) -> Optional[str]:
     return filename
 
 async def generate_technical_deep_dive(week_start: datetime.date, week_end: datetime.date) -> Optional[str]:
-    """Generate technical deep dive post for the most interesting research from the week"""
+    """Generate technical deep dive post based on Saturday's weekly report"""
     print(f"🔬 Generating technical deep dive for {week_start} to {week_end}...")
     
-    # Get posts from this week
-    week_posts = []
+    # Get weekly report from Saturday
+    weekly_report_filename = f"_posts/{week_start.strftime('%Y-%m-%d')}-to-{week_end.strftime('%Y-%m-%d')}-weekly-report.md"
     
-    current_date = week_start
-    while current_date <= week_end:
-        weekday = current_date.strftime("%A").lower()
-        filename = f"_posts/{current_date.strftime('%Y-%m-%d')}-{weekday}-daily-ai-research-digest.md"
-        
-        if os.path.exists(filename):
-            with open(filename, 'r', encoding='utf-8') as f:
-                content = f.read()
-                week_posts.append({
-                    'date': current_date.strftime('%Y-%m-%d'),
-                    'content': content
-                })
-                print(f"  📄 Found daily post: {current_date.strftime('%Y-%m-%d')} ({weekday})")
-        else:
-            print(f"  ⚠️ Missing daily post: {current_date.strftime('%Y-%m-%d')} ({weekday})")
-        
-        current_date += datetime.timedelta(days=1)
-    
-    if not week_posts:
-        print("⚠️ No posts found for this week")
+    week_content = ""
+    if os.path.exists(weekly_report_filename):
+        with open(weekly_report_filename, 'r', encoding='utf-8') as f:
+            week_content = f.read()
+            print(f"  📄 Found weekly report: {weekly_report_filename}")
+    else:
+        print(f"  ⚠️ Missing weekly report: {weekly_report_filename}")
         return None
     
-    # Create technical deep dive prompt
+    # Create technical deep dive prompt based on weekly report
     deep_dive_prompt = (
         f"You are a senior AI researcher and technical writer with deep expertise in machine learning, deep learning, and AI systems. "
-        f"Based on the research papers from this week ({week_start.strftime('%Y-%m-%d')} to {week_end.strftime('%Y-%m-%d')}), "
-        f"identify the MOST FRONTIER, MOST ATTRACTIVE, and MOST USEFUL research topic. "
+        f"Based on the weekly research summary from {week_start.strftime('%Y-%m-%d')} to {week_end.strftime('%Y-%m-%d')}, "
+        f"identify the MOST FRONTIER, MOST ATTRACTIVE, and MOST USEFUL research topic mentioned in the weekly report. "
         f"Then write a comprehensive technical deep dive that includes:\n\n"
         f"1. **Introduction**: Explain why this research is groundbreaking and exciting\n"
         f"2. **Technical Background**: Provide the necessary theoretical foundation\n"
@@ -416,17 +403,14 @@ async def generate_technical_deep_dive(week_start: datetime.date, week_end: date
         f"5. **Practical Applications**: Show real-world use cases\n"
         f"6. **Future Implications**: Discuss the broader impact\n\n"
         f"Requirements:\n"
-        f"- Choose the MOST exciting and practical research from the week\n"
+        f"- Choose the MOST exciting and practical research from the weekly report\n"
         f"- Include detailed Python code with comprehensive comments\n"
         f"- Make the code educational and implementable\n"
         f"- Focus on cutting-edge techniques (transformers, diffusion models, RL, etc.)\n"
         f"- Include mathematical formulations where relevant\n"
         f"- Make it highly engaging and attractive to readers\n\n"
-        f"Weekly Posts:\n"
+        f"Weekly Report Content:\n{week_content}\n"
     )
-    
-    for i, post in enumerate(week_posts, 1):
-        deep_dive_prompt += f"\n--- Day {i} ({post['date']}) ---\n{post['content']}\n"
     
     # Call API for technical deep dive
     deep_dive_response = await call_ai_api([
@@ -552,7 +536,7 @@ async def batch_generate(start_date: datetime.date, end_date: datetime.date) -> 
     """Generate posts for the entire date range with new strategy"""
     print(f"🚀 Starting batch generation from {start_date} to {end_date}...")
     print("📅 New Strategy:")
-    print("  - Saturday: Generate Monday-Friday daily posts")
+    print("  - Saturday: Generate weekly report (Monday-Friday summary)")
     print("  - Sunday: Generate technical deep dive post")
     
     generated_files = []
@@ -563,14 +547,14 @@ async def batch_generate(start_date: datetime.date, end_date: datetime.date) -> 
         
         # Check if it's Saturday (weekday 5)
         if current_date.weekday() == 5:  # Saturday
-            print("🗓️ Saturday detected - generating Monday-Friday daily posts...")
+            print("📊 Saturday detected - generating weekly report...")
             
-            # Generate daily posts for Monday to Friday
-            for i in range(5):
-                target_date = current_date - datetime.timedelta(days=5-i)  # Monday to Friday
-                daily_file = await generate_daily_post(target_date)
-                if daily_file:
-                    generated_files.append(daily_file)
+            # Generate weekly report for Monday to Friday
+            week_start = current_date - datetime.timedelta(days=5)  # Monday
+            week_end = current_date - datetime.timedelta(days=1)    # Friday
+            weekly_file = await generate_weekly_report(week_start, week_end)
+            if weekly_file:
+                generated_files.append(weekly_file)
         
         # Check if it's Sunday (weekday 6)
         elif current_date.weekday() == 6:  # Sunday

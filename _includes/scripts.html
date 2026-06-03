@@ -77,9 +77,13 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!searchIndex) return;
 
     var terms = query.split(/\s+/);
+    var termRegexes = terms.map(function (t) {
+      var escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      return new RegExp('\\b' + escaped, 'i');
+    });
     var matches = searchIndex.filter(function (post) {
-      var text = (post.title + ' ' + post.content).toLowerCase();
-      return terms.every(function (t) { return text.indexOf(t) !== -1; });
+      var text = post.title + ' ' + post.content;
+      return termRegexes.every(function (re) { return re.test(text); });
     });
 
     postList.style.display = 'none';
@@ -100,8 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var lines = post.content.split('\n');
       var snippets = [];
       lines.forEach(function (line) {
-        var lower = line.toLowerCase();
-        if (terms.some(function (t) { return lower.indexOf(t) !== -1; }) && line.trim().length > 10) {
+        if (termRegexes.some(function (re) { return re.test(line); }) && line.trim().length > 10) {
           var snippet = line.trim();
           if (snippet.length > 150) snippet = snippet.substring(0, 150) + '...';
           snippets.push(snippet);
@@ -116,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
         html += '<div class="search-snippets">';
         snippets.slice(0, 3).forEach(function (s) {
           terms.forEach(function (t) {
-            var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+            var re = new RegExp('\\b(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
             s = s.replace(re, '<mark>$1</mark>');
           });
           html += '<p>' + s + '</p>';

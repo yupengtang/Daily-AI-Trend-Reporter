@@ -284,14 +284,24 @@ a {
     border-radius: 3px;
   }
 
-  pre {
-    background: #1e1e2e;
+  div.highlight,
+  figure.highlight {
+    background: #1e1e2e !important;
+    border-radius: 6px;
+    margin-bottom: 1.25em;
+  }
+
+  pre,
+  .highlight pre {
+    background: #1e1e2e !important;
     color: #cdd6f4;
     border-radius: 6px;
     padding: 20px 24px;
     overflow-x: auto;
     font-size: 14px;
     line-height: 1.6;
+    margin: 0;
+    border: none;
 
     code {
       background: none;
@@ -390,4 +400,34 @@ a {
   .post-card-title {
     font-size: 17px;
   }
+}
+
+// ── Syntax highlighting (dark) ──
+// Overrides minima's default light theme
+
+.highlight {
+  .c, .c1, .cm, .cs { color: #6c7086; font-style: italic; } // comments
+  .k, .kd, .kn, .kp, .kr, .kt { color: #cba6f7; }          // keywords
+  .s, .s1, .s2, .sb, .sc, .sd, .sh, .sx { color: #a6e3a1; } // strings
+  .si { color: #94e2d5; }                                     // interpolation
+  .na { color: #89dceb; }                                     // attribute
+  .nb { color: #f9e2af; }                                     // builtin
+  .nc, .nn { color: #f9e2af; }                                // class/module
+  .nf, .fm { color: #89b4fa; }                                // function
+  .ni { color: #cdd6f4; }                                     // entity
+  .no { color: #fab387; }                                     // constant
+  .nd { color: #89b4fa; }                                     // decorator
+  .nt { color: #f38ba8; }                                     // tag
+  .nv, .vi, .vg, .vc { color: #cdd6f4; }                     // variable
+  .o, .ow { color: #94e2d5; }                                 // operator
+  .p { color: #cdd6f4; }                                      // punctuation
+  .mi, .mf, .mh, .mo, .il { color: #fab387; }                // number
+  .bp { color: #f9e2af; }                                     // builtin pseudo
+  .kc { color: #fab387; }                                     // constant (True/False)
+  .err { color: #f38ba8; }                                    // error
+  .w { color: #cdd6f4; }                                      // whitespace
+  .n { color: #cdd6f4; }                                      // name
+  .se { color: #fab387; }                                     // string escape
+  .gi { color: #a6e3a1; }                                     // diff inserted
+  .gd { color: #f38ba8; }                                     // diff deleted
 }

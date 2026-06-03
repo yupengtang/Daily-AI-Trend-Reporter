@@ -48,8 +48,20 @@ document.addEventListener('DOMContentLoaded', function () {
   var searchResults = document.getElementById('search-results');
   var postList = document.getElementById('post-list');
   var loadMoreWrap = document.getElementById('load-more-wrap');
+  var searchBox = document.getElementById('search-box');
+  var clearBtn = document.getElementById('search-clear');
   var searchIndex = null;
   var debounceTimer = null;
+
+  clearBtn.addEventListener('click', function () {
+    searchInput.value = '';
+    searchBox.classList.remove('has-query');
+    searchResults.style.display = 'none';
+    searchResults.innerHTML = '';
+    postList.style.display = '';
+    if (loadMoreWrap) loadMoreWrap.style.display = '';
+    searchInput.focus();
+  });
 
   searchInput.addEventListener('focus', function () {
     if (searchIndex) return;
@@ -59,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   searchInput.addEventListener('input', function () {
+    searchBox.classList.toggle('has-query', searchInput.value.trim().length > 0);
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(doSearch, 200);
   });

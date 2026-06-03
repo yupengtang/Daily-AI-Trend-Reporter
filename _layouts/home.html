@@ -6,6 +6,8 @@ layout: default
   <section class="hero">
     <h1 class="hero-title">{{ site.title | escape }}</h1>
     <p class="hero-subtitle">{{ site.description | escape }}</p>
+    {%- assign paper_count = site.posts.size | times: 10 -%}
+    <p class="hero-stat">{{ paper_count }}+ papers indexed since January 2025</p>
   </section>
 
   {{ content }}

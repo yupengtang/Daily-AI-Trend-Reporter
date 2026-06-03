@@ -16,12 +16,19 @@ layout: default
     <button class="search-clear" id="search-clear" aria-label="Clear">&times;</button>
   </div>
 
+  <div class="filter-tabs" id="filter-tabs">
+    <button class="filter-tab active" data-filter="all">All</button>
+    <button class="filter-tab" data-filter="daily">Daily</button>
+    <button class="filter-tab" data-filter="weekly-report">Weekly</button>
+    <button class="filter-tab" data-filter="technical-deep-dive">Deep Dive</button>
+  </div>
+
   <section id="search-results" class="post-feed" style="display:none;"></section>
 
   {%- if site.posts.size > 0 -%}
   <section id="post-list" class="post-feed">
     {%- for post in site.posts -%}
-    <article class="post-card{% if forloop.index > 20 %} post-hidden{% endif %}">
+    <article class="post-card{% if forloop.index > 20 %} post-hidden{% endif %}" data-category="{{ post.category | default: 'daily' }}">
       <div class="post-card-meta">
         {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>

@@ -1,5 +1,16 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+
+  // ── Dark mode toggle ──
+  var toggle = document.getElementById('theme-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      document.documentElement.setAttribute('data-theme', isDark ? '' : 'dark');
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    });
+  }
+
   // ── Copy button for code blocks ──
   document.querySelectorAll('div.highlight, figure.highlight').forEach(function (block) {
     var btn = document.createElement('button');
@@ -11,22 +22,27 @@ document.addEventListener('DOMContentLoaded', function () {
       navigator.clipboard.writeText(text).then(function () {
         btn.textContent = 'Copied';
         btn.classList.add('copied');
-        setTimeout(function () {
-          btn.textContent = 'Copy';
-          btn.classList.remove('copied');
-        }, 2000);
+        setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
       });
     });
     block.style.position = 'relative';
     block.appendChild(btn);
   });
 
-  // ── PDF download button ──
+  // ── PDF download ──
   var pdfBtn = document.getElementById('download-pdf');
   if (pdfBtn) {
-    pdfBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      window.print();
+    pdfBtn.addEventListener('click', function (e) { e.preventDefault(); window.print(); });
+  }
+
+  // ── Back to top ──
+  var topBtn = document.getElementById('back-to-top');
+  if (topBtn) {
+    window.addEventListener('scroll', function () {
+      topBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    topBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
@@ -34,10 +50,39 @@ document.addEventListener('DOMContentLoaded', function () {
   var loadBtn = document.getElementById('load-more');
   if (loadBtn) {
     loadBtn.addEventListener('click', function () {
-      document.querySelectorAll('.post-hidden').forEach(function (el) {
-        el.classList.remove('post-hidden');
-      });
+      document.querySelectorAll('.post-hidden').forEach(function (el) { el.classList.remove('post-hidden'); });
       loadBtn.parentElement.remove();
+    });
+  }
+
+  // ── Category filter tabs ──
+  var filterTabs = document.getElementById('filter-tabs');
+  if (filterTabs) {
+    var postList = document.getElementById('post-list');
+    var loadMoreWrap = document.getElementById('load-more-wrap');
+
+    filterTabs.addEventListener('click', function (e) {
+      var tab = e.target.closest('.filter-tab');
+      if (!tab) return;
+
+      filterTabs.querySelectorAll('.filter-tab').forEach(function (t) { t.classList.remove('active'); });
+      tab.classList.add('active');
+
+      var filter = tab.getAttribute('data-filter');
+      var cards = postList.querySelectorAll('.post-card');
+      var shown = 0;
+
+      cards.forEach(function (card) {
+        var cat = card.getAttribute('data-category') || 'daily';
+        var match = filter === 'all' || cat === filter;
+        card.style.display = match ? '' : 'none';
+        if (match) {
+          card.classList.remove('post-hidden');
+          shown++;
+        }
+      });
+
+      if (loadMoreWrap) loadMoreWrap.style.display = filter === 'all' ? '' : 'none';
     });
   }
 
@@ -46,10 +91,11 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!searchInput) return;
 
   var searchResults = document.getElementById('search-results');
-  var postList = document.getElementById('post-list');
-  var loadMoreWrap = document.getElementById('load-more-wrap');
+  var searchPostList = document.getElementById('post-list');
+  var searchLoadMore = document.getElementById('load-more-wrap');
   var searchBox = document.getElementById('search-box');
   var clearBtn = document.getElementById('search-clear');
+  var searchFilterTabs = document.getElementById('filter-tabs');
   var searchIndex = null;
   var debounceTimer = null;
 
@@ -58,16 +104,16 @@ document.addEventListener('DOMContentLoaded', function () {
     searchBox.classList.remove('has-query');
     searchResults.style.display = 'none';
     searchResults.innerHTML = '';
-    postList.style.display = '';
-    if (loadMoreWrap) loadMoreWrap.style.display = '';
+    searchPostList.style.display = '';
+    if (searchLoadMore) searchLoadMore.style.display = '';
+    if (searchFilterTabs) searchFilterTabs.style.display = '';
     searchInput.focus();
   });
 
   searchInput.addEventListener('focus', function () {
     if (searchIndex) return;
-    fetch(document.querySelector('.site-title').getAttribute('href') + 'search.json')
-      .then(function (r) { return r.json(); })
-      .then(function (data) { searchIndex = data; });
+    var base = document.querySelector('.site-title').getAttribute('href');
+    fetch(base + 'search.json').then(function (r) { return r.json(); }).then(function (d) { searchIndex = d; });
   });
 
   searchInput.addEventListener('input', function () {
@@ -78,56 +124,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function doSearch() {
     var query = searchInput.value.trim().toLowerCase();
-
     if (!query || query.length < 2) {
       searchResults.style.display = 'none';
       searchResults.innerHTML = '';
-      postList.style.display = '';
-      if (loadMoreWrap) loadMoreWrap.style.display = '';
+      searchPostList.style.display = '';
+      if (searchLoadMore) searchLoadMore.style.display = '';
+      if (searchFilterTabs) searchFilterTabs.style.display = '';
       return;
     }
-
     if (!searchIndex) return;
 
     var terms = query.split(/\s+/);
     var termRegexes = terms.map(function (t) {
-      var escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      return new RegExp('\\b' + escaped, 'i');
+      return new RegExp('\\b' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
     });
     var matches = searchIndex.filter(function (post) {
       var text = post.title + ' ' + post.content;
       return termRegexes.every(function (re) { return re.test(text); });
     });
 
-    postList.style.display = 'none';
-    if (loadMoreWrap) loadMoreWrap.style.display = 'none';
+    searchPostList.style.display = 'none';
+    if (searchLoadMore) searchLoadMore.style.display = 'none';
+    if (searchFilterTabs) searchFilterTabs.style.display = 'none';
     searchResults.style.display = '';
 
     if (matches.length === 0) {
-      searchResults.innerHTML = '<p class="search-empty">No papers found for "' +
-        query.replace(/</g, '&lt;') + '"</p>';
+      searchResults.innerHTML = '<p class="search-empty">No papers found for "' + query.replace(/</g, '&lt;') + '"</p>';
       return;
     }
 
-    var html = '<p class="search-count">' + matches.length + ' result' +
-      (matches.length === 1 ? '' : 's') + '</p>';
-
+    var html = '<p class="search-count">' + matches.length + ' result' + (matches.length === 1 ? '' : 's') + '</p>';
     matches.slice(0, 50).forEach(function (post) {
-      // Extract matching paper lines from content
       var lines = post.content.split('\n');
       var snippets = [];
       lines.forEach(function (line) {
         if (termRegexes.some(function (re) { return re.test(line); }) && line.trim().length > 10) {
-          var snippet = line.trim();
-          if (snippet.length > 150) snippet = snippet.substring(0, 150) + '...';
-          snippets.push(snippet);
+          var s = line.trim();
+          if (s.length > 150) s = s.substring(0, 150) + '...';
+          snippets.push(s);
         }
       });
-
-      html += '<article class="post-card">' +
-        '<div class="post-card-meta"><time>' + post.date + '</time></div>' +
-        '<h2 class="post-card-title"><a href="' + post.url + '">' + post.title + '</a></h2>';
-
+      html += '<article class="post-card"><div class="post-card-meta"><time>' + post.date + '</time></div>';
+      html += '<h2 class="post-card-title"><a href="' + post.url + '">' + post.title + '</a></h2>';
       if (snippets.length > 0) {
         html += '<div class="search-snippets">';
         snippets.slice(0, 3).forEach(function (s) {
@@ -139,14 +177,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         html += '</div>';
       }
-
       html += '</article>';
     });
-
-    if (matches.length > 50) {
-      html += '<p class="search-count">Showing first 50 results</p>';
-    }
-
+    if (matches.length > 50) html += '<p class="search-count">Showing first 50</p>';
     searchResults.innerHTML = html;
   }
 });

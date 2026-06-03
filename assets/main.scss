@@ -48,6 +48,43 @@ a {
   background: $background-color;
   min-height: auto;
   padding: 20px 0;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-link {
+  color: $grey-color;
+  transition: color 0.15s ease;
+  display: flex;
+  &:hover { color: $brand-color; }
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: $grey-color;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s ease;
+  &:hover { color: $brand-color; }
+  .icon-moon { display: none; }
+}
+
+[data-theme="dark"] .theme-toggle {
+  .icon-sun { display: none; }
+  .icon-moon { display: block; }
 }
 
 .site-title {
@@ -64,26 +101,6 @@ a {
   }
 }
 
-.site-nav {
-  line-height: 1.4;
-  padding-top: 2px;
-
-  .page-link {
-    color: $grey-color;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    padding: 4px 0;
-    background: none;
-    transition: color 0.15s ease;
-
-    &:hover {
-      color: $text-color;
-      text-decoration: none;
-    }
-  }
-}
 
 // ── Hero ──
 
@@ -221,6 +238,38 @@ a {
     color: $text-color;
     padding: 1px 2px;
     border-radius: 2px;
+  }
+}
+
+// ── Filter tabs ──
+
+.filter-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.filter-tab {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-family: $base-font-family;
+  font-size: 13px;
+  font-weight: 500;
+  color: $grey-color;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover {
+    color: $text-color;
+    background: rgba($grey-color-light, 0.5);
+  }
+
+  &.active {
+    color: $brand-color;
+    background: rgba($brand-color, 0.08);
+    border-color: rgba($brand-color, 0.2);
   }
 }
 
@@ -464,21 +513,81 @@ a {
   }
 }
 
-// ── Post footer ──
+// ── Post navigation ──
 
-.post-footer {
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
   margin-top: 48px;
   padding-top: 24px;
   border-top: 1px solid $grey-color-light;
+}
 
-  a {
-    font-size: 14px;
-    color: $grey-color;
-    font-weight: 500;
+.post-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 45%;
+  text-decoration: none;
 
-    &:hover {
-      color: $brand-color;
-    }
+  &.post-nav-next {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+.post-nav-label {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $grey-color;
+}
+
+.post-nav-title {
+  font-size: 14px;
+  color: $text-color;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: color 0.15s ease;
+
+  .post-nav-link:hover & {
+    color: $brand-color;
+  }
+}
+
+// ── Back to top ──
+
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid $grey-color-light;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  color: $grey-color;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.2s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  &:hover {
+    color: $brand-color;
+    border-color: $brand-color;
   }
 }
 
@@ -637,8 +746,9 @@ figure.highlight:hover .copy-btn {
 @media print {
   .site-header,
   .site-footer,
-  .post-footer,
+  .post-nav,
   .post-actions,
+  .back-to-top,
   .copy-btn {
     display: none !important;
   }
@@ -683,4 +793,94 @@ figure.highlight:hover .copy-btn {
       page-break-inside: avoid;
     }
   }
+}
+
+// ── Dark mode ──
+
+$dark-bg: #1a1a2e;
+$dark-surface: #222240;
+$dark-text: #e2e2e8;
+$dark-text-secondary: #9ca3af;
+$dark-border: #2d2d4a;
+
+[data-theme="dark"] {
+  body {
+    background: $dark-bg;
+    color: $dark-text;
+  }
+
+  .site-header {
+    background: $dark-bg;
+    border-color: $dark-border;
+  }
+
+  .site-title,
+  .site-title:visited {
+    color: $dark-text;
+  }
+
+  .hero-title { color: $dark-text; }
+  .hero-subtitle { color: $dark-text-secondary; }
+
+  .home > p { color: $dark-text-secondary; }
+  .home > p strong { color: $dark-text; }
+
+  #search-input {
+    background: $dark-surface;
+    border-color: $dark-border;
+    color: $dark-text;
+    box-shadow: none;
+    &::placeholder { color: darken($dark-text-secondary, 15%); }
+    &:focus {
+      border-color: rgba($brand-color, 0.5);
+      box-shadow: 0 0 0 3px rgba($brand-color, 0.1);
+    }
+  }
+
+  .search-icon { color: darken($dark-text-secondary, 15%); }
+  .search-clear { color: $dark-text-secondary; }
+
+  .filter-tab {
+    color: $dark-text-secondary;
+    &:hover { color: $dark-text; background: rgba(255,255,255,0.05); }
+    &.active { color: $brand-color; background: rgba($brand-color, 0.1); border-color: rgba($brand-color, 0.25); }
+  }
+
+  .post-card { border-color: $dark-border; }
+  .post-card-title a { color: $dark-text; &:hover { color: $brand-color; } }
+  .post-card-meta time { color: $dark-text-secondary; }
+
+  .post-title { color: $dark-text; }
+  .post-meta time { color: $dark-text-secondary; }
+  .post-content { color: $dark-text-secondary;
+    strong { color: $dark-text; }
+    h1, h2, h3, h4, h5, h6 { color: $dark-text; }
+    a { color: $brand-color; }
+    code { background: rgba(255,255,255,0.06); }
+    blockquote { color: $dark-text-secondary; }
+    hr { border-color: $dark-border; }
+  }
+
+  .post-nav { border-color: $dark-border; }
+  .post-nav-title { color: $dark-text; }
+
+  .btn-pdf { color: $dark-text-secondary; border-color: $dark-border;
+    &:hover { color: $brand-color; border-color: $brand-color; }
+  }
+
+  .btn-load-more { color: $dark-text-secondary; border-color: $dark-border;
+    &:hover { color: $brand-color; border-color: $brand-color; }
+  }
+
+  .back-to-top { background: $dark-surface; border-color: $dark-border; color: $dark-text-secondary;
+    &:hover { color: $brand-color; border-color: $brand-color; }
+  }
+
+  .site-footer { background: $dark-bg; border-color: $dark-border; }
+  .footer-text { color: $dark-text-secondary; }
+  .footer-meta { color: darken($dark-text-secondary, 10%);
+    a { color: $dark-text-secondary; }
+  }
+
+  mark { background: rgba($brand-color, 0.2); color: $dark-text; }
 }

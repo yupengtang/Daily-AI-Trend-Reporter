@@ -5,3 +5,9 @@ baseurl: "/Daily-AI-Trend-Reporter"
 theme: minima
 markdown: kramdown
 show_excerpts: false
+
+plugins:
+  - jekyll-feed
+
+feed:
+  posts_limit: 30

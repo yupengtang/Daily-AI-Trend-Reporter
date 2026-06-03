@@ -16,7 +16,7 @@ A GitHub Actions cron job runs daily at 14:00 UTC. The script hits the [Hugging 
 
 ## Setup
 
-1. **Add your token.** Repository Settings → Secrets → `HF_TOKEN`. Needs `models:read` scope on a GitHub Personal Access Token.
+1. **Add your token.** Go to [GitHub Models](https://github.com/marketplace/models), generate an API key (Fine-grained PAT with **Models: Read** permission). Then add it as `HF_TOKEN` in Repository Settings → Secrets.
 2. **Enable Pages.** Repository Settings → Pages → Source: "GitHub Actions".
 3. **Test it.** Actions tab → "Daily AI Frontier - Daily Generation" → Run workflow.
 

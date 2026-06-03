@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, August 06, 2025"
 date: 2025-08-06
 ---
 
-** Keywords**: multimodal video generation, autoregressive modeling, diffusion language models, reinforcement learning, code search, model alignment, fine-tuning techniques, large language models, high-speed inference, visual understanding, tool integration, alignment attribution
+Keywords: multimodal video generation, autoregressive modeling, diffusion language models, reinforcement learning, code search, model alignment, fine-tuning techniques, large language models, high-speed inference, visual understanding, tool integration, alignment attribution
 
 **1. LongVie: Multimodal-Guided Controllable Ultra-Long Video Generation**  
  [Read Paper](https://huggingface.co/papers/2508.03694)  

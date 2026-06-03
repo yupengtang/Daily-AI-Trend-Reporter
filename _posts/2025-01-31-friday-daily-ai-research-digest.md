@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, January 31, 2025"
 date: 2025-01-31
 ---
 
-** Keywords**: LLM safeguards, reasoning-based AI, distributed systems, medical reasoning, synthetic data, vision-language models, autonomous navigation, training efficiency, inference optimization, collaborative agents, benchmarking, deep learning
+Keywords: LLM safeguards, reasoning-based AI, distributed systems, medical reasoning, synthetic data, vision-language models, autonomous navigation, training efficiency, inference optimization, collaborative agents, benchmarking, deep learning
 
 **1. GuardReasoner: Towards Reasoning-based LLM Safeguards**  
  [Read Paper](https://huggingface.co/papers/2501.18492)  

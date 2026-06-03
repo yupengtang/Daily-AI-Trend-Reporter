@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Weekly AI Research Summary - February 03 to February 07, 2025 (Saturday)"
+title: "Weekly Report - February 03 to February 07, 2025"
 date: 2025-02-08 12:00:00 +0000
-categories: [AI Research, Weekly Summary]
-tags: [artificial intelligence, research papers, weekly digest]
+category: weekly-report
 ---
 
-# Weekly AI Research Summary: February 03 - February 07, 2025
+# Weekly Report: February 03 - February 07, 2025
 
 ## Week Overview
 This week in AI research highlighted significant advancements in natural language processing (NLP), reinforcement learning (RL), and generative models. A noticeable trend was the integration of multimodal learning techniques, which combine text, image, and audio data to enhance model performance. Researchers also focused on improving model interpretability and efficiency, addressing ongoing concerns about the transparency and sustainability of AI systems.

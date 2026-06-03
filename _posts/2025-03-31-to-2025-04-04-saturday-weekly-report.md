@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "Weekly AI Research Summary - March 31 to April 04, 2025 (Saturday)"
+title: "Weekly Report - March 31 to April 04, 2025"
 date: 2025-04-05 12:00:00 +0000
-categories: [AI Research, Weekly Summary]
-tags: [artificial intelligence, research papers, weekly digest]
+category: weekly-report
 ---
 
 # Weekly Research Summary: AI Papers (March 31 - April 04, 2025)

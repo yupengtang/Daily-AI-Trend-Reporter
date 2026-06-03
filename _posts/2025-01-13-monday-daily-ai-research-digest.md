@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, January 13, 2025"
 date: 2025-01-13
 ---
 
-** Keywords**: self-evolving critic, retrieval-augmented generation, visual reasoning, robotic manipulation, video understanding, multimodal models, multiagent finetuning, structured image understanding, video customization, diffusion transformers, personalization, spatial constraints
+Keywords: self-evolving critic, retrieval-augmented generation, visual reasoning, robotic manipulation, video understanding, multimodal models, multiagent finetuning, structured image understanding, video customization, diffusion transformers, personalization, spatial constraints
 
 **1. Enabling Scalable Oversight via Self-Evolving Critic**  
  [Read Paper](https://huggingface.co/papers/2501.05727)  

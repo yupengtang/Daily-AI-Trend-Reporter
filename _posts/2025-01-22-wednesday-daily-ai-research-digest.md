@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, January 22, 2025"
 date: 2025-01-22
 ---
 
-** Keywords**: language models, multi-discipline video understanding, mixture-of-expert models, automated GUI interaction, token modulation, diffusion models, multi-modal reward models, self-evolving agents, adaptive frameworks, load balancing, personalization techniques, realistic environments
+Keywords: language models, multi-discipline video understanding, mixture-of-expert models, automated GUI interaction, token modulation, diffusion models, multi-modal reward models, self-evolving agents, adaptive frameworks, load balancing, personalization techniques, realistic environments
 
 **1. Agent-R: Training Language Model Agents to Reflect via Iterative
   Self-Training**  

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, February 04, 2025"
 date: 2025-02-04
 ---
 
-** Keywords**: human animation, alignment algorithms, reinforcement learning, preference leakage, multimodal understanding, security benchmarking, diffusion models, language models, embedding layers, retrieval-augmented generation, abstraction reasoning, visual capabilities
+Keywords: human animation, alignment algorithms, reinforcement learning, preference leakage, multimodal understanding, security benchmarking, diffusion models, language models, embedding layers, retrieval-augmented generation, abstraction reasoning, visual capabilities
 
 **1. OmniHuman-1: Rethinking the Scaling-Up of One-Stage Conditioned Human
   Animation Models**  

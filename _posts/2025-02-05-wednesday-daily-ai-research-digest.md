@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, February 05, 2025"
 date: 2025-02-05
 ---
 
-** Keywords**: video models, reinforcement learning, large language models, automated test-case synthesis, motion generation, inference-time search, autoencoders, panoptic segmentation, controllable generations, agent inference, KV cache compression, mixture-of-agents
+Keywords: video models, reinforcement learning, large language models, automated test-case synthesis, motion generation, inference-time search, autoencoders, panoptic segmentation, controllable generations, agent inference, KV cache compression, mixture-of-agents
 
 **1. VideoJAM: Joint Appearance-Motion Representations for Enhanced Motion
   Generation in Video Models**  

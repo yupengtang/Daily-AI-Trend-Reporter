@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, January 14, 2025"
 date: 2025-01-14
 ---
 
-** Keywords**: mathematical reasoning, tensor product attention, biomedical image captioning, large language models, multimodal interaction, video generation, medical reasoning, web traversal, LLM training, spike-aware optimization, 3D object recognition, dataset development
+Keywords: mathematical reasoning, tensor product attention, biomedical image captioning, large language models, multimodal interaction, video generation, medical reasoning, web traversal, LLM training, spike-aware optimization, 3D object recognition, dataset development
 
 **1. The Lessons of Developing Process Reward Models in Mathematical
   Reasoning**  

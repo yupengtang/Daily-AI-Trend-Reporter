@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, July 30, 2025"
 date: 2025-07-30
 ---
 
-** Keywords**: 3D world generation, image generation, chemical language models, CUDA optimization, EEG classification, preference optimization, animal recognition, video object segmentation
+Keywords: 3D world generation, image generation, chemical language models, CUDA optimization, EEG classification, preference optimization, animal recognition, video object segmentation
 
 **1. HunyuanWorld 1.0: Generating Immersive, Explorable, and Interactive 3D Worlds from Words or Pixels**  
  [Read Paper](https://huggingface.co/papers/2507.14111)  

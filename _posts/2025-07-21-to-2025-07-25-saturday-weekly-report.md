@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "Weekly AI Research Summary - July 21 to July 25, 2025 (Saturday)"
+title: "Weekly Report - July 21 to July 25, 2025"
 date: 2025-07-26 12:00:00 +0000
-categories: [AI Research, Weekly Summary]
-tags: [artificial intelligence, research papers, weekly digest]
+category: weekly-report
 ---
 
 # Weekly Research Summary: AI Papers (July 21 - July 25, 2025)

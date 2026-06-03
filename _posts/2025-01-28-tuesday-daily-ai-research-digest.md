@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, January 28, 2025"
 date: 2025-01-28
 ---
 
-** Keywords**: Qwen2.5, Baichuan-Omni, Reinforcement Learning, RNN-Attention, Multilingual Dataset, ConvNet, Transformer, Language Models, Sparsity, Software Engineering, Vision Language Models, Multi-Modal Models
+Keywords: Qwen2.5, Baichuan-Omni, Reinforcement Learning, RNN-Attention, Multilingual Dataset, ConvNet, Transformer, Language Models, Sparsity, Software Engineering, Vision Language Models, Multi-Modal Models
 
 **1. Qwen2.5-1M Technical Report**  
  [Read Paper](https://huggingface.co/papers/2501.15383)  

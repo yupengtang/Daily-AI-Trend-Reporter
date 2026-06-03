@@ -231,6 +231,13 @@ a {
   line-height: 1.75;
   color: $grey-color-dark;
 
+  // Keywords line at top of daily digests
+  > p:first-child {
+    font-size: 13px;
+    color: $grey-color;
+    letter-spacing: 0.01em;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: "Source Serif 4", Georgia, serif;
     color: $text-color;

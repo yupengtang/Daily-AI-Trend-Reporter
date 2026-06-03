@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, January 16, 2025"
 date: 2025-01-16
 ---
 
-** Keywords**: open datasets, multi-modal retrieval, generative models, video generation, content generation, multimodal reasoning, music generation, visual perception, machine learning, private inference, image matching, zero-shot learning
+Keywords: open datasets, multi-modal retrieval, generative models, video generation, content generation, multimodal reasoning, music generation, visual perception, machine learning, private inference, image matching, zero-shot learning
 
 **1. Towards Best Practices for Open Datasets for LLM Training**  
  [Read Paper](https://huggingface.co/papers/2501.08365)  

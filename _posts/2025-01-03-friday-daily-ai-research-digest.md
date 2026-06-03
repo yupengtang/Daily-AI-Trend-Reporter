@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, January 03, 2025"
 date: 2025-01-03
 ---
 
-** Keywords**: multimodal learning, video object insertion, code generation, spatial-temporal understanding, latent diffusion models, image safety, large language models, geo-spatial reasoning, mobile agents, pretraining techniques, optimization dilemma, human-comparable evaluation
+Keywords: multimodal learning, video object insertion, code generation, spatial-temporal understanding, latent diffusion models, image safety, large language models, geo-spatial reasoning, mobile agents, pretraining techniques, optimization dilemma, human-comparable evaluation
 
 **1. 2.5 Years in Class: A Multimodal Textbook for Vision-Language
   Pretraining**  

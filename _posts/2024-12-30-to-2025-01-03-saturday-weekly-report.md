@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Weekly AI Research Summary - December 30 to January 03, 2025 (Saturday)"
+title: "Weekly Report - December 30 to January 03, 2025"
 date: 2025-01-04 12:00:00 +0000
-categories: [AI Research, Weekly Summary]
-tags: [artificial intelligence, research papers, weekly digest]
+category: weekly-report
 ---
 
-# Weekly AI Research Summary (December 30, 2024 – January 3, 2025)
+# Weekly Report (December 30, 2024 – January 3, 2025)
 
 ## Week Overview
 The first week of January 2025 showcased significant advancements in AI research, focusing on generative models, reinforcement learning, and ethical AI frameworks. Researchers are increasingly addressing the challenges associated with model interpretability and bias mitigation, thereby enhancing the applicability of AI systems across various domains. Key themes included:

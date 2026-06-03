@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Weekly AI Research Summary - January 20 to January 24, 2025 (Saturday)"
+title: "Weekly Report - January 20 to January 24, 2025"
 date: 2025-01-25 12:00:00 +0000
-categories: [AI Research, Weekly Summary]
-tags: [artificial intelligence, research papers, weekly digest]
+category: weekly-report
 ---
 
-# Weekly AI Research Summary: January 20 - January 24, 2025
+# Weekly Report: January 20 - January 24, 2025
 
 ## Week Overview
 The week of January 20 to January 24, 2025, has been marked by significant advancements in the fields of neural architecture search, unsupervised learning, and ethical AI. Researchers are increasingly focusing on making AI systems more interpretable and efficient, with a notable shift towards methods that reduce reliance on large labeled datasets. The integration of multi-modal learning systems is also gaining traction, indicating a growing interest in creating more holistic AI models that can process diverse types of data.

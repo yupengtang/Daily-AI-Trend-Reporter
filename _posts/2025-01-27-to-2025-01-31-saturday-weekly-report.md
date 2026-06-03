@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "Weekly AI Research Summary - January 27 to January 31, 2025 (Saturday)"
+title: "Weekly Report - January 27 to January 31, 2025"
 date: 2025-02-01 12:00:00 +0000
-categories: [AI Research, Weekly Summary]
-tags: [artificial intelligence, research papers, weekly digest]
+category: weekly-report
 ---
 
 # Weekly Research Summary: January 27 - January 31, 2025

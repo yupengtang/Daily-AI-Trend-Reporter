@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, February 06, 2025"
 date: 2025-02-06
 ---
 
-** Keywords**: language models, reasoning, data-centric training, multimodal reasoning, financial simulation, cognitive alignment, code generation, probabilistic inference, Monte Carlo methods, distillation, structured thinking, behavioral simulation
+Keywords: language models, reasoning, data-centric training, multimodal reasoning, financial simulation, cognitive alignment, code generation, probabilistic inference, Monte Carlo methods, distillation, structured thinking, behavioral simulation
 
 **1. SmolLM2: When Smol Goes Big -- Data-Centric Training of a Small Language
   Model**  

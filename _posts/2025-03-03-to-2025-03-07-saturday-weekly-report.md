@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Weekly AI Research Summary - March 03 to March 07, 2025 (Saturday)"
+title: "Weekly Report - March 03 to March 07, 2025"
 date: 2025-03-08 12:00:00 +0000
-categories: [AI Research, Weekly Summary]
-tags: [artificial intelligence, research papers, weekly digest]
+category: weekly-report
 ---
 
-# Weekly AI Research Summary: March 03 - March 07, 2025
+# Weekly Report: March 03 - March 07, 2025
 
 ## Week Overview
 The week of March 03 to March 07, 2025, has showcased significant advancements in the fields of Natural Language Processing (NLP), computer vision, and reinforcement learning. Notable trends include:

@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Weekly AI Research Summary - March 10 to March 14, 2025 (Saturday)"
+title: "Weekly Report - March 10 to March 14, 2025"
 date: 2025-03-15 12:00:00 +0000
-categories: [AI Research, Weekly Summary]
-tags: [artificial intelligence, research papers, weekly digest]
+category: weekly-report
 ---
 
-# Weekly AI Research Summary: March 10 - March 14, 2025
+# Weekly Report: March 10 - March 14, 2025
 
 ## Week Overview
 This week in AI research showcased significant advancements in generative models, reinforcement learning, and ethical AI frameworks. A notable trend is the increasing focus on interpretability and fairness in AI systems, indicating a shift towards responsible AI development. Papers also highlighted innovations in language models and their applications in real-world scenarios, showcasing the versatility and necessity of AI in modern technology.

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, February 07, 2025"
 date: 2025-02-07
 ---
 
-** Keywords**: feature flow, language models, AlphaGeometry2, interpretable features, AI oversight, omni-modal models, dynamic content augmentation, speech synthesis, chain-of-thought reasoning, instruction following, diffusion transformers, modality alignment
+Keywords: feature flow, language models, AlphaGeometry2, interpretable features, AI oversight, omni-modal models, dynamic content augmentation, speech synthesis, chain-of-thought reasoning, instruction following, diffusion transformers, modality alignment
 
 **1. Analyze Feature Flow to Enhance Interpretation and Steering in Language
   Models**  

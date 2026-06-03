@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Weekly AI Research Summary - March 17 to March 21, 2025 (Saturday)"
+title: "Weekly Report - March 17 to March 21, 2025"
 date: 2025-03-22 12:00:00 +0000
-categories: [AI Research, Weekly Summary]
-tags: [artificial intelligence, research papers, weekly digest]
+category: weekly-report
 ---
 
-# Weekly AI Research Summary (March 17 - March 21, 2025)
+# Weekly Report (March 17 - March 21, 2025)
 
 ## Week Overview
 During the week of March 17 to March 21, 2025, the AI research landscape showcased a vibrant mix of advancements in deep learning architectures, reinforcement learning applications, and innovative methodologies for natural language processing (NLP). Key themes included the optimization of transformer models, the rise of self-supervised learning techniques, and a focus on ethical AI frameworks. The convergence of these domains indicates a continued shift towards more robust, efficient, and responsible AI systems.

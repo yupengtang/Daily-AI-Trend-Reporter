@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "Weekly AI Research Summary - July 28 to August 01, 2025 (Saturday)"
+title: "Weekly Report - July 28 to August 01, 2025"
 date: 2025-08-02 12:00:00 +0000
-categories: [AI Research, Weekly Summary]
-tags: [artificial intelligence, research papers, weekly digest]
+category: weekly-report
 ---
 
 ## AI Research Weekly Summary: July 28 - August 1, 2025

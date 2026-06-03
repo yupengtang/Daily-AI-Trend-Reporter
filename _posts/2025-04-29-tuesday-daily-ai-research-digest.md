@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, April 29, 2025"
 date: 2025-04-29
 ---
 
-** Keywords**: AI research, machine learning, deep learning, computer vision, natural language processing, model optimization, edge computing, autonomous systems
+Keywords: AI research, machine learning, deep learning, computer vision, natural language processing, model optimization, edge computing, autonomous systems
 
 **1. Advanced AI Research in Machine Learning**  
  [Read Paper](https://huggingface.co/papers/2507.14111)  

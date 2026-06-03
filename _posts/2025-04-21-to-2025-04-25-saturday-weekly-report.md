@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Weekly AI Research Summary - April 21 to April 25, 2025 (Saturday)"
+title: "Weekly Report - April 21 to April 25, 2025"
 date: 2025-04-26 12:00:00 +0000
-categories: [AI Research, Weekly Summary]
-tags: [artificial intelligence, research papers, weekly digest]
+category: weekly-report
 ---
 
-# Weekly AI Research Summary (April 21 - April 25, 2025)
+# Weekly Report (April 21 - April 25, 2025)
 
 ## Week Overview
 During the week of April 21 to April 25, 2025, the AI research community witnessed significant advancements in various domains, particularly in natural language processing (NLP), computer vision, and reinforcement learning. A key theme throughout the week was the growing emphasis on model interpretability and ethical AI, with researchers striving to make AI systems more transparent and accountable. Additionally, innovative methodologies that leverage transformer architectures for improved performance were prominent, indicating a continued trend towards enhancing existing frameworks.

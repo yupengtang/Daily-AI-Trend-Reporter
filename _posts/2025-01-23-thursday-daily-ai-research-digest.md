@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, January 23, 2025"
 date: 2025-01-23
 ---
 
-** Keywords**: reinforcement learning, large language models, multimodal models, video understanding, film automation, multi-agent systems, preference optimization, 3D reconstruction, textual feedback, reasoning capability, fine-tuning, conversational AI
+Keywords: reinforcement learning, large language models, multimodal models, video understanding, film automation, multi-agent systems, preference optimization, 3D reconstruction, textual feedback, reasoning capability, fine-tuning, conversational AI
 
 **1. DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via
   Reinforcement Learning**  

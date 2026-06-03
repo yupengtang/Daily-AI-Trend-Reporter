@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, August 05, 2025"
 date: 2025-08-05
 ---
 
-** Keywords**: virtual cell models, agentic AI, large language models, vision-language models, multimodal learning, distributed training, safety alignment, text-to-image diffusion, lifelong learning, embodied agents, cybersecurity, instruction tuning
+Keywords: virtual cell models, agentic AI, large language models, vision-language models, multimodal learning, distributed training, safety alignment, text-to-image diffusion, lifelong learning, embodied agents, cybersecurity, instruction tuning
 
 **1. CellForge: Agentic Design of Virtual Cell Models**  
  [Read Paper](https://huggingface.co/papers/2508.02276)  

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, January 01, 2025"
 date: 2025-01-01
 ---
 
-** Keywords**: explanatory instructions, multimodal LLMs, medical imaging, compositional generalization, 4D generation, LLM reasoning, software engineering agents, text to audio generation, image editing, generative avatars, learned embedding propagation, zero-shot generalization
+Keywords: explanatory instructions, multimodal LLMs, medical imaging, compositional generalization, 4D generation, LLM reasoning, software engineering agents, text to audio generation, image editing, generative avatars, learned embedding propagation, zero-shot generalization
 
 **1. Explanatory Instructions: Towards Unified Vision Tasks Understanding and
   Zero-shot Generalization**  

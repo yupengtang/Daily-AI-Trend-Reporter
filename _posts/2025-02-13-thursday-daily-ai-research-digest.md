@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, February 13, 2025"
 date: 2025-02-13
 ---
 
-** Keywords**: transferability, reasoning, large language models, multilingual evaluation, distillation, text image generation, video relighting, text-to-video generation, pretraining, GUI automation, sequence parallelism, linear attention
+Keywords: transferability, reasoning, large language models, multilingual evaluation, distillation, text image generation, video relighting, text-to-video generation, pretraining, GUI automation, sequence parallelism, linear attention
 
 **1. Fino1: On the Transferability of Reasoning Enhanced LLMs to Finance**  
  [Read Paper](https://huggingface.co/papers/2502.08127)  

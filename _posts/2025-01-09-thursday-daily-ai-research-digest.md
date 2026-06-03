@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, January 09, 2025"
 date: 2025-01-09
 ---
 
-** Keywords**: LLMs, math reasoning, agent-based search, meta reasoning, multimodal learning, scientific research, GUI agents, 3D object reconstruction, chain-of-thought, generative models, creative generation, deep learning
+Keywords: LLMs, math reasoning, agent-based search, meta reasoning, multimodal learning, scientific research, GUI agents, 3D object reconstruction, chain-of-thought, generative models, creative generation, deep learning
 
 **1. rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep
   Thinking**  

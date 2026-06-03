@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, August 07, 2025"
 date: 2025-08-07
 ---
 
-** Keywords**: AI research, machine learning, deep learning, computer vision, natural language processing, model optimization, edge computing, autonomous systems
+Keywords: AI research, machine learning, deep learning, computer vision, natural language processing, model optimization, edge computing, autonomous systems
 
 **1. VeriGUI: Verifiable Long-Chain GUI Dataset**  
  [Read Paper](https://huggingface.co/papers/2508.04026)  

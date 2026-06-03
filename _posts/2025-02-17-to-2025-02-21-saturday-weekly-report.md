@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Weekly AI Research Summary - February 17 to February 21, 2025 (Saturday)"
+title: "Weekly Report - February 17 to February 21, 2025"
 date: 2025-02-22 12:00:00 +0000
-categories: [AI Research, Weekly Summary]
-tags: [artificial intelligence, research papers, weekly digest]
+category: weekly-report
 ---
 
-# Weekly AI Research Summary: February 17 - February 21, 2025
+# Weekly Report: February 17 - February 21, 2025
 
 ## Week Overview
 The week of February 17 to February 21, 2025, showcased significant advancements in AI research, particularly in the realms of natural language processing (NLP), reinforcement learning (RL), and ethical AI. Key themes included the integration of multimodal learning systems, enhancements in model interpretability, and the growing emphasis on fairness and accountability in AI systems. Researchers are increasingly focusing on real-world applications, ensuring that AI technologies are robust and ethically sound.

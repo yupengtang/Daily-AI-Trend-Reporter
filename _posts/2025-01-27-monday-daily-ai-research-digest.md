@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, January 27, 2025"
 date: 2025-01-27
 ---
 
-** Keywords**: humanity, language models, evaluation metrics, redundancy principles, reinforcement learning, Gaussian codec, medical records, multimodal models, remote sensing, 3D correspondence, feature finetuning, virtual try-on
+Keywords: humanity, language models, evaluation metrics, redundancy principles, reinforcement learning, Gaussian codec, medical records, multimodal models, remote sensing, 3D correspondence, feature finetuning, virtual try-on
 
 **1. Humanity's Last Exam**  
  [Read Paper](https://huggingface.co/papers/2501.14249)  

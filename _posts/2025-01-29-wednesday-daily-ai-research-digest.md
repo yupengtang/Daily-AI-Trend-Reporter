@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, January 29, 2025"
 date: 2025-01-29
 ---
 
-** Keywords**: foundation models, large language models, model optimization, quantization techniques, neural architecture search, knowledge transfer, interpretability, dataset benchmarking, moral alignment, image diffusion models, scalable generation, efficient serving
+Keywords: foundation models, large language models, model optimization, quantization techniques, neural architecture search, knowledge transfer, interpretability, dataset benchmarking, moral alignment, image diffusion models, scalable generation, efficient serving
 
 **1. SFT Memorizes, RL Generalizes: A Comparative Study of Foundation Model
   Post-training**  

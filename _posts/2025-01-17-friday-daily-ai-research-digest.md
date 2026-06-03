@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, January 17, 2025"
 date: 2025-01-17
 ---
 
-** Keywords**: diffusion models, machine writing, large language models, visual tokenizers, generative video models, vision-language-action models, portrait relighting, textured mesh generation, patient simulators, text-to-image generation, reasoning models, efficient synthesis
+Keywords: diffusion models, machine writing, large language models, visual tokenizers, generative video models, vision-language-action models, portrait relighting, textured mesh generation, patient simulators, text-to-image generation, reasoning models, efficient synthesis
 
 **1. Inference-Time Scaling for Diffusion Models beyond Scaling Denoising
   Steps**  

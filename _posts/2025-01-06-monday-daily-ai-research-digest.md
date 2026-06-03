@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, January 06, 2025"
 date: 2025-01-06
 ---
 
-** Keywords**: robotics manipulation, real-time vision, speech interaction, multi-modal large language models, preference optimization, generative transformers, human preference learning, multilingual embeddings, automated experimental design, model discovery, image generation, video generation
+Keywords: robotics manipulation, real-time vision, speech interaction, multi-modal large language models, preference optimization, generative transformers, human preference learning, multilingual embeddings, automated experimental design, model discovery, image generation, video generation
 
 **1. EnerVerse: Envisioning Embodied Future Space for Robotics Manipulation**  
  [Read Paper](https://huggingface.co/papers/2501.01895)  

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, January 21, 2025"
 date: 2025-01-21
 ---
 
-** Keywords**: generative video, interactive gaming, knowledge extraction, unlabeled video analysis, low-rank adaptation, white-box watermarking, machine learning, video content generation, game design, multimedia technologies, data-driven learning, AI in gaming
+Keywords: generative video, interactive gaming, knowledge extraction, unlabeled video analysis, low-rank adaptation, white-box watermarking, machine learning, video content generation, game design, multimedia technologies, data-driven learning, AI in gaming
 
 **1. GameFactory: Creating New Games with Generative Interactive Videos**  
  [Read Paper](https://huggingface.co/papers/2501.08325)  

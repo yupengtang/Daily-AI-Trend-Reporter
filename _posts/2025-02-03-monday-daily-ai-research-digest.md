@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, February 03, 2025"
 date: 2025-02-03
 ---
 
-** Keywords**: test-time scaling, reward-guided decoding, video matting, self-supervised learning, knowledge graphs, scalable softmax, pixel perception, world models, constitutional classifiers, concept unlearning, diffusion models, learning-rate scheduling
+Keywords: test-time scaling, reward-guided decoding, video matting, self-supervised learning, knowledge graphs, scalable softmax, pixel perception, world models, constitutional classifiers, concept unlearning, diffusion models, learning-rate scheduling
 
 **1. s1: Simple test-time scaling**  
  [Read Paper](https://huggingface.co/papers/2501.19393)  

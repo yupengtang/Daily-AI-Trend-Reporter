@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "Weekly AI Research Summary - February 10 to February 14, 2025 (Saturday)"
+title: "Weekly Report - February 10 to February 14, 2025"
 date: 2025-02-15 12:00:00 +0000
-categories: [AI Research, Weekly Summary]
-tags: [artificial intelligence, research papers, weekly digest]
+category: weekly-report
 ---
 
 # Weekly Research Summary: AI Papers (February 10 - February 14, 2025)

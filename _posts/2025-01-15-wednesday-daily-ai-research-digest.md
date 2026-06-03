@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, January 15, 2025"
 date: 2025-01-15
 ---
 
-** Keywords**: foundation models, attention mechanisms, line art colorization, multi-instance generation, video generation, multi-modal AI, large language models, interactive image editing, token analysis, single-cell analysis, AI copilot, hallucinations in AI
+Keywords: foundation models, attention mechanisms, line art colorization, multi-instance generation, video generation, multi-modal AI, large language models, interactive image editing, token analysis, single-cell analysis, AI copilot, hallucinations in AI
 
 **1. MiniMax-01: Scaling Foundation Models with Lightning Attention**  
  [Read Paper](https://huggingface.co/papers/2501.08313)  

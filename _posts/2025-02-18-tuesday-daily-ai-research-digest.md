@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, February 18, 2025"
 date: 2025-02-18
 ---
 
-** Keywords**: AI research, machine learning, deep learning, computer vision, natural language processing, model optimization, edge computing, autonomous systems
+Keywords: AI research, machine learning, deep learning, computer vision, natural language processing, model optimization, edge computing, autonomous systems
 
 **1. Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse
   Attention**  

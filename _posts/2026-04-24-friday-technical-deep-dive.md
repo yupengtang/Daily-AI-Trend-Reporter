@@ -19,21 +19,21 @@ Multimodal learning involves the integration of multiple types of data, such as 
 
 The core mathematical concepts in multimodal learning include:
 
-1. **Attention Mechanisms**: Attention allows the model to focus on specific parts of the input data. The attention score \( a_{ij} \) between input \( i \) and output \( j \) can be computed as follows:
+1. **Attention Mechanisms**: Attention allows the model to focus on specific parts of the input data. The attention score $ a_{ij} $ between input $ i $ and output $ j $ can be computed as follows:
 
-   \[
+$$
    a_{ij} = \frac{\exp(\text{score}(h_i, h_j))}{\sum_{k=1}^n \exp(\text{score}(h_i, h_k))}
-   \]
+$$
 
-   where \( h_i \) and \( h_j \) are the hidden states of the input and output respectively, and \( \text{score} \) is a function that measures the compatibility between them.
+   where $ h_i $ and $ h_j $ are the hidden states of the input and output respectively, and $ \text{score} $ is a function that measures the compatibility between them.
 
 2. **Memory Networks**: Memory networks allow the model to store and retrieve information over time. The memory update can be expressed as:
 
-   \[
+$$
    M_t = \text{Update}(M_{t-1}, \text{input}_t)
-   \]
+$$
 
-   where \( M_t \) is the memory at time \( t \), and \( \text{Update} \) is a function that modifies the memory based on new input.
+   where $ M_t $ is the memory at time $ t $, and $ \text{Update} $ is a function that modifies the memory based on new input.
 
 ## Core Innovation
 

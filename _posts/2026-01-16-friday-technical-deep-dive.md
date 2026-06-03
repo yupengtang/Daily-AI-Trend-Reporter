@@ -19,9 +19,9 @@ Multimodal reasoning involves the integration of information from different moda
 
 The core mathematical framework underlying MMFormalizer can be described using formal logic and set theory. The integration can be represented as follows:
 
-1. **Visual Representation**: Let \( V \) represent the set of visual inputs, which can be images or videos.
-2. **Mathematical Representation**: Let \( M \) represent the set of mathematical expressions or logical statements.
-3. **Reasoning Function**: Define a reasoning function \( R: V \times M \rightarrow D \), where \( D \) is the domain of decisions or outputs derived from the integrated inputs.
+1. **Visual Representation**: Let $ V $ represent the set of visual inputs, which can be images or videos.
+2. **Mathematical Representation**: Let $ M $ represent the set of mathematical expressions or logical statements.
+3. **Reasoning Function**: Define a reasoning function $ R: V \times M \rightarrow D $, where $ D $ is the domain of decisions or outputs derived from the integrated inputs.
 
 This function allows the model to reason about visual data in the context of mathematical logic, enhancing its decision-making capabilities.
 

@@ -31,15 +31,15 @@ The Foundation Protocol introduces a multi-tiered architecture that enhances age
 
 Mathematically, the coordination process can be represented as follows:
 
-\[
+$$
 C(a_i, a_j) = f(I(a_i, a_j), A(a_i, a_j), G(a_i, a_j))
-\]
+$$
 
 Where:
-- \(C(a_i, a_j)\) represents the coordination function between agents \(a_i\) and \(a_j\).
-- \(I(a_i, a_j)\) represents the interaction context.
-- \(A(a_i, a_j)\) denotes the accountability measures in place.
-- \(G(a_i, a_j)\) signifies the governance protocols applicable to the agents.
+- $C(a_i, a_j)$ represents the coordination function between agents $a_i$ and $a_j$.
+- $I(a_i, a_j)$ represents the interaction context.
+- $A(a_i, a_j)$ denotes the accountability measures in place.
+- $G(a_i, a_j)$ signifies the governance protocols applicable to the agents.
 
 ## Implementation
 

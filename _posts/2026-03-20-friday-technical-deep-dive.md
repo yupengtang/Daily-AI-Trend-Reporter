@@ -19,23 +19,23 @@ The introduction of HSImul3R represents a significant advancement in the field o
 
 The core of HSImul3R relies on a bidirectional optimization process that can be mathematically represented as follows:
 
-1. **Perception Model**: Given a set of images \( I \), the perception model seeks to estimate the 3D scene representation \( S \) as:
-   \[
+1. **Perception Model**: Given a set of images $ I $, the perception model seeks to estimate the 3D scene representation $ S $ as:
+$$
    S = f(I; \theta_p)
-   \]
-   where \( \theta_p \) represents the parameters of the perception model.
+$$
+   where $ \theta_p $ represents the parameters of the perception model.
 
-2. **Simulation Model**: The simulation model predicts the expected visual output \( V \) from the 3D scene representation \( S \):
-   \[
+2. **Simulation Model**: The simulation model predicts the expected visual output $ V $ from the 3D scene representation $ S $:
+$$
    V = g(S; \theta_s)
-   \]
-   where \( \theta_s \) are the parameters of the simulation model.
+$$
+   where $ \theta_s $ are the parameters of the simulation model.
 
 3. **Optimization Objective**: The joint optimization can be framed as minimizing the difference between the observed images and the simulated output:
-   \[
+$$
    L = \| I - V \|^2 + \lambda \| S \|^2
-   \]
-   where \( \lambda \) is a regularization parameter that balances the importance of the scene representation.
+$$
+   where $ \lambda $ is a regularization parameter that balances the importance of the scene representation.
 
 ## Core Innovation
 
@@ -43,11 +43,11 @@ The key innovation of HSImul3R lies in its bidirectional optimization framework,
 
 ### Bidirectional Optimization Process
 
-1. **Initialization**: Start with an initial guess for \( S \) and \( \theta_s \).
+1. **Initialization**: Start with an initial guess for $ S $ and $ \theta_s $.
 2. **Iterative Refinement**:
-   - Update \( S \) by minimizing \( L \) with respect to the perception model.
-   - Update \( \theta_s \) by minimizing \( L \) with respect to the simulation model.
-3. **Convergence Check**: Continue the process until convergence criteria are met (e.g., changes in \( L \) are below a threshold).
+   - Update $ S $ by minimizing $ L $ with respect to the perception model.
+   - Update $ \theta_s $ by minimizing $ L $ with respect to the simulation model.
+3. **Convergence Check**: Continue the process until convergence criteria are met (e.g., changes in $ L $ are below a threshold).
 
 ## Implementation
 

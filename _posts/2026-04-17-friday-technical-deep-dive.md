@@ -19,17 +19,17 @@ Dynamic reward shaping is a technique that modifies the reward signal to acceler
 
 Mathematically, the RL agent's objective can be formulated as:
 
-\[
+$$
 \max_{\pi} \mathbb{E}\left[\sum_{t=0}^{T} r_t\right]
-\]
+$$
 
-where \( \pi \) is the policy, \( r_t \) is the reward at time \( t \), and \( T \) is the time horizon. The MEDS framework modifies the reward function \( r_t \) based on historical information, which can be represented as:
+where $ \pi $ is the policy, $ r_t $ is the reward at time $ t $, and $ T $ is the time horizon. The MEDS framework modifies the reward function $ r_t $ based on historical information, which can be represented as:
 
-\[
+$$
 r_t' = r_t + \lambda \cdot f(h_t)
-\]
+$$
 
-where \( r_t' \) is the modified reward, \( \lambda \) is a scaling factor, \( h_t \) represents the historical behavioral signals, and \( f \) is a function that maps these signals to reward adjustments.
+where $ r_t' $ is the modified reward, $ \lambda $ is a scaling factor, $ h_t $ represents the historical behavioral signals, and $ f $ is a function that maps these signals to reward adjustments.
 
 ## Core Innovation
 

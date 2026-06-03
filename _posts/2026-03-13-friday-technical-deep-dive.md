@@ -17,17 +17,17 @@ Language models, particularly those based on transformer architectures, have bec
 
 The ProRes approach introduces a novel learning rate schedule that gradually increases the learning rate during the initial phase of training while incorporating residual connections to stabilize the optimization process. This technique draws on principles from residual networks (ResNets), which have been shown to facilitate the training of deep architectures by mitigating the vanishing gradient problem.
 
-Mathematically, the learning rate \( \alpha_t \) at iteration \( t \) can be expressed as:
+Mathematically, the learning rate $ \alpha_t $ at iteration $ t $ can be expressed as:
 
-\[
+$$
 \alpha_t = \alpha_{\text{min}} + \frac{(t - t_0)}{T} \cdot (\alpha_{\text{max}} - \alpha_{\text{min}})
-\]
+$$
 
 where:
-- \( \alpha_{\text{min}} \) is the minimum learning rate,
-- \( \alpha_{\text{max}} \) is the maximum learning rate,
-- \( t_0 \) is the iteration at which the warmup starts,
-- \( T \) is the total number of warmup iterations.
+- $ \alpha_{\text{min}} $ is the minimum learning rate,
+- $ \alpha_{\text{max}} $ is the maximum learning rate,
+- $ t_0 $ is the iteration at which the warmup starts,
+- $ T $ is the total number of warmup iterations.
 
 ## Core Innovation
 

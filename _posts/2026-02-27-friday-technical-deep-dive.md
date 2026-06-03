@@ -19,11 +19,11 @@ Sequential recommendation systems are designed to predict a user's next action b
 
 1. **Softmax Attention**: The softmax attention mechanism computes a weighted sum of input values based on the similarity between a query and a set of keys. It is defined mathematically as follows:
 
-   \[
+$$
    \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-   \]
+$$
 
-   where \(Q\) is the query matrix, \(K\) is the key matrix, \(V\) is the value matrix, and \(d_k\) is the dimensionality of the keys.
+   where $Q$ is the query matrix, $K$ is the key matrix, $V$ is the value matrix, and $d_k$ is the dimensionality of the keys.
 
 2. **Linear Attention**: In contrast, linear attention approximates the softmax attention by using kernel functions, which allows for linear time complexity relative to the input size. This is particularly useful for long sequences where computational resources are limited.
 

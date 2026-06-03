@@ -17,15 +17,15 @@ The Semantic Progress Function builds upon foundational concepts in computer vis
 
 Mathematically, the SPF can be represented as follows:
 
-\[
+$$
 SPF(V) = \sum_{t=1}^{T} \alpha_t \cdot S(V_t, C)
-\]
+$$
 
 Where:
-- \( V \) is the generated video,
-- \( T \) is the total number of frames,
-- \( S(V_t, C) \) is a semantic similarity function that measures the coherence of frame \( V_t \) with respect to a given context \( C \),
-- \( \alpha_t \) is a weighting factor that adjusts the importance of each frame based on its semantic relevance.
+- $ V $ is the generated video,
+- $ T $ is the total number of frames,
+- $ S(V_t, C) $ is a semantic similarity function that measures the coherence of frame $ V_t $ with respect to a given context $ C $,
+- $ \alpha_t $ is a weighting factor that adjusts the importance of each frame based on its semantic relevance.
 
 This formulation emphasizes the need for a robust semantic understanding, which can be achieved through the integration of transformer architectures and multimodal embeddings.
 

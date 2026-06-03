@@ -15,13 +15,13 @@ The recent advancements in real-time interactive video generation, specifically 
 
 Video generation has traditionally faced challenges such as occlusion, temporal coherence, and the need for real-time processing. The integration of memory architectures into video models addresses these challenges by allowing the system to retain contextual information over time. The causal architecture employed in ShotStream ensures that the generation of each frame is dependent on the previously generated frames, maintaining a coherent narrative flow.
 
-Mathematically, let \( V(t) \) denote the video frame at time \( t \). The generation process can be described as:
+Mathematically, let $ V(t) $ denote the video frame at time $ t $. The generation process can be described as:
 
-\[
+$$
 V(t) = f(V(t-1), M(t), \theta)
-\]
+$$
 
-where \( f \) is the generative function, \( M(t) \) represents the memory state at time \( t \), and \( \theta \) are the model parameters. This formulation highlights the dependency of each frame on its predecessor, facilitated by the memory mechanism.
+where $ f $ is the generative function, $ M(t) $ represents the memory state at time $ t $, and $ \theta $ are the model parameters. This formulation highlights the dependency of each frame on its predecessor, facilitated by the memory mechanism.
 
 ## Core Innovation
 
@@ -32,11 +32,11 @@ The core innovation of ShotStream lies in its dual-cache memory mechanism, which
 
 The architecture can be represented as follows:
 
-\[
+$$
 M(t) = \text{Update}(M(t-1), V(t-1), \text{Input})
-\]
+$$
 
-where the memory state \( M(t) \) is updated based on previous frames and user input, allowing for dynamic adjustments to the generated content.
+where the memory state $ M(t) $ is updated based on previous frames and user input, allowing for dynamic adjustments to the generated content.
 
 ## Implementation
 

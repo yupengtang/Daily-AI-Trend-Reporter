@@ -270,7 +270,7 @@ async def generate_technical_deep_dive(week_start: datetime.date, week_end: date
 
     # Call API for technical deep dive
     deep_dive_response = await call_ai_api([
-        {"role": "system", "content": "You are a senior AI researcher and technical writer. You write precise, technically accurate content with code examples. Never use emojis. Write in a professional academic tone."},
+        {"role": "system", "content": "You are a senior AI researcher and technical writer. You write precise, technically accurate content with code examples. Never use emojis. Write in a professional academic tone. For math formulas, use $ for inline math and $$ on its own line for display math. Do NOT use \\( \\) or \\[ \\] delimiters."},
         {"role": "user", "content": deep_dive_prompt}
     ], max_tokens=3000, temperature=0.4)
     

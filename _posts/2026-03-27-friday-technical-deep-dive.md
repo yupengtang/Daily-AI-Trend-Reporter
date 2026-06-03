@@ -19,19 +19,19 @@ Multimodal AI refers to models that can process and integrate information from m
 
 ### Mathematical Formulation
 
-The reinforcement learning problem can be formalized using the Markov Decision Process (MDP) framework, defined by the tuple \( (S, A, P, R, \gamma) \):
+The reinforcement learning problem can be formalized using the Markov Decision Process (MDP) framework, defined by the tuple $ (S, A, P, R, \gamma) $:
 
-- \( S \): Set of states
-- \( A \): Set of actions
-- \( P(s'|s, a) \): State transition probability
-- \( R(s, a) \): Reward function
-- \( \gamma \): Discount factor
+- $ S $: Set of states
+- $ A $: Set of actions
+- $ P(s'|s, a) $: State transition probability
+- $ R(s, a) $: Reward function
+- $ \gamma $: Discount factor
 
-The goal of the agent is to learn a policy \( \pi(a|s) \) that maximizes the expected cumulative reward:
+The goal of the agent is to learn a policy $ \pi(a|s) $ that maximizes the expected cumulative reward:
 
-\[
+$$
 J(\pi) = \mathbb{E}\left[\sum_{t=0}^{\infty} \gamma^t R(s_t, a_t)\right]
-\]
+$$
 
 ## Core Innovation
 

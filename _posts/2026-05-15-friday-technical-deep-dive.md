@@ -19,19 +19,19 @@ Flow-based models, on the other hand, provide a promising alternative by modelin
 
 ### Mathematical Formulation
 
-Let \( X \) represent the input video frames, and \( Y \) the output generated frames. The flow-map transition can be defined as:
+Let $ X $ represent the input video frames, and $ Y $ the output generated frames. The flow-map transition can be defined as:
 
-\[
+$$
 Y = f(X; \theta)
-\]
+$$
 
-where \( f \) is a flow-based transformation parameterized by \( \theta \). The objective is to optimize the parameters \( \theta \) such that the generated frames \( Y \) closely resemble the target frames \( T \):
+where $ f $ is a flow-based transformation parameterized by $ \theta $. The objective is to optimize the parameters $ \theta $ such that the generated frames $ Y $ closely resemble the target frames $ T $:
 
-\[
+$$
 \min_{\theta} \mathbb{E}_{X \sim P(X)} \left[ \| Y - T \|^2 \right]
-\]
+$$
 
-where \( P(X) \) is the distribution of the input video frames.
+where $ P(X) $ is the distribution of the input video frames.
 
 ## Core Innovation
 

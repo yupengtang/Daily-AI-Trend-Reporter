@@ -22,13 +22,13 @@ Reinforcement learning (RL) is a paradigm of machine learning where agents learn
 - **Reward (r)**: Feedback from the environment based on the agent's action.
 - **Policy (π)**: A strategy that the agent employs to determine actions based on states.
 
-The Bellman equation is fundamental in RL, providing a recursive relationship for the value function \(V(s)\):
+The Bellman equation is fundamental in RL, providing a recursive relationship for the value function $V(s)$:
 
-\[
+$$
 V(s) = \max_{a} \left( r + \gamma \sum_{s'} P(s'|s,a)V(s') \right)
-\]
+$$
 
-where \( \gamma \) is the discount factor, and \( P(s'|s,a) \) is the transition probability to the next state \(s'\) given the current state \(s\) and action \(a\).
+where $ \gamma $ is the discount factor, and $ P(s'|s,a) $ is the transition probability to the next state $s'$ given the current state $s$ and action $a$.
 
 ## Core Innovation
 

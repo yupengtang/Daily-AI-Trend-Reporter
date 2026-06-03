@@ -17,21 +17,21 @@ The LongCat-Flash-Thinking model represents a significant leap in the field of a
 
 The Mixture-of-Experts (MoE) architecture is designed to enhance model capacity without a proportional increase in computational cost. In an MoE model, only a subset of experts is activated for each input, allowing the model to scale while maintaining efficiency. Mathematically, the output of an MoE model can be expressed as:
 
-\[
+$$
 y = \sum_{i=1}^{N} g_i(x) \cdot f_i(x)
-\]
+$$
 
-where \( g_i(x) \) is the gating function that determines the activation of expert \( i \) for input \( x \), and \( f_i(x) \) is the output of expert \( i \).
+where $ g_i(x) $ is the gating function that determines the activation of expert $ i $ for input $ x $, and $ f_i(x) $ is the output of expert $ i $.
 
 ### Reinforcement Learning Integration
 
 Reinforcement learning (RL) is a paradigm where agents learn to make decisions by interacting with their environment. The integration of RL with LLMs allows these models to refine their responses based on feedback from their interactions, thus improving their performance over time. The objective function in RL can be defined as:
 
-\[
+$$
 J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta} \left[ \sum_{t=0}^{T} r_t \right]
-\]
+$$
 
-where \( \theta \) represents the model parameters, \( \tau \) is a trajectory of states and actions, and \( r_t \) is the reward received at time \( t \).
+where $ \theta $ represents the model parameters, $ \tau $ is a trajectory of states and actions, and $ r_t $ is the reward received at time $ t $.
 
 ## Core Innovation
 

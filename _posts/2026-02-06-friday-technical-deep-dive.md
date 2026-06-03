@@ -23,11 +23,11 @@ The core innovation of the Green-VLA model lies in its hybrid architecture that 
 
 Mathematically, the integration of modalities can be expressed as follows:
 
-\[
+$$
 Z = f(T, V) = \text{Transformer}(T) + \text{CNN}(V)
-\]
+$$
 
-where \( Z \) is the joint representation, \( T \) is the textual input, \( V \) is the visual input, and \( f \) represents the function that combines the outputs of the transformer and CNN.
+where $ Z $ is the joint representation, $ T $ is the textual input, $ V $ is the visual input, and $ f $ represents the function that combines the outputs of the transformer and CNN.
 
 ## Implementation
 

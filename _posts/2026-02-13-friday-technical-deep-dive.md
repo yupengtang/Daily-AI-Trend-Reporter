@@ -31,13 +31,13 @@ The core innovation of the Baichuan-M3 model lies in its unique architecture tha
 
 The model can be mathematically represented as follows:
 
-Let \( S_t \) be the state of the system at time \( t \), and \( A_t \) be the action taken at time \( t \). The goal is to maximize the expected cumulative reward \( R \):
+Let $ S_t $ be the state of the system at time $ t $, and $ A_t $ be the action taken at time $ t $. The goal is to maximize the expected cumulative reward $ R $:
 
-\[
+$$
 R = \sum_{t=0}^{T} \gamma^t r(S_t, A_t)
-\]
+$$
 
-where \( \gamma \) is the discount factor, and \( r(S_t, A_t) \) is the reward function that evaluates the effectiveness of the action taken in the given state.
+where $ \gamma $ is the discount factor, and $ r(S_t, A_t) $ is the reward function that evaluates the effectiveness of the action taken in the given state.
 
 ## Implementation
 

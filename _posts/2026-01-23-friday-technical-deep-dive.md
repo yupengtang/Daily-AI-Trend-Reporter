@@ -17,17 +17,17 @@ Reinforcement learning is a paradigm where agents learn to make decisions by int
 
 ### Mathematical Formulation
 
-Let \( S \) be the state space, \( A \) the action space, and \( R \) the reward function. The agent's goal is to maximize the expected cumulative reward:
+Let $ S $ be the state space, $ A $ the action space, and $ R $ the reward function. The agent's goal is to maximize the expected cumulative reward:
 
-\[
+$$
 R_t = \sum_{k=0}^{\infty} \gamma^k r_{t+k}
-\]
+$$
 
-where \( \gamma \) is the discount factor. In adaptive difficulty weighting, we introduce a function \( D(a, s) \) that adjusts the difficulty of action \( a \) in state \( s \), influencing the reward structure:
+where $ \gamma $ is the discount factor. In adaptive difficulty weighting, we introduce a function $ D(a, s) $ that adjusts the difficulty of action $ a $ in state $ s $, influencing the reward structure:
 
-\[
+$$
 R'(t) = R(t) - D(a, s)
-\]
+$$
 
 This modification allows the agent to experience a more tailored learning environment, enhancing its ability to adapt to varying task complexities.
 

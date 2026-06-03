@@ -19,11 +19,11 @@ The introduction of diffusion models has provided a new paradigm for generative 
 
 Mathematically, the diffusion process can be described as follows:
 
-\[
+$$
 x_t = \sqrt{\alpha_t} x_0 + \sqrt{1 - \alpha_t} \epsilon
-\]
+$$
 
-where \( x_t \) is the noisy version of the data at time \( t \), \( \alpha_t \) is a variance schedule, and \( \epsilon \) is Gaussian noise. The UL framework enhances this process by introducing a prior regularization term that encourages the learning of joint latent representations.
+where $ x_t $ is the noisy version of the data at time $ t $, $ \alpha_t $ is a variance schedule, and $ \epsilon $ is Gaussian noise. The UL framework enhances this process by introducing a prior regularization term that encourages the learning of joint latent representations.
 
 ## Core Innovation
 

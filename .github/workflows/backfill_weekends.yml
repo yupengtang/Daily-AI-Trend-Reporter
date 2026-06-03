@@ -6,11 +6,11 @@ on:
       type:
         description: 'What to generate'
         required: true
-        default: 'saturdays'
+        default: 'sundays-remaining'
         type: choice
         options:
           - saturdays
-          - sundays
+          - sundays-remaining
           - both
 
 permissions:
@@ -31,35 +31,23 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Generate Saturday weekly reports
-        if: ${{ inputs.type == 'saturdays' || inputs.type == 'both' }}
+      - name: Generate Sunday deep dives (remaining 7)
+        if: ${{ inputs.type == 'sundays-remaining' || inputs.type == 'both' }}
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          DATES=(2026-05-09 2026-05-16 2026-05-23 2026-05-30)
+          DATES=(2026-04-19 2026-04-26 2026-05-03 2026-05-10 2026-05-17 2026-05-24 2026-05-31)
           for d in "${DATES[@]}"; do
-            echo "=== Saturday $d ==="
+            echo "=== Sunday $d ==="
             python3 batch_generate.py --start "$d" --end "$d" || echo "Failed $d"
-            sleep 6
+            sleep 10
           done
 
-      - name: Commit Saturday reports
-        if: ${{ inputs.type == 'saturdays' || inputs.type == 'both' }}
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add _posts/
-          if ! git diff --staged --quiet; then
-            git commit -m "Backfill missing Saturday weekly reports"
-            git push
-          fi
-
-      - name: Generate Sunday deep dives
-        if: ${{ inputs.type == 'sundays' || inputs.type == 'both' }}
+      - name: Generate all 20 Sundays (full)
+        if: ${{ inputs.type == 'sundays-full' }}
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git pull || true
           DATES=(
             2026-01-18 2026-01-25 2026-02-01
             2026-02-08 2026-02-15 2026-02-22 2026-03-01
@@ -81,6 +69,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No new files"
           else
+            git pull --rebase origin main
             git commit -m "Backfill weekend reports"
             git push
           fi

@@ -431,3 +431,118 @@ a {
   .gi { color: #a6e3a1; }                                     // diff inserted
   .gd { color: #f38ba8; }                                     // diff deleted
 }
+
+// ── Copy button ──
+
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #a6adc8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-family: $base-font-family;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, background 0.15s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #cdd6f4;
+  }
+
+  &.copied {
+    color: #a6e3a1;
+    border-color: rgba(#a6e3a1, 0.3);
+  }
+}
+
+div.highlight:hover .copy-btn,
+figure.highlight:hover .copy-btn {
+  opacity: 1;
+}
+
+// ── PDF button ──
+
+.post-actions {
+  margin-top: 16px;
+}
+
+.btn-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: $grey-color;
+  border: 1px solid $grey-color-light;
+  border-radius: 5px;
+  padding: 6px 14px;
+  transition: all 0.15s ease;
+
+  &:hover {
+    color: $brand-color;
+    border-color: $brand-color;
+    background: rgba($brand-color, 0.04);
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+// ── Print styles ──
+
+@media print {
+  .site-header,
+  .site-footer,
+  .post-footer,
+  .post-actions,
+  .copy-btn {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .page-content {
+    padding: 0;
+  }
+
+  .wrapper {
+    max-width: 100%;
+  }
+
+  .post-title {
+    font-size: 22pt;
+  }
+
+  .post-content {
+    color: #222;
+
+    a {
+      color: #222;
+      text-decoration: none;
+
+      &[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #666;
+      }
+    }
+
+    pre,
+    .highlight pre {
+      background: #f5f5f5 !important;
+      color: #222;
+      border: 1px solid #ddd;
+      page-break-inside: avoid;
+    }
+  }
+}

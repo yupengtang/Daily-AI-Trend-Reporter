@@ -6,8 +6,7 @@ categories: [AI Research, Weekly Summary]
 tags: [artificial intelligence, research papers, weekly digest]
 ---
 
-```markdown
-# AI Research Weekly Summary: July 28 - August 1, 2025
+## AI Research Weekly Summary: July 28 - August 1, 2025
 
 This week in AI research, we witnessed exciting developments across several domains including foundation model efficiency, multi-modal learning, and advancements in creative AI. New methodologies are pushing the boundaries of efficiency, interpretability, and adaptability in machine learning systems, with significant implications for real-world applications. Below is a comprehensive summary of the week's highlights.
 
@@ -99,4 +98,3 @@ These advances are poised to shape the AI landscape in significant ways:
 This week’s research highlights not only demonstrate the rapid pace of innovation but also underscore a growing commitment to addressing real-world challenges like efficiency, fairness, and accessibility. As these breakthroughs transition from research to application, their impact on technology and society will be profound.
 
 Stay tuned for next week’s summary as we continue to track the latest developments in AI research.
-```

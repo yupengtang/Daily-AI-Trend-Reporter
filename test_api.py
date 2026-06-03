@@ -4,15 +4,13 @@ Test script to verify GitHub Models API connection and paper fetching
 """
 
 import os
-import asyncio
 import requests
-from azure.rest.ai_inference import ModelClient
-from azure.core.credentials import AzureKeyCredential
+
 
 def test_paper_fetching():
     """Test fetching papers from Hugging Face"""
     print("🔍 Testing paper fetching from Hugging Face...")
-    
+
     try:
         response = requests.get("https://huggingface.co/papers", timeout=10)
         if response.status_code == 200:
@@ -26,36 +24,43 @@ def test_paper_fetching():
         print(f"❌ Error testing paper fetching: {e}")
         return False
 
-async def test_api():
-    """Test the GitHub Models API connection"""
-    
-    # Get token from environment
-    token = os.getenv("HF_TOKEN")  # Changed from GITHUB_TOKEN
+
+def test_api():
+    """Test the GitHub Models API connection using requests"""
+
+    token = os.getenv("HF_TOKEN")
     if not token:
         print("❌ HF_TOKEN environment variable not set")
-        print("Please set it with: export HF_TOKEN='your-token-here'")
         return False
-    
-    # Create client
-    client = ModelClient(
-        "https://models.github.ai/inference",
-        AzureKeyCredential(token),
-    )
-    
-    # Test with a simple prompt
+
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json",
+    }
+
+    data = {
+        "messages": [
+            {"role": "user", "content": "Hello! Please respond with 'API test successful'"}
+        ],
+        "model": "openai/gpt-4o-mini",
+        "max_tokens": 50,
+    }
+
     try:
-        response = await client.path("/chat/completions").post({
-            "body": {
-                "messages": [
-                    {"role": "user", "content": "Hello! Please respond with 'API test successful'"}
-                ],
-                "model": "openai/gpt-4.1",
-                "max_tokens": 50
-            }
-        })
-        
+        response = requests.post(
+            "https://models.github.ai/inference/chat/completions",
+            headers=headers,
+            json=data,
+            timeout=30,
+        )
+
         if response.status_code == 200:
-            content = response.json().get("choices", [{}])[0].get("message", {}).get("content", "")
+            content = (
+                response.json()
+                .get("choices", [{}])[0]
+                .get("message", {})
+                .get("content", "")
+            )
             print(f"✅ API test successful!")
             print(f"Response: {content}")
             return True
@@ -63,23 +68,22 @@ async def test_api():
             print(f"❌ API test failed with status {response.status_code}")
             print(f"Response: {response.text}")
             return False
-            
+
     except Exception as e:
         print(f"❌ API test failed with exception: {e}")
         return False
 
-async def main():
+
+def main():
     """Run all tests"""
     print("🚀 Starting comprehensive tests...\n")
-    
-    # Test paper fetching
+
     paper_success = test_paper_fetching()
     print()
-    
-    # Test API connection
-    api_success = await test_api()
+
+    api_success = test_api()
     print()
-    
+
     if paper_success and api_success:
         print("🎉 All tests passed! The system is ready to generate content.")
         return True
@@ -87,6 +91,7 @@ async def main():
         print("⚠️ Some tests failed. Please check the configuration.")
         return False
 
+
 if __name__ == "__main__":
-    success = asyncio.run(main())
-    exit(0 if success else 1) 
+    success = main()
+    exit(0 if success else 1)

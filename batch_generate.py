@@ -12,10 +12,11 @@ import asyncio
 import requests
 import argparse
 from typing import List, Dict, Optional
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 # Set API configuration
 HF_TOKEN = os.getenv("HF_TOKEN")  # GitHub Models token
@@ -534,6 +535,7 @@ async def generate_weekly_report(week_start: datetime.date, week_end: datetime.d
 
 async def batch_generate(start_date: datetime.date, end_date: datetime.date) -> None:
     """Generate posts for the entire date range with new strategy"""
+    os.makedirs("_posts", exist_ok=True)
     print(f"🚀 Starting batch generation from {start_date} to {end_date}...")
     print("📅 New Strategy:")
     print("  - Saturday: Generate weekly report (Monday-Friday summary)")
@@ -559,10 +561,10 @@ async def batch_generate(start_date: datetime.date, end_date: datetime.date) -> 
         # Check if it's Sunday (weekday 6)
         elif current_date.weekday() == 6:  # Sunday
             print("🔬 Sunday detected - generating technical deep dive...")
-            
+
             # Generate technical deep dive for the week
             week_start = current_date - datetime.timedelta(days=6)  # Monday
-            week_end = current_date - datetime.timedelta(days=1)    # Friday
+            week_end = current_date - datetime.timedelta(days=2)    # Friday (matches weekly report range)
             deep_dive_file = await generate_technical_deep_dive(week_start, week_end)
             if deep_dive_file:
                 generated_files.append(deep_dive_file)
@@ -581,47 +583,52 @@ async def batch_generate(start_date: datetime.date, end_date: datetime.date) -> 
         print(f"  - {file}")
 
 def main():
-    """Main function"""
+    """Main function - auto-generates for today by default (CI-friendly)"""
+    parser = argparse.ArgumentParser(description="Daily AI Trend Reporter - Batch Generator")
+    parser.add_argument("--start", type=str, help="Start date (YYYY-MM-DD)")
+    parser.add_argument("--end", type=str, help="End date (YYYY-MM-DD)")
+    parser.add_argument("--interactive", action="store_true", help="Run in interactive mode with prompts")
+    args = parser.parse_args()
+
     print("🌟 Daily AI Trend Reporter - Batch Generator")
     print("=" * 50)
-    print("📅 New Strategy:")
-    print("  - Saturday: Generate Monday-Friday daily posts")
-    print("  - Sunday: Generate technical deep dive post")
-    print("=" * 50)
-    
-    # Check API keys
+
     if not HF_TOKEN:
         print("❌ HF_TOKEN environment variable is not set")
         print("💡 Set HF_TOKEN to use the GitHub Models API")
-        return
-    
-    # Get user input
+        exit(1)
+
     try:
-        start_str = input("📅 Enter start date (YYYY-MM-DD): ").strip()
-        end_str = input("📅 Enter end date (YYYY-MM-DD): ").strip()
-        
-        # Validate dates
-        start_date = validate_date(start_str)
-        end_date = validate_date(end_str)
-        validate_date_range(start_date, end_date)
-        
-        print(f"\n✅ Date range validated: {start_date} to {end_date}")
-        
-        # Confirm before proceeding
-        confirm = input("\n🤔 Proceed with generation? (y/N): ").strip().lower()
-        if confirm != 'y':
-            print("❌ Generation cancelled")
-            return
-        
-        # Run batch generation
+        if args.interactive:
+            start_str = input("📅 Enter start date (YYYY-MM-DD): ").strip()
+            end_str = input("📅 Enter end date (YYYY-MM-DD): ").strip()
+            start_date = validate_date(start_str)
+            end_date = validate_date(end_str)
+            validate_date_range(start_date, end_date)
+            confirm = input("\n🤔 Proceed with generation? (y/N): ").strip().lower()
+            if confirm != 'y':
+                print("❌ Generation cancelled")
+                return
+        elif args.start and args.end:
+            start_date = validate_date(args.start)
+            end_date = validate_date(args.end)
+            validate_date_range(start_date, end_date)
+        else:
+            start_date = datetime.date.today()
+            end_date = datetime.date.today()
+            print(f"📅 Auto-generating for today: {start_date}")
+
+        print(f"✅ Date range: {start_date} to {end_date}")
         asyncio.run(batch_generate(start_date, end_date))
-        
+
     except ValueError as e:
         print(f"❌ Error: {e}")
+        exit(1)
     except KeyboardInterrupt:
         print("\n❌ Generation interrupted by user")
     except Exception as e:
         print(f"❌ Unexpected error: {e}")
+        exit(1)
 
 if __name__ == "__main__":
-    main() 
+    main()

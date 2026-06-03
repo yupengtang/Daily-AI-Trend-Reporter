@@ -19,7 +19,7 @@ except ImportError:
 # Set API configuration
 HF_TOKEN = os.getenv("HF_TOKEN")  # GitHub Models token
 ENDPOINT = "https://models.github.ai/inference/chat/completions"
-MODEL = "openai/gpt-4o-mini"  # Use GPT-4o-mini as default
+MODEL = "openai/gpt-5"
 
 # Number of papers to summarize each day
 PAPERS_PER_DAY = 10

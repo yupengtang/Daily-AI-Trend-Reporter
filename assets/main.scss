@@ -73,13 +73,78 @@ a {
   display: flex;
   align-items: center;
   gap: 12px;
+  position: relative;
 }
 
 .header-link {
   color: $grey-color;
   transition: color 0.15s ease;
   display: flex;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
   &:hover { color: $brand-color; }
+}
+
+.rss-tooltip {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 8px;
+  background: #fff;
+  border: 1px solid $grey-color-light;
+  border-radius: 8px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  width: 340px;
+
+  &.visible { display: block; }
+
+  p {
+    font-size: 13px;
+    color: $grey-color;
+    margin: 0 0 8px;
+  }
+}
+
+.rss-url-row {
+  display: flex;
+  gap: 6px;
+
+  input {
+    flex: 1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    padding: 6px 10px;
+    border: 1px solid $grey-color-light;
+    border-radius: 5px;
+    background: $background-color;
+    color: $text-color;
+    outline: none;
+    min-width: 0;
+  }
+
+  button {
+    font-family: $base-font-family;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border: 1px solid $grey-color-light;
+    border-radius: 5px;
+    background: none;
+    color: $grey-color;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s ease;
+
+    &:hover {
+      color: $brand-color;
+      border-color: $brand-color;
+    }
+  }
 }
 
 .theme-toggle {
@@ -915,6 +980,13 @@ $dark-border: #2d2d4a;
     a { color: $dark-text-secondary; }
   }
 
+  .rss-tooltip {
+    background: $dark-surface; border-color: $dark-border;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    p { color: $dark-text-secondary; }
+    input { background: $dark-bg; border-color: $dark-border; color: $dark-text; }
+    button { color: $dark-text-secondary; border-color: $dark-border; }
+  }
   .hero-stat { color: darken($dark-text-secondary, 10%); }
   .reading-time { color: $dark-text-secondary; }
   mark { background: rgba($brand-color, 0.2); color: $dark-text; }

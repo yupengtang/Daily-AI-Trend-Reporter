@@ -26,6 +26,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ── RSS tooltip ──
+  var rssBtn = document.getElementById('rss-btn');
+  var rssTooltip = document.getElementById('rss-tooltip');
+  if (rssBtn && rssTooltip) {
+    rssBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      rssTooltip.classList.toggle('visible');
+    });
+    document.addEventListener('click', function (e) {
+      if (!rssTooltip.contains(e.target) && e.target !== rssBtn) {
+        rssTooltip.classList.remove('visible');
+      }
+    });
+    var rssCopy = document.getElementById('rss-copy');
+    var rssUrl = document.getElementById('rss-url');
+    rssCopy.addEventListener('click', function () {
+      rssUrl.select();
+      navigator.clipboard.writeText(rssUrl.value).then(function () {
+        rssCopy.textContent = 'Copied';
+        setTimeout(function () { rssCopy.textContent = 'Copy'; }, 2000);
+      });
+    });
+  }
+
   // ── Dark mode toggle ──
   var toggle = document.getElementById('theme-toggle');
   if (toggle) {

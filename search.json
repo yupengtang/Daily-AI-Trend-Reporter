@@ -1,0 +1,14 @@
+---
+layout: null
+---
+[
+{%- assign dailies = site.posts | where_exp: "p", "p.category != 'weekly-report' and p.category != 'technical-deep-dive'" -%}
+{%- for post in dailies -%}
+  {
+    "title": {{ post.title | jsonify }},
+    "date": "{{ post.date | date: '%B %-d, %Y' }}",
+    "url": "{{ post.url | relative_url }}",
+    "content": {{ post.content | strip_html | truncatewords: 500 | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+]

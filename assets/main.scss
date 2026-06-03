@@ -126,6 +126,63 @@ a {
   font-weight: 600;
 }
 
+// ── Search ──
+
+.search-box {
+  margin-bottom: 24px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: $base-font-family;
+  font-size: 15px;
+  color: $text-color;
+  background: #fff;
+  border: 1px solid $grey-color-light;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s ease;
+
+  &::placeholder {
+    color: lighten($grey-color, 15%);
+  }
+
+  &:focus {
+    border-color: $brand-color;
+  }
+}
+
+.search-empty {
+  color: $grey-color;
+  font-size: 14px;
+  padding: 12px 0;
+}
+
+.search-count {
+  font-size: 13px;
+  color: $grey-color;
+  margin-bottom: 8px;
+}
+
+.search-snippets {
+  margin-top: 6px;
+
+  p {
+    font-size: 13px;
+    color: $grey-color;
+    line-height: 1.5;
+    margin: 2px 0;
+  }
+
+  mark {
+    background: rgba($brand-color, 0.12);
+    color: $text-color;
+    padding: 1px 2px;
+    border-radius: 2px;
+  }
+}
+
 // ── Post feed ──
 
 .post-feed {

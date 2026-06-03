@@ -10,8 +10,14 @@ layout: default
 
   {{ content }}
 
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Search papers by title or topic..." autocomplete="off" />
+  </div>
+
+  <section id="search-results" class="post-feed" style="display:none;"></section>
+
   {%- if site.posts.size > 0 -%}
-  <section class="post-feed">
+  <section id="post-list" class="post-feed">
     {%- for post in site.posts -%}
     <article class="post-card{% if forloop.index > 20 %} post-hidden{% endif %}">
       <div class="post-card-meta">
@@ -29,7 +35,7 @@ layout: default
   </section>
 
   {%- if site.posts.size > 20 -%}
-  <div class="load-more-wrap">
+  <div id="load-more-wrap" class="load-more-wrap">
     <button id="load-more" class="btn-load-more">
       Show older posts
       <span class="post-count">({{ site.posts.size | minus: 20 }} more)</span>

@@ -40,5 +40,98 @@ document.addEventListener('DOMContentLoaded', function () {
       loadBtn.parentElement.remove();
     });
   }
+
+  // ── Paper search ──
+  var searchInput = document.getElementById('search-input');
+  if (!searchInput) return;
+
+  var searchResults = document.getElementById('search-results');
+  var postList = document.getElementById('post-list');
+  var loadMoreWrap = document.getElementById('load-more-wrap');
+  var searchIndex = null;
+  var debounceTimer = null;
+
+  searchInput.addEventListener('focus', function () {
+    if (searchIndex) return;
+    fetch(document.querySelector('.site-title').getAttribute('href') + 'search.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) { searchIndex = data; });
+  });
+
+  searchInput.addEventListener('input', function () {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(doSearch, 200);
+  });
+
+  function doSearch() {
+    var query = searchInput.value.trim().toLowerCase();
+
+    if (!query || query.length < 2) {
+      searchResults.style.display = 'none';
+      searchResults.innerHTML = '';
+      postList.style.display = '';
+      if (loadMoreWrap) loadMoreWrap.style.display = '';
+      return;
+    }
+
+    if (!searchIndex) return;
+
+    var terms = query.split(/\s+/);
+    var matches = searchIndex.filter(function (post) {
+      var text = (post.title + ' ' + post.content).toLowerCase();
+      return terms.every(function (t) { return text.indexOf(t) !== -1; });
+    });
+
+    postList.style.display = 'none';
+    if (loadMoreWrap) loadMoreWrap.style.display = 'none';
+    searchResults.style.display = '';
+
+    if (matches.length === 0) {
+      searchResults.innerHTML = '<p class="search-empty">No papers found for "' +
+        query.replace(/</g, '&lt;') + '"</p>';
+      return;
+    }
+
+    var html = '<p class="search-count">' + matches.length + ' result' +
+      (matches.length === 1 ? '' : 's') + '</p>';
+
+    matches.slice(0, 50).forEach(function (post) {
+      // Extract matching paper lines from content
+      var lines = post.content.split('\n');
+      var snippets = [];
+      lines.forEach(function (line) {
+        var lower = line.toLowerCase();
+        if (terms.some(function (t) { return lower.indexOf(t) !== -1; }) && line.trim().length > 10) {
+          var snippet = line.trim();
+          if (snippet.length > 150) snippet = snippet.substring(0, 150) + '...';
+          snippets.push(snippet);
+        }
+      });
+
+      html += '<article class="post-card">' +
+        '<div class="post-card-meta"><time>' + post.date + '</time></div>' +
+        '<h2 class="post-card-title"><a href="' + post.url + '">' + post.title + '</a></h2>';
+
+      if (snippets.length > 0) {
+        html += '<div class="search-snippets">';
+        snippets.slice(0, 3).forEach(function (s) {
+          terms.forEach(function (t) {
+            var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+            s = s.replace(re, '<mark>$1</mark>');
+          });
+          html += '<p>' + s + '</p>';
+        });
+        html += '</div>';
+      }
+
+      html += '</article>';
+    });
+
+    if (matches.length > 50) {
+      html += '<p class="search-count">Showing first 50 results</p>';
+    }
+
+    searchResults.innerHTML = html;
+  }
 });
 </script>

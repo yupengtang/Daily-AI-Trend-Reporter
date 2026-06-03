@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, February 17, 2025"
 date: 2025-02-17
 ---
 
-Keywords: large language models, diffusion models, multimodal models, video foundation models, reasoning-action dilemma, image retrieval, model alignment, dynamic image generation, advanced reasoning, structured pruning, sampling techniques, Fourier features
+Keywords: large language models, diffusion models, multimodal models, video foundation models, reasoning-action dilemma, image retrieval, model alignment, dynamic image generation
 
 **1. Large Language Diffusion Models**  
  [Read Paper](https://huggingface.co/papers/2502.09992)  

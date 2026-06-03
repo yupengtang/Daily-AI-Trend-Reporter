@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, August 01, 2025"
 date: 2025-08-01
 ---
 
-Keywords: automated theorem proving, large language models, vision-language models, reinforcement learning, multimodal benchmarks, spatial intelligence, attention mechanisms, dialogue systems, bilingual datasets, latent action modeling, agriculture AI, generalization
+Keywords: automated theorem proving, large language models, vision-language models, reinforcement learning, multimodal benchmarks, spatial intelligence, attention mechanisms, dialogue systems
 
 **1. Seed-Prover: Deep and Broad Reasoning for Automated Theorem Proving**  
  [Read Paper](https://huggingface.co/papers/2507.23726)  

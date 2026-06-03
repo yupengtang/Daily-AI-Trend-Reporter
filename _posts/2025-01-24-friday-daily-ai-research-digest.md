@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, January 24, 2025"
 date: 2025-01-24
 ---
 
-Keywords: multi-agent systems, pathfinding algorithms, video generation, human feedback, language models, image generation, video understanding, mathematical reasoning, diffusion models, inpainting techniques, large language models, drug discovery
+Keywords: multi-agent systems, pathfinding algorithms, video generation, human feedback, language models, image generation, video understanding, mathematical reasoning
 
 **1. SRMT: Shared Memory for Multi-agent Lifelong Pathfinding**  
  [Read Paper](https://huggingface.co/papers/2501.13200)  

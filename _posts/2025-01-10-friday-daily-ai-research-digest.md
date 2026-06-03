@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, January 10, 2025"
 date: 2025-01-10
 ---
 
-Keywords: GANs, Large Language Models, Autoregressive Pre-training, Vision-Language Models, Multilingual Ability, Open-Source LLMs, Computational Complexity, Private LLMs, Natural Language Processing, Historical Linguistics, Video Analysis, Attention Mechanisms
+Keywords: GANs, Large Language Models, Autoregressive Pre-training, Vision-Language Models, Multilingual Ability, Open-Source LLMs, Computational Complexity, Private LLMs
 
 **1. The GAN is dead; long live the GAN! A Modern GAN Baseline**  
  [Read Paper](https://huggingface.co/papers/2501.05441)  

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, January 02, 2025"
 date: 2025-01-02
 ---
 
-Keywords: GUI automation, task synthesis, vision-language models, multi-vision sensors, automated theorem proving, data synthesis framework, tree search algorithms, text-to-image generation, diffusion models, cross-attention mechanisms, scalable AI solutions, machine learning techniques
+Keywords: GUI automation, task synthesis, vision-language models, multi-vision sensors, automated theorem proving, data synthesis framework, tree search algorithms, text-to-image generation
 
 **1. OS-Genesis: Automating GUI Agent Trajectory Construction via Reverse
   Task Synthesis**  

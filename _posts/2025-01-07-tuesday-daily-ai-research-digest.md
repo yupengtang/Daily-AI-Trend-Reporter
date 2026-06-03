@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, January 07, 2025"
 date: 2025-01-07
 ---
 
-Keywords: video super-resolution, text-to-video generation, large language models, mathematical reasoning, active interaction, graph-based retrieval, quantization training, metagenomic monitoring, image-to-video generation, pandemic response, system thinking, real-time decision making
+Keywords: video super-resolution, text-to-video generation, large language models, mathematical reasoning, active interaction, graph-based retrieval, quantization training, metagenomic monitoring
 
 **1. STAR: Spatial-Temporal Augmentation with Text-to-Video Models for
   Real-World Video Super-Resolution**  

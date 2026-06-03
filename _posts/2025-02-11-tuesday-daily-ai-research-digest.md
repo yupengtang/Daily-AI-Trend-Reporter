@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, February 11, 2025"
 date: 2025-02-11
 ---
 
-Keywords: large language models, few-shot learning, reinforcement learning, multimodal understanding, mathematical reasoning, model quantization, agent-based simulation, hierarchical reasoning, compute optimization, detoxification, code generation, memory models
+Keywords: large language models, few-shot learning, reinforcement learning, multimodal understanding, mathematical reasoning, model quantization, agent-based simulation, hierarchical reasoning
 
 **1. Can 1B LLM Surpass 405B LLM? Rethinking Compute-Optimal Test-Time
   Scaling**  

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, August 04, 2025"
 date: 2025-08-04
 ---
 
-Keywords: diffusion models, large language models, neural fields, software issue resolution, multi-agent systems, multimodal segmentation, 3D scene understanding, dialogue evaluation, low-resource languages, hallucination detection, image-goal navigation, visual language models
+Keywords: diffusion models, large language models, neural fields, software issue resolution, multi-agent systems, multimodal segmentation, 3D scene understanding, dialogue evaluation
 
 **1. Beyond Fixed: Variable-Length Denoising for Diffusion Large Language
   Models**  

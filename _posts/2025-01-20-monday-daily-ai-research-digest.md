@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, January 20, 2025"
 date: 2025-01-20
 ---
 
-Keywords: LLM, academic search, reasoning, cartoon generation, function calling, human animation, healthcare language models, speech super-resolution, photorealistic avatars, generative models, dynamic animation, natural language processing
+Keywords: LLM, academic search, reasoning, cartoon generation, function calling, human animation, healthcare language models, speech super-resolution
 
 **1. Evolving Deeper LLM Thinking**  
  [Read Paper](https://huggingface.co/papers/2501.09891)  

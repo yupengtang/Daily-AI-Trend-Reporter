@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, February 10, 2025"
 date: 2025-02-10
 ---
 
-Keywords: latent reasoning, video generation, rotary position embedding, attention mechanisms, large language models, scene inpainting, high-resolution video, reinforcement learning, multilingual models, augmented reality, computational efficiency, self-backtracking
+Keywords: latent reasoning, video generation, rotary position embedding, attention mechanisms, large language models, scene inpainting, high-resolution video, reinforcement learning
 
 **1. Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth
   Approach**  

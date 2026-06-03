@@ -66,6 +66,7 @@ def fetch_papers_for_date(target_date: datetime.date) -> List[Dict]:
                         'title': paper.get("title", f"Research Paper {paper_id}"),
                         'authors': authors or ['Research Team'],
                         'abstract': abstract,
+                        'ai_keywords': paper.get("ai_keywords", []),
                         'url': f"https://huggingface.co/papers/{paper_id}"
                     })
                 print(f"✅ Found {len(papers)} papers for {date_str} via API")
@@ -166,67 +167,26 @@ async def generate_daily_post(target_date: datetime.date) -> Optional[str]:
         print(f"✅ Using real abstract for paper {i}")
     
     if paper_summaries:
-        # Generate keywords based on the papers
-        print("🔑 Generating keywords based on today's papers...")
-        keywords_prompt = (
-            f"Based on these {len(paper_summaries)} research papers, generate 8-12 relevant keywords.\n"
-            f"Focus on the main research areas and technologies mentioned.\n\n"
-            f"Papers:\n"
-        )
-        for i, paper in enumerate(paper_summaries, 1):
-            keywords_prompt += f"{i}. {paper['title']}\n"
-        
-        keywords_prompt += "\nReturn ONLY a comma-separated list of keywords, no numbering or extra text: keyword1, keyword2, keyword3, keyword4, keyword5, keyword6, keyword7, keyword8"
-        
-        # Call API for keywords
-        keywords_response = await call_ai_api([
-            {"role": "system", "content": "You are a technical writer. Generate relevant keywords based on research paper titles and topics."},
-            {"role": "user", "content": keywords_prompt}
-        ], max_tokens=100, temperature=0.3)
-        
-        if keywords_response and keywords_response.status_code == 200:
-            keywords_data = keywords_response.json()
-            keywords = keywords_data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
-        else:
-            keywords = "AI research, machine learning, deep learning, computer vision, natural language processing, model optimization, edge computing, autonomous systems"
-        
+        # Use keywords from HF API ai_keywords field (no AI call needed)
+        all_keywords = set()
+        for paper in papers:
+            for kw in paper.get('ai_keywords', []):
+                if len(kw) >= 3:
+                    all_keywords.add(kw)
+        keywords_list = sorted(all_keywords)[:8]
+        if not keywords_list:
+            keywords_list = ["AI research", "machine learning", "deep learning"]
+        keywords = ", ".join(keywords_list)
+
         # Create content
         date_str = target_date.strftime("%Y-%m-%d")
-        content = f"**Keywords**: {keywords}\n\n---\n\n"
+        content = f"Keywords: {keywords}\n\n---\n\n"
 
         for i, paper in enumerate(paper_summaries, 1):
             content += f"### {i}. {paper['title']}\n\n"
             content += f"[Read Paper]({paper['url']})\n\n"
             content += f"{paper['summary']}\n\n"
         
-    else:
-        # Fallback to general topic generation
-        prompt = (
-            "Generate a concise technical digest (max 300 words) about a frontier topic in MLE or SDE.\n"
-            "Focus on the latest cutting-edge research and practical applications.\n"
-            "Do NOT use any emojis. Write in a professional, academic tone.\n"
-            "Format exactly as follows:\n"
-            "Date: <today's date>\n"
-            "Topic: <Short Title>\n"
-            "Summary: <150 words max technical summary>\n"
-            "Keywords: keyword1, keyword2, keyword3"
-        )
-        
-        date_str = target_date.strftime("%Y-%m-%d")
-        
-        # Call API
-        response = await call_ai_api([
-            {"role": "system", "content": "You are a helpful technical writer specialized in AI/ML. Focus on the latest cutting-edge research and practical applications."},
-            {"role": "user", "content": prompt}
-        ], max_tokens=1024, temperature=0.3)
-        
-        if response and response.status_code == 200:
-            response_data = response.json()
-            content = response_data.get("choices", [{}])[0].get("message", {}).get("content", "")
-        else:
-            print("❌ API call failed")
-            return None
-    
     # Generate safe filename with weekday
     weekday = target_date.strftime("%A")  # Get weekday name (Monday, Tuesday, etc.)
     safe_title = "daily-ai-research-digest"

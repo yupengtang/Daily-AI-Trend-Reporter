@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, February 14, 2025"
 date: 2025-02-14
 ---
 
-Keywords: stochastic models, large language models, text-to-image generation, 3D shape synthesis, zero-shot learning, self-supervised learning, multi-modal models, model merging, persona simulation, reasoning quality, benchmarking, memory efficiency
+Keywords: stochastic models, large language models, text-to-image generation, 3D shape synthesis, zero-shot learning, self-supervised learning, multi-modal models, model merging
 
 **1. The Stochastic Parrot on LLM's Shoulder: A Summative Assessment of
   Physical Concept Understanding**  

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, January 08, 2025"
 date: 2025-01-08
 ---
 
-Keywords: reinforcement learning, large language models, multimodal models, video generation, image understanding, video motion analysis, emotional speech synthesis, auto-research systems, video diffusion, presentation generation, AI alignment, physical AI
+Keywords: reinforcement learning, large language models, multimodal models, video generation, image understanding, video motion analysis, emotional speech synthesis, auto-research systems
 
 **1. REINFORCE++: A Simple and Efficient Approach for Aligning Large Language
   Models**  

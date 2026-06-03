@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, January 30, 2025"
 date: 2025-01-30
 ---
 
-Keywords: fine-tuning, AI evaluation, environmental impact, virtual clothing, AI-generated text detection, safety testing, language models, harmful attacks, adaptive embeddings, critique learning, sustainable AI, pre-deployment evaluation
+Keywords: fine-tuning, AI evaluation, environmental impact, virtual clothing, AI-generated text detection, safety testing, language models, harmful attacks
 
 **1. Critique Fine-Tuning: Learning to Critique is More Effective than
   Learning to Imitate**  

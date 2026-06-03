@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, February 12, 2025"
 date: 2025-02-12
 ---
 
-Keywords: Long Context QA, Financial Forecasting, Large Language Models, Code Input-Output Prediction, Reasoning Patterns, Video Generation, Vision Language Models, Reinforcement Learning, Demonstration Learning, Scaling Laws, Competitive Programming, Retrieval-Augmented Models
+Keywords: Long Context QA, Financial Forecasting, Large Language Models, Code Input-Output Prediction, Reasoning Patterns, Video Generation, Vision Language Models, Reinforcement Learning
 
 **1. Expect the Unexpected: FailSafe Long Context QA for Finance**  
  [Read Paper](https://huggingface.co/papers/2502.06329)  

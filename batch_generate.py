@@ -5,9 +5,7 @@ Generates posts for a specified date range including weekly reports and technica
 """
 
 import os
-import json
 import datetime
-import re
 import asyncio
 import requests
 import argparse
@@ -47,188 +45,63 @@ def validate_date_range(start_date: datetime.date, end_date: datetime.date) -> N
         raise ValueError("Start date must be before or equal to end date!")
 
 def fetch_papers_for_date(target_date: datetime.date) -> List[Dict]:
-    """Fetch papers for a specific date from Hugging Face"""
+    """Fetch papers for a specific date from the Hugging Face API"""
     print(f"🔍 Fetching papers for {target_date}...")
-    
+    date_str = target_date.strftime("%Y-%m-%d")
+
     try:
-        # Try to fetch from the specific date page
-        date_str = target_date.strftime("%Y-%m-%d")
-        url = f"https://huggingface.co/papers/date/{date_str}"
-        
+        url = f"https://huggingface.co/api/daily_papers?date={date_str}"
         response = requests.get(url, timeout=15)
-        if response.status_code != 200:
-            print(f"⚠️ Failed to fetch from {url}, trying alternative methods...")
-            return fetch_papers_fallback(target_date)
-        
-        content = response.text
-        print(f"✅ Successfully fetched page for {date_str}")
-        
-        # Extract paper information using multiple patterns
-        papers = extract_papers_from_html(content, target_date)
-        
-        if papers:
-            print(f"✅ Found {len(papers)} papers for {date_str}")
-            return papers[:PAPERS_PER_DAY]
-        else:
-            print(f"⚠️ No papers found for {date_str}, using fallback...")
-            return fetch_papers_fallback(target_date)
-            
+
+        if response.status_code == 200:
+            data = response.json()
+            if data and isinstance(data, list):
+                papers = []
+                for item in data[:PAPERS_PER_DAY]:
+                    paper = item.get("paper", {})
+                    paper_id = paper.get("id", "")
+                    authors = [a.get("name", "Unknown") for a in paper.get("authors", [])]
+                    abstract = paper.get("ai_summary") or paper.get("summary") or f"Latest research on {paper.get('title', paper_id)}"
+                    papers.append({
+                        'title': paper.get("title", f"Research Paper {paper_id}"),
+                        'authors': authors or ['Research Team'],
+                        'abstract': abstract,
+                        'url': f"https://huggingface.co/papers/{paper_id}"
+                    })
+                print(f"✅ Found {len(papers)} papers for {date_str} via API")
+                return papers
+
+        print(f"⚠️ API returned status {response.status_code}, trying fallback...")
     except Exception as e:
         print(f"❌ Error fetching papers for {target_date}: {e}")
-        return fetch_papers_fallback(target_date)
 
-def extract_papers_from_html(content: str, target_date: datetime.date) -> List[Dict]:
-    """Extract paper information from HTML content"""
-    papers = []
-    
-    # Look for paper links with titles (most accurate method)
-    paper_with_title_pattern = r'<a[^>]*href="/papers/([^"]+)"[^>]*>([^<]+)</a>'
-    papers_with_titles = re.findall(paper_with_title_pattern, content)
-    
-    # Also look for paper links in the HTML
-    paper_link_patterns = [
-        r'href="/papers/([^"]+)"',
-        r'href="https://huggingface\.co/papers/([^"]+)"',
-        r'data-paper-id="([^"]+)"'
-    ]
-    
-    paper_links = []
-    for pattern in paper_link_patterns:
-        links = re.findall(pattern, content)
-        if links:
-            paper_links.extend(links)
-            break
-    
-    # Look for paper titles in the HTML
-    title_pattern = r'<h[1-6][^>]*>([^<]+)</h[1-6]>'
-    titles = re.findall(title_pattern, content)
-    
-    # Also look for paper titles in other formats
-    alt_title_pattern = r'<a[^>]*href="/papers/[^"]*"[^>]*>([^<]+)</a>'
-    alt_titles = re.findall(alt_title_pattern, content)
-    
-    # Combine all titles
-    all_titles = titles + alt_titles
-    
-    # Combine titles with links if available
-    clean_papers = []
-    
-    # First try to use papers with titles (most accurate)
-    if papers_with_titles:
-        for i, (paper_id, title) in enumerate(papers_with_titles[:PAPERS_PER_DAY]):
-            title = title.strip()
-            if len(title) > 10 and len(title) < 200:  # Reasonable title length
-                # Get real abstract from paper page
-                abstract = fetch_paper_abstract(paper_id)
-                clean_papers.append({
-                    'title': title,
-                    'authors': ['Research Team'],
-                    'abstract': abstract,
-                    'url': f"https://huggingface.co/papers/{paper_id}"
-                })
-    
-    # Fallback to other methods if needed
-    if not clean_papers and paper_links:
-        for i, paper_id in enumerate(paper_links[:PAPERS_PER_DAY]):
-            if i < len(all_titles):
-                title = all_titles[i].strip()
-            else:
-                title = f"Research Paper {i+1}"
-            
-            if len(title) > 10 and len(title) < 200:  # Reasonable title length
-                # Get real abstract from paper page
-                abstract = fetch_paper_abstract(paper_id)
-                clean_papers.append({
-                    'title': title,
-                    'authors': ['Research Team'],
-                    'abstract': abstract,
-                    'url': f"https://huggingface.co/papers/{paper_id}"
-                })
-    
-    return clean_papers
-
-def fetch_paper_abstract(paper_id: str) -> str:
-    """Fetch the real abstract from a paper's detail page"""
-    try:
-        url = f"https://huggingface.co/papers/{paper_id}"
-        response = requests.get(url, timeout=10)
-        
-        if response.status_code == 200:
-            content = response.text
-            
-            # Look for abstract in various formats
-            abstract_patterns = [
-                r'<div[^>]*class="[^"]*abstract[^"]*"[^>]*>([^<]+)</div>',
-                r'<p[^>]*class="[^"]*abstract[^"]*"[^>]*>([^<]+)</p>',
-                r'<div[^>]*class="[^"]*summary[^"]*"[^>]*>([^<]+)</div>',
-                r'<p[^>]*class="[^"]*summary[^"]*"[^>]*>([^<]+)</p>',
-                r'<div[^>]*class="[^"]*description[^"]*"[^>]*>([^<]+)</div>',
-                r'<p[^>]*class="[^"]*description[^"]*"[^>]*>([^<]+)</p>',
-                # Look for text that mentions "Abstract" or "Summary"
-                r'Abstract[^:]*:\s*([^<]+)',
-                r'Summary[^:]*:\s*([^<]+)',
-                # Look for AI-generated summary
-                r'✨ AI-generated summary[^<]*</[^>]*>([^<]+)',
-                r'AI-generated summary[^<]*</[^>]*>([^<]+)'
-            ]
-            
-            for pattern in abstract_patterns:
-                matches = re.findall(pattern, content, re.IGNORECASE | re.DOTALL)
-                if matches:
-                    abstract = matches[0].strip()
-                    if len(abstract) > 20:  # Reasonable abstract length
-                        return abstract
-            
-            # If no abstract found, look for any meaningful text block
-            text_blocks = re.findall(r'<p[^>]*>([^<]{50,})</p>', content)
-            if text_blocks:
-                for block in text_blocks:
-                    block = block.strip()
-                    if len(block) > 50 and len(block) < 500:  # Reasonable length
-                        return block
-            
-        return f"Latest research on paper {paper_id}"
-        
-    except Exception as e:
-        print(f"⚠️ Failed to fetch abstract for {paper_id}: {e}")
-        return f"Latest research on paper {paper_id}"
+    return fetch_papers_fallback(target_date)
 
 def fetch_papers_fallback(target_date: datetime.date) -> List[Dict]:
-    """Fallback method to get papers when direct fetching fails"""
+    """Fallback: fetch today's general papers list from HF API"""
     print(f"🔄 Using fallback method for {target_date}...")
-    
-    # Use real paper IDs from recent papers as fallback
-    real_paper_ids = [
-        "2507.14111", "2507.20254", "2507.21183", "2507.20240", 
-        "2507.22061", "2507.21503", "2507.21364", "2507.14112",
-        "2507.20255", "2507.21184"
-    ]
-    
-    # Generate some realistic titles based on the date
-    base_titles = [
-        "Advanced AI Research in Machine Learning",
-        "Novel Approaches to Deep Learning",
-        "Computer Vision Breakthroughs",
-        "Natural Language Processing Innovations",
-        "Reinforcement Learning Advances",
-        "Neural Network Optimization",
-        "AI Ethics and Safety Research",
-        "Multimodal AI Systems",
-        "Edge Computing for AI",
-        "Autonomous Systems Research"
-    ]
-    
-    papers = []
-    for i, paper_id in enumerate(real_paper_ids[:PAPERS_PER_DAY]):
-        title = base_titles[i] if i < len(base_titles) else f"AI Research Paper {i+1}"
-        papers.append({
-            'title': title,
-            'authors': ['Research Team'],
-            'abstract': f'Latest research on {title}',
-            'url': f"https://huggingface.co/papers/{paper_id}"
-        })
-    
-    return papers
+
+    try:
+        response = requests.get("https://huggingface.co/api/papers", timeout=15)
+        if response.status_code == 200:
+            data = response.json()
+            if data and isinstance(data, list):
+                papers = []
+                for item in data[:PAPERS_PER_DAY]:
+                    paper_id = item.get("id", "")
+                    abstract = item.get("ai_summary") or item.get("summary") or f"Latest research on {item.get('title', paper_id)}"
+                    papers.append({
+                        'title': item.get("title", f"Research Paper {paper_id}"),
+                        'authors': [a.get("name", "Unknown") for a in item.get("authors", [])],
+                        'abstract': abstract,
+                        'url': f"https://huggingface.co/papers/{paper_id}"
+                    })
+                print(f"✅ Fallback: found {len(papers)} papers")
+                return papers
+    except Exception as e:
+        print(f"❌ Fallback also failed: {e}")
+
+    return []
 
 async def call_ai_api(messages, max_tokens=1024, temperature=0.3):
     """Call GitHub Models API"""

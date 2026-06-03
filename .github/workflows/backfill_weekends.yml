@@ -1,0 +1,64 @@
+name: Backfill Weekend Reports
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backfill-saturdays:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - run: pip install -r requirements.txt
+
+      - name: Generate all missing weekly reports (Saturdays)
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          SATURDAYS=(
+            2026-01-17 2026-01-24 2026-01-31
+            2026-02-07 2026-02-14 2026-02-21 2026-02-28
+            2026-03-07 2026-03-14 2026-03-21 2026-03-28
+            2026-04-04 2026-04-11 2026-04-18 2026-04-25
+            2026-05-02 2026-05-09 2026-05-16 2026-05-23 2026-05-30
+          )
+          for d in "${SATURDAYS[@]}"; do
+            echo "=== Generating weekly report for Saturday $d ==="
+            python3 batch_generate.py --start "$d" --end "$d" || echo "Failed for $d, continuing..."
+          done
+
+      - name: Generate all missing deep dives (Sundays)
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          SUNDAYS=(
+            2026-01-18 2026-01-25 2026-02-01
+            2026-02-08 2026-02-15 2026-02-22 2026-03-01
+            2026-03-08 2026-03-15 2026-03-22 2026-03-29
+            2026-04-05 2026-04-12 2026-04-19 2026-04-26
+            2026-05-03 2026-05-10 2026-05-17 2026-05-24 2026-05-31
+          )
+          for d in "${SUNDAYS[@]}"; do
+            echo "=== Generating deep dive for Sunday $d ==="
+            python3 batch_generate.py --start "$d" --end "$d" || echo "Failed for $d, continuing..."
+          done
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _posts/
+          if git diff --staged --quiet; then
+            echo "No new files"
+          else
+            git commit -m "Backfill 20 weeks of weekend reports (weekly + deep dive)"
+            git push
+          fi

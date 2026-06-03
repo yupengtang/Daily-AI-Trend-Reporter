@@ -121,6 +121,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var postList = document.getElementById('post-list');
     var loadMoreWrap = document.getElementById('load-more-wrap');
 
+    var savedFilter = sessionStorage.getItem('activeFilter') || 'all';
+    if (savedFilter !== 'all') {
+      var savedTab = filterTabs.querySelector('[data-filter="' + savedFilter + '"]');
+      if (savedTab) savedTab.click();
+    }
+
     filterTabs.addEventListener('click', function (e) {
       var tab = e.target.closest('.filter-tab');
       if (!tab) return;
@@ -129,17 +135,15 @@ document.addEventListener('DOMContentLoaded', function () {
       tab.classList.add('active');
 
       var filter = tab.getAttribute('data-filter');
+      sessionStorage.setItem('activeFilter', filter);
+
       var cards = postList.querySelectorAll('.post-card');
-      var shown = 0;
 
       cards.forEach(function (card) {
         var cat = card.getAttribute('data-category') || 'daily';
         var match = filter === 'all' || cat === filter;
         card.style.display = match ? '' : 'none';
-        if (match) {
-          card.classList.remove('post-hidden');
-          shown++;
-        }
+        if (match) card.classList.remove('post-hidden');
       });
 
       if (loadMoreWrap) loadMoreWrap.style.display = filter === 'all' ? '' : 'none';

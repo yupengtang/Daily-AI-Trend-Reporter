@@ -121,32 +121,33 @@ document.addEventListener('DOMContentLoaded', function () {
     var postList = document.getElementById('post-list');
     var loadMoreWrap = document.getElementById('load-more-wrap');
 
-    var savedFilter = sessionStorage.getItem('activeFilter') || 'all';
-    if (savedFilter !== 'all') {
-      var savedTab = filterTabs.querySelector('[data-filter="' + savedFilter + '"]');
-      if (savedTab) savedTab.click();
-    }
-
-    filterTabs.addEventListener('click', function (e) {
-      var tab = e.target.closest('.filter-tab');
-      if (!tab) return;
-
+    function applyFilter(filter) {
       filterTabs.querySelectorAll('.filter-tab').forEach(function (t) { t.classList.remove('active'); });
-      tab.classList.add('active');
-
-      var filter = tab.getAttribute('data-filter');
-      sessionStorage.setItem('activeFilter', filter);
-
-      var cards = postList.querySelectorAll('.post-card');
-
-      cards.forEach(function (card) {
+      var tab = filterTabs.querySelector('[data-filter="' + filter + '"]');
+      if (tab) tab.classList.add('active');
+      postList.querySelectorAll('.post-card').forEach(function (card) {
         var cat = card.getAttribute('data-category') || 'daily';
         var match = filter === 'all' || cat === filter;
         card.style.display = match ? '' : 'none';
         if (match) card.classList.remove('post-hidden');
       });
-
       if (loadMoreWrap) loadMoreWrap.style.display = filter === 'all' ? '' : 'none';
+    }
+
+    var savedFilter = sessionStorage.getItem('activeFilter') || 'all';
+    if (savedFilter !== 'all') applyFilter(savedFilter);
+
+    window.addEventListener('pageshow', function () {
+      var f = sessionStorage.getItem('activeFilter') || 'all';
+      if (f !== 'all') applyFilter(f);
+    });
+
+    filterTabs.addEventListener('click', function (e) {
+      var tab = e.target.closest('.filter-tab');
+      if (!tab) return;
+      var filter = tab.getAttribute('data-filter');
+      sessionStorage.setItem('activeFilter', filter);
+      applyFilter(filter);
     });
   }
 
@@ -228,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function () {
           snippets.push(s);
         }
       });
-      html += '<article class="post-card"><div class="post-card-meta"><time>' + post.date + '</time></div>';
+      html += '<article class="post-card in-view"><div class="post-card-meta"><time>' + post.date + '</time></div>';
       html += '<h2 class="post-card-title"><a href="' + post.url + '">' + post.title + '</a></h2>';
       if (snippets.length > 0) {
         html += '<div class="search-snippets">';

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Technical Deep Dive - May 25 to May 29, 2026 (Friday)"
-date: 2026-05-29
+title: "Technical Deep Dive - May 25 to May 29, 2026"
+date: 2026-05-31
 category: technical-deep-dive
 ---
 

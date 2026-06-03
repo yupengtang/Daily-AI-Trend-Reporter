@@ -4,6 +4,8 @@ url: "https://yupengtang.github.io"
 baseurl: "/Daily-AI-Trend-Reporter"
 theme: minima
 markdown: kramdown
+kramdown:
+  math_engine: null
 show_excerpts: false
 
 plugins:

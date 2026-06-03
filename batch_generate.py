@@ -229,8 +229,10 @@ async def generate_daily_post(target_date: datetime.date) -> Optional[str]:
     print(f"✅ Generated daily digest: {filename}")
     return filename
 
-async def generate_technical_deep_dive(week_start: datetime.date, week_end: datetime.date) -> Optional[str]:
-    """Generate technical deep dive post based on Saturday's weekly report"""
+async def generate_technical_deep_dive(week_start: datetime.date, week_end: datetime.date, publish_date: Optional[datetime.date] = None) -> Optional[str]:
+    """Generate technical deep dive post, published on publish_date (Sunday)"""
+    if publish_date is None:
+        publish_date = week_end + datetime.timedelta(days=2)
     print(f"🔬 Generating technical deep dive for {week_start} to {week_end}...")
     
     # Get weekly report from Saturday
@@ -278,16 +280,16 @@ async def generate_technical_deep_dive(week_start: datetime.date, week_end: date
         deep_dive_data = deep_dive_response.json()
         deep_dive_content = deep_dive_data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
         
-        # Generate technical deep dive filename with weekday
-        weekday = week_end.strftime("%A")  # Get weekday name
-        deep_dive_filename = f"_posts/{week_end.strftime('%Y-%m-%d')}-{weekday.lower()}-technical-deep-dive.md"
-        
+        # Generate technical deep dive filename — published on Sunday
+        weekday = publish_date.strftime("%A")
+        deep_dive_filename = f"_posts/{publish_date.strftime('%Y-%m-%d')}-{weekday.lower()}-technical-deep-dive.md"
+
         # Save technical deep dive
         with open(deep_dive_filename, "w", encoding="utf-8") as f:
             f.write("---\n")
             f.write(f"layout: post\n")
-            f.write(f"title: \"Technical Deep Dive - {week_start.strftime('%B %d')} to {week_end.strftime('%B %d, %Y')} ({weekday})\"\n")
-            f.write(f"date: {week_end.strftime('%Y-%m-%d')}\n")
+            f.write(f"title: \"Technical Deep Dive - {week_start.strftime('%B %d')} to {week_end.strftime('%B %d, %Y')}\"\n")
+            f.write(f"date: {publish_date.strftime('%Y-%m-%d')}\n")
             f.write("category: technical-deep-dive\n")
             f.write("---\n\n")
             f.write(deep_dive_content.strip() + "\n")
@@ -298,8 +300,10 @@ async def generate_technical_deep_dive(week_start: datetime.date, week_end: date
         print(f"❌ Technical deep dive generation failed: {deep_dive_response.status_code if deep_dive_response else 'No response'}")
         return None
 
-async def generate_weekly_report(week_start: datetime.date, week_end: datetime.date) -> Optional[str]:
-    """Generate weekly report for a specific week"""
+async def generate_weekly_report(week_start: datetime.date, week_end: datetime.date, publish_date: Optional[datetime.date] = None) -> Optional[str]:
+    """Generate weekly report, published on publish_date (Saturday)"""
+    if publish_date is None:
+        publish_date = week_end + datetime.timedelta(days=1)
     print(f"📊 Generating weekly report for {week_start} to {week_end}...")
     
     # Get posts from this week
@@ -378,7 +382,7 @@ async def generate_weekly_report(week_start: datetime.date, week_end: datetime.d
             f.write("---\n")
             f.write(f"layout: post\n")
             f.write(f"title: \"Weekly Report - {week_start.strftime('%B %d')} to {week_end.strftime('%B %d, %Y')}\"\n")
-            f.write(f"date: {week_end.strftime('%Y-%m-%d')}\n")
+            f.write(f"date: {publish_date.strftime('%Y-%m-%d')}\n")
             f.write("category: weekly-report\n")
             f.write("---\n\n")
             f.write(weekly_content.strip() + "\n")
@@ -410,7 +414,7 @@ async def batch_generate(start_date: datetime.date, end_date: datetime.date) -> 
             # Generate weekly report for Monday to Friday
             week_start = current_date - datetime.timedelta(days=5)  # Monday
             week_end = current_date - datetime.timedelta(days=1)    # Friday
-            weekly_file = await generate_weekly_report(week_start, week_end)
+            weekly_file = await generate_weekly_report(week_start, week_end, current_date)
             if weekly_file:
                 generated_files.append(weekly_file)
         
@@ -421,7 +425,7 @@ async def batch_generate(start_date: datetime.date, end_date: datetime.date) -> 
             # Generate technical deep dive for the week
             week_start = current_date - datetime.timedelta(days=6)  # Monday
             week_end = current_date - datetime.timedelta(days=2)    # Friday (matches weekly report range)
-            deep_dive_file = await generate_technical_deep_dive(week_start, week_end)
+            deep_dive_file = await generate_technical_deep_dive(week_start, week_end, current_date)
             if deep_dive_file:
                 generated_files.append(deep_dive_file)
         

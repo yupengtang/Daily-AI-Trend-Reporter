@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, September 17, 2025"
 date: 2025-09-17
 ---
 
-Keywords: 0-shot performance, 3D positional embeddings, ACEBench, AI agents, AIME 25, AgentFounder, AgentScaler, Agentic Continual Pre-training
+Keywords: BrowseComp-en, BrowseComp-zh, AI agents, GRPO, Large language models, agentic systems, autonomous tool use, multi-step reasoning
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, April 06, 2026"
 date: 2026-04-06
 ---
 
-Keywords: AgentHazard, Agentic-MME, COSMIC benchmark, Codeforces, Error-driven Chain-of-Thought, GPU profiling, Knowledge Expansion, LLMs
+Keywords: post-training, Multimodal Large Language Models, multi-agent RL, reinforcement learning, agentic GRPO, online test-time RL, competitive programming, Codeforces
 
 ---
 

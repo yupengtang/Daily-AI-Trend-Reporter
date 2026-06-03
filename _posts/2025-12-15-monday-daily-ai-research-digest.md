@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, December 15, 2025"
 date: 2025-12-15
 ---
 
-Keywords: 3D Gaussian Splatting, 3D Gaussian representation, 3D implicit keypoints, DISTS, DPG-Bench, Delaunay triangulation, GenEval, LPIPS
+Keywords: multimodal large language models, zero-shot generalization, video diffusion models, LoRA adaptation, unified conditioning, width and channel wise concatenation, geometry-guided self-attention, egocentric videos
 
 ---
 

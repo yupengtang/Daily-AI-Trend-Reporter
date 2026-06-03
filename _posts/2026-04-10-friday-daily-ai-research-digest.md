@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, April 10, 2026"
 date: 2026-04-10
 ---
 
-Keywords: AI agents, CLIP alignment, CountBench, Diffusion Transformer, GSM8K, Group Relative Policy Optimization, LPM-Bench, MBPP
+Keywords: reinforcement learning, large language model agents, reusable skills, supervised finetuning, cross-domain generalization, optimization dynamics, long chain-of-thought, training data
 
 ---
 

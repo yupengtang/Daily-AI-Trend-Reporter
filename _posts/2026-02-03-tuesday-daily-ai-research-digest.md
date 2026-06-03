@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, February 03, 2026"
 date: 2026-02-03
 ---
 
-Keywords: Agent Swarm, DINO-based perceptual loss, GitHub pull requests, KrisBench, LPIPS loss, Mixture-of-Experts, Multimodal Large Language Models, RMS-scale consistency
+Keywords: reinforcement learning, Vision-Language-Action, multimodal grounding, multi-embodiment pretraining, embodiment-specific adaptation, reinforcement-learning, episode-progress prediction, out-of-distribution detection
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, April 09, 2026"
 date: 2026-04-09
 ---
 
-Keywords: 4D environment navigation, A2A protocol, BF16 precision, Bayesian POMDP, Claw Bridge, Completely Neural Computer, Dafny program verification, Diffusion RL
+Keywords: textual planning, visual drafting, textual reflection, visual refinement, step-wise supervision, spatial consistency, semantic consistency, prompt-violating elements
 
 ---
 

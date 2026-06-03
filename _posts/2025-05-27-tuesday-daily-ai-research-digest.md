@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, May 27, 2025"
 date: 2025-05-27
 ---
 
-Keywords: AIME, ARC-AGI, ARM, Ada-GRPO, Adaptive Mode, Adaptive Reasoning Model, Beam Search, BeyondAIME
+Keywords: large language models, Reinforcement Learning with Verifiable Rewards, Group Relative Policy Optimization, language model, bidirectional Arabic-English translation, LLMs, Kuwain-1.5B, two-phase training
 
 ---
 

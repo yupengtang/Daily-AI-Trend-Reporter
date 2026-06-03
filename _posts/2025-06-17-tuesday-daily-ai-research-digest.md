@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, June 17, 2025"
 date: 2025-06-17
 ---
 
-Keywords: Autoregressive (AR) Transformer, CISPO, Chain-of-Tool-Thought, CoTT, DataMorgana, Deep Research Agents, Discrete Diffusion Language Models, Discrete Diffusion Multimodal Language Models
+Keywords: Mixture-of-Experts (MoE), lightning attention mechanism, reinforcement learning (RL), CISPO, importance sampling weights, token updates, Deep Research Agents, LLM-based agents
 
 ---
 

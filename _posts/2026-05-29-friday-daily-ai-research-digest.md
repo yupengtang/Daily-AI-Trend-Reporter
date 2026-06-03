@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, May 29, 2026"
 date: 2026-05-29
 ---
 
-Keywords: AgentDoG 1.5, Asymmetric Orthogonal Prompting, Coarse-to-Fine Distillation Objective, DiT-based action decoder, Docker-level environments, FLOPs, LLMs, LLaVA-OneVision-7B
+Keywords: spatial reasoning, Low-Rank Adaptation, agent safety alignment framework, agent safety taxonomy, influence-function purification, AgentDoG 1.5, agentic safety SFT, RL training environment
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, April 13, 2026"
 date: 2026-04-13
 ---
 
-Keywords: 3B-parameter model, 3D detection dataset, 3D object detection, Any-Time inference, Boundary Consistency Loss, Direct Conditional Distillation, Distribution Matching Distillation, FID
+Keywords: large language models, monocular 3D object detection, geometry-aware architecture, text prompts, point prompts, box prompts, depth signals, open-world transfer
 
 ---
 

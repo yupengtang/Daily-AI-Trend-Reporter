@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, July 02, 2025"
 date: 2025-07-02
 ---
 
-Keywords: Agentic RAG frameworks, Artificial General Intelligence (AGI), Chatbot Arena, GPT-4o, GPT-based methods, GUI-based agents, HunyuanVideo, IntentBench
+Keywords: reinforcement learning, amodal segmentation, vision-language model, VLM, reasoning-centric training framework, large-scale pre-training, Reinforcement Learning with Curriculum Sampling, RLCS
 
 ---
 

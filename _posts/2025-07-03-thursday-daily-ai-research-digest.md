@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, July 03, 2025"
 date: 2025-07-03
 ---
 
-Keywords: Audio-DiT, CT image-report datasets, Color Consistency Reward, DPO, Dynamic Global-Local Memory (DGLM), Flexible Parallelized Autoregressive Modeling, GREEN-RedLlama, Gemini
+Keywords: Multimodal Large Language Models, Kwai Keye-VL, vision-language alignment, cold-start data mixture, thinking, non-thinking, auto-think, think with image
 
 ---
 

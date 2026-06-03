@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, May 19, 2026"
 date: 2026-05-19
 ---
 
-Keywords: 3D room synthesis, AI automation, AI-assisted research, Agent Skills, BF16 accuracy gap, Balanced SP, Blackwell GPUs, Blender codes
+Keywords: agent harness, reinforcement learning, large language models, agentic systems, code as agent harness, agent infrastructure, reasoning, action
 
 ---
 

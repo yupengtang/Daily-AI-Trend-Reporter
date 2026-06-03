@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, December 16, 2025"
 date: 2025-12-16
 ---
 
-Keywords: Adaptive Entropy-Controlled Policy Optimization, Co-Reasoning Director, DeltaNet, DiT, FLOPS, ImageNet, Key-Value caching, LLM memory
+Keywords: agent memory, LLM memory, retrieval augmented generation (RAG), context engineering, token-level memory, parametric memory, latent memory, factual memory
 
 ---
 

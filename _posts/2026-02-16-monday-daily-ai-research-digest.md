@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, February 16, 2026"
 date: 2026-02-16
 ---
 
-Keywords: 3D RoPE, Codec Patchification, Feature Activation Coverage, GUI agents, LLM, Multimodal Large Language Models, SimMotion benchmarks, Thinking-with-Images
+Keywords: Feature Activation Coverage, sparse autoencoder, data diversity, downstream performance, instruction following, toxicity detection, reward modeling, behavior steering
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, October 09, 2025"
 date: 2025-10-09
 ---
 
-Keywords: Artificial Hippocampus Network (AHN), Cache-to-Cache, Delethink, DeltaNet, Franka robot, GPU-parallelized simulators, GRPO, Gated DeltaNet
+Keywords: Large Language Models, reinforcement learning, KV-Cache, Cache-to-Cache, neural network, semantic communication, gating mechanism, accuracy
 
 ---
 

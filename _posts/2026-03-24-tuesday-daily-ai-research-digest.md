@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, March 24, 2026"
 date: 2026-03-24
 ---
 
-Keywords: 2D image quality, 30B-A3B backbone, 3D consistency, 3D reconstruction, 3D spatial relationships, 4D generation, ADE20K, BrowseComp
+Keywords: video generation, world models, 4D generation, interactive response, causal impact, temporal evolution, state transitions, agent-based evaluation
 
 ---
 

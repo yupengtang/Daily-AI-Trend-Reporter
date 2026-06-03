@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, July 23, 2025"
 date: 2025-07-23
 ---
 
-Keywords: 2D visual reasoning, 3D multi-hop inference, 3D reasoning, AIME25, Anole-7B, Bagel-7B, DeepSeek-R1-Distill-Qwen-14B, Detail-Consistent Appearance Preservation
+Keywords: retrieval-augmented generation, supervised fine-tuning, Thread Inference Model, TIM, TIMRUN, recursive problem solving, decompositional problem solving, long-horizon structured reasoning
 
 ---
 

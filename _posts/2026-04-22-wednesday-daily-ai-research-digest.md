@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, April 22, 2026"
 date: 2026-04-22
 ---
 
-Keywords: 3D geometric memory, AIME 2024, Chat2Workflow, Diffusion Transformer, Exec@3, Expectation-Maximization algorithm, GUI applications, HOI structure stream
+Keywords: virtual try-on, image generation, image editing, photorealistic results, multi-stage training, end-to-end model architecture, scalable data engine, robust infrastructure
 
 ---
 

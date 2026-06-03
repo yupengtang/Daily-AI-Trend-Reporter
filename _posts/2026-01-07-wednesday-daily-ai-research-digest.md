@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, January 07, 2026"
 date: 2026-01-07
 ---
 
-Keywords: 4K synthetic benchmark, AI models, AdaLN, Conduction Aphasia, Image-to-Video (I2V) model, Low-Rank Adaptation (LoRA), Mixture-of-Experts, Multi-Teacher On-Policy Distillation
+Keywords: text-to-video diffusion models, audiovisual content, dual-stream transformer, cross-attention layers, temporal positional embeddings, AdaLN, classifier-free guidance, modality-aware classifier-free guidance
 
 ---
 

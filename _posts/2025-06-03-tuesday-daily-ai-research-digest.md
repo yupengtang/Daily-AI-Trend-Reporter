@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, June 03, 2025"
 date: 2025-06-03
 ---
 
-Keywords: 3D vector-quantized variational autoencoder (VQVAE), 3D-Alpaca dataset, 3D-native AI, AIME, AdamW, Chain-of-Thought, CoT reasoning, CogVideoX-5B
+Keywords: reinforcement learning, large language models, Reinforcement Learning with Verifiable Rewards, RLVR, Large Language Models, LLMs, token entropy patterns, Chain-of-Thought
 
 ---
 

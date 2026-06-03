@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, June 04, 2025"
 date: 2025-06-04
 ---
 
-Keywords: Essential Reasoning, FinMME, FinScore, GPT-4o-Image, GUI action grounding benchmarks, GUI-Actor, GUI-Actor-7B, LLM-Judge
+Keywords: reinforcement learning, parameter-efficient fine-tuning, multimodal benchmark, Multimodal Large Language Models, self-reflection, self-reflective commentary, performance gains, math equation writing
 
 ---
 

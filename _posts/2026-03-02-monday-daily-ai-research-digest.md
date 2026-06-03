@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, March 02, 2026"
 date: 2026-03-02
 ---
 
-Keywords: BERT-style encoder, CIFAR-10, CLIP, CUDA development environment, CUDA kernel optimization, DINO, Decoupled Diffusion Transformer, Gaussian structure
+Keywords: large language models, reinforcement learning, diffusion language models, training, inference, evaluation, open-source framework, reproducible recipes
 
 ---
 

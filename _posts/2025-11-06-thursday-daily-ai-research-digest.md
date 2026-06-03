@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, November 06, 2025"
 date: 2025-11-06
 ---
 
-Keywords: 3D scene synthesis, AI Reviewers, AI Scientist, AI-driven scientific contributions, Agents4Science, Asymmetric Cross-Modal Interaction, CLIPScore, Chain-of-Thought
+Keywords: diffusion language models, autoregressive models, any-order modeling, iterative bidirectional denoising, Monte Carlo augmentation, HellaSwag, MMLU, Diffusion Transformers
 
 ---
 

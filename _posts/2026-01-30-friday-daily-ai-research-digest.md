@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, January 30, 2026"
 date: 2026-01-30
 ---
 
-Keywords: Agentic Reinforcement Learning, Chain-of-Thought, CoT rationale generation, ConceptMoE, Continuous Inference, Dynamic Object Manipulation benchmark, GAIA, KV cache
+Keywords: large language model, autonomous scientific discovery, runtime-centric execution, context window limitations, hallucination, pre-computation-driven framework, peer-reviewed papers, research patterns
 
 ---
 

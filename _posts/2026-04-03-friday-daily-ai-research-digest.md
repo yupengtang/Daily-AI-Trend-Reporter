@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, April 03, 2026"
 date: 2026-04-03
 ---
 
-Keywords: ALFWorld, DINOv2, DeepSpeed ZeRO-3, G-buffer, LLaMA-Factory, MAE, MMLU, Qwen2.5-1.5B
+Keywords: data-centric training, large language models, sample selection, domain mixture adjustment, sample reweighting, LLaMA-Factory, extensible trainer abstractions, modular components
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, December 30, 2025"
 date: 2025-12-30
 ---
 
-Keywords: Anchor-Heavy Identity Sinks, Dream-VL, Dream-VLA, LIBERO, Mixture-of-Experts (MoE), MoE-LLMs, Self Forcing, SimplerEnv-Bridge
+Keywords: Mixture-of-Experts (MoE), expert-router coupling (ERC) loss, router embeddings, proxy tokens, internal activations, MoE-LLMs, expert specialization levels, n² activations
 
 ---
 

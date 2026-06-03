@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, May 12, 2025"
 date: 2025-05-12
 ---
 
-Keywords: Adaptive Learning Rate, Complex Polish Text Understanding Benchmark, DINO feature space, DPO, Expectation-Maximization algorithm, G-FOCUS, GPT-4.1, GPT-4.5
+Keywords: Weighted Instruction Cross-Entropy Loss, Adaptive Learning Rate, parameter-efficient generative text models, custom Polish tokenizer, Open PL LLM Leaderboard, Complex Polish Text Understanding Benchmark, Polish EQ-Bench, Polish Medical Leaderboard
 
 ---
 

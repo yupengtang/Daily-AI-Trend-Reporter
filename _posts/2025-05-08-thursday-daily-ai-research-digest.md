@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, May 08, 2025"
 date: 2025-05-08
 ---
 
-Keywords: 2D grid environment, API costs, AudioNet, CLIP, Claude Sonnet, D-FPS, Deductive FPS, Embodied MAS
+Keywords: LLaVA, multimodal understanding, diffusion-based models, autoregressive-based models, hybrid approaches, cross-modal attention, reinforcement learning, LLMs
 
 ---
 

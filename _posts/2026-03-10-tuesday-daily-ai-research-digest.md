@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, March 10, 2026"
 date: 2026-03-10
 ---
 
-Keywords: 3D Gaussian Splatting, 3D grounding, 3D reconstruction, 3DGS, ATE, Chain-of-Thought reasoning, CoCo-10K dataset, ControlNet
+Keywords: large language models, long-form story generation, narrative consistency, story generation benchmarks, contradiction detection, token-level entropy, 3D Gaussian Splatting, 3DGS
 
 ---
 

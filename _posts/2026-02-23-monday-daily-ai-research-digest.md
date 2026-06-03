@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, February 23, 2026"
 date: 2026-02-23
 ---
 
-Keywords: 3D head pose, Best-of-K, Diffusion Language Models, KL-anchored coverage objective, Large Multimodal Models, LoRA, Low-Rank Adaptation, MATH500
+Keywords: large reasoning models, chains of thought, sampling paradigms, self-aware guided efficient reasoning, group-based reinforcement learning, pass@1 inference, mathematical benchmarks, reinforcement learning
 
 ---
 

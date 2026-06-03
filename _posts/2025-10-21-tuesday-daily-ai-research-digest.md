@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, October 21, 2025"
 date: 2025-10-21
 ---
 
-Keywords: BBH, Best-of-N selection, DeepSeek-R1-671B, FineVision, Glyph, ImageNet classification, LLM backbone, LLMs
+Keywords: large language models, vision-language models, LLMs, workflow-based data agents, agentic LLM, curriculum-based agentic training, data-grounded trajectory synthesis, data question answering
 
 ---
 

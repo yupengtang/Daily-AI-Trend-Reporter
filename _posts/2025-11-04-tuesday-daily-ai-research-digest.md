@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, November 04, 2025"
 date: 2025-11-04
 ---
 
-Keywords: Agent-REINFORCE, Diffusion Policy, EBMs, EBT-Policy, EBTs, Energy-Based Models, Energy-Based Transformers, Evo-CoT)
+Keywords: Mixture-of-Experts (MoE), high sparsity, cross-scale consistency, MTP, reasoning-oriented data, mid-training CoT activation, reinforcement-based fine-tuning (DFT, Evo-CoT)
 
 ---
 

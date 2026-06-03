@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, November 18, 2025"
 date: 2025-11-18
 ---
 
-Keywords: Bagel, MMaDA-Parallel, Output Alignment, ParaBench, ParaRL, Parallel Reinforcement Learning, autoregressive, bidirectional interaction
+Keywords: thinking-aware generation, sequential, autoregressive, ParaBench, diffusion framework, parallel multimodal diffusion, MMaDA-Parallel, continuous
 
 ---
 

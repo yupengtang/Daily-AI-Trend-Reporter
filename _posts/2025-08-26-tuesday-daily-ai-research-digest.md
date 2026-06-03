@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, August 26, 2025"
 date: 2025-08-26
 ---
 
-Keywords: 3D consistency, ASPO, Advantage Shaping Policy Optimization, Boolean functions, Cascade RL, Curator, Decoupled Vision-Language Deployment, DvD
+Keywords: Large Language Models, Cascade RL, offline RL, online RL, Visual Resolution Router, ViR, Decoupled Vision-Language Deployment, DvD
 
 ---
 

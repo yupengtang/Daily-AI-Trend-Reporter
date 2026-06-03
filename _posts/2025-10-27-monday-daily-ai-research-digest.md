@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, October 27, 2025"
 date: 2025-10-27
 ---
 
-Keywords: 3D block inpainting, 3D foundation models, 3D implicit representations, 3D-FRONT dataset, AGI scores, ALFWorld, API-Bank, Cattell-Horn-Carroll theory
+Keywords: reinforcement learning, DeepAgent, autonomous thinking, tool discovery, action execution, autonomous memory folding, episodic memory, working memory
 
 ---
 

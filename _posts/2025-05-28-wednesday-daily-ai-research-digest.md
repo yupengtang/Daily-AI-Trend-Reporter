@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, May 28, 2025"
 date: 2025-05-28
 ---
 
-Keywords: BBEH, Best-of-N (BoN), CGMs, Claude 3.7, Code Graph Models, Data Synthesis, DeepSeek-R1, DeepSeek-R1-Distill-Qwen-32B
+Keywords: Large Language Models (LLMs), top-down pipeline, multi-agent pipeline, VLM-as-judge, binary-tree layout, rendering code, VLM feedback, parser
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, November 28, 2025"
 date: 2025-11-28
 ---
 
-Keywords: BEHAVIOR, Flux.1-Kontext, GPT-Image, LMMs, MIRA-Editing, Multi-Task Canvas Training, Nano-Banana, POMDP
+Keywords: vision-language models, reward feedback learning, ReFL, video generation, pixel space, VAE decoding, latent space, noisy latent representations
 
 ---
 

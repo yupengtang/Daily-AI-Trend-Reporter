@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, September 15, 2025"
 date: 2025-09-15
 ---
 
-Keywords: AMC, Bitcoin, Collision Dynamics, FINMEM, Fluid Dynamics, GRPO, GSM8K, HFT
+Keywords: large language models, LLMs, single-step accuracy, long-horizon tasks, execution capability, self-conditioning, thinking models, sequential test-time compute
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, July 16, 2025"
 date: 2025-07-16
 ---
 
-Keywords: AgentsNet, BYOKG-RAG, C++ programming language, Counterfactual World Model (CWM), EXAONE 3.5, EXAONE 4.0, EXAONE Deep, GPT-4o
+Keywords: Non-reasoning mode, Reasoning mode, agentic tool use, multilingual capabilities, EXAONE 4.0, EXAONE Deep, EXAONE 3.5, mid-size 32B model
 
 ---
 

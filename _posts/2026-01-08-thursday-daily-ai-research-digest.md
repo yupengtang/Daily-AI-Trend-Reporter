@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, January 08, 2026"
 date: 2026-01-08
 ---
 
-Keywords: 4D dynamic scenes, Benchmark^2, Confident Conflicts, DiT blocks, Eulerian representations, Group Relative Policy Optimization, Lagrangian motion, ODE sampling
+Keywords: large language models, supervised fine-tuning, catastrophic forgetting, on-policy reinforcement learning, distributional gap, Confident Conflicts, token-level entropy, epistemic uncertainty
 
 ---
 

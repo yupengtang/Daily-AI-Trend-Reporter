@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, April 16, 2026"
 date: 2026-04-16
 ---
 
-Keywords: 3D spatial reasoning, AI coding agents, DGE, Deterministic Geometric Environment, Directed Acyclic Graph, FIFO input queuing, Generate-Critique-Refine loop, LLM RLVR
+Keywords: multi-modal audio-video generation, unified architecture, joint generation, content reference, editing capabilities, generation speed, low-latency scenarios, Multimodal Large Language Model
 
 ---
 

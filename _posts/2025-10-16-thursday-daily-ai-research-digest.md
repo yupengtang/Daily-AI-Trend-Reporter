@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, October 16, 2025"
 date: 2025-10-16
 ---
 
-Keywords: 3D Gaussian representations, 3D scenes, 3D-oriented approach, B-spline, Bee-8B, Chain-of-Thought, DataStudio, Direct Preference Optimization
+Keywords: reinforcement learning, large language models, generative model, 3D scenes, single image, text prompt, 3D Gaussian representations, MV-oriented paradigm
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, April 20, 2026"
 date: 2026-04-20
 ---
 
-Keywords: 1P-DNL, ARIA, Audio-Visual Vibe Coding, DPO, Deep Neural Lesion, Deep Neural Networks, Hybrid Attention Mixture-of-Experts, ImageNet
+Keywords: large language models, diffusion probabilistic models, Signal-to-Noise Ratio-timestep bias, denoising sample, inference phase, training phase, error accumulation, differential correction
 
 ---
 

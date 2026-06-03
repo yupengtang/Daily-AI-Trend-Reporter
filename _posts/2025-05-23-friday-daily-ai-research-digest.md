@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, May 23, 2025"
 date: 2025-05-23
 ---
 
-Keywords: AIME 2025, Conceptual, DeepSeek-R1, DiT, Diffusion Transformers, Factual, Generation Chain-of-Thought, InfographicsVQA
+Keywords: reinforcement learning, instruction-following, reasoning-oriented models, benchmarks, chains-of-thought, instruction adherence, large language models, LLMs
 
 ---
 

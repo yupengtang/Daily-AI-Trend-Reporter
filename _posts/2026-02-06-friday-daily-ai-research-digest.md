@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, February 06, 2026"
 date: 2026-02-06
 ---
 
-Keywords: Attack Success Rate, EAGLE-3, False Positive Rate, GRPO, Group Sequence Policy Optimization, Intrinsic Risk Sensing, LLMs, Large Language Model
+Keywords: GRPO, reinforcement learning, Large Language Model agents, multi-turn dialogue, tool-using agents, in-car assistant, hallucination tasks, disambiguation tasks
 
 ---
 

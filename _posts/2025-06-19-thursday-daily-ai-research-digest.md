@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, June 19, 2025"
 date: 2025-06-19
 ---
 
-Keywords: (de)embedding layers, 3D indoor and outdoor environments, AIME 2024, AIME24, ASR, DiCoW, DiariZen, Embodied Web Agents
+Keywords: first-person view, worldwide video dataset, rich annotations, FPV, UVA, video collection, pre-processing, camera trajectories
 
 ---
 

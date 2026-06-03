@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, June 01, 2026"
 date: 2026-06-01
 ---
 
-Keywords: Exact Match, FP8 hybrid precision, GrepSeek, Group Relative Policy Optimization, Grouped-Query Attention, KL trust region, LLM-based contextual reasoning, LQ-HQ paired dataset
+Keywords: RLVR, expert knowledge distillation, person-grounded agents, trace-to-skill distillation, capability track, behavior track, skill package, correction lifecycle
 
 ---
 

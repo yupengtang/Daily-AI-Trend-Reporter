@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, November 12, 2025"
 date: 2025-11-12
 ---
 
-Keywords: AIME24, AIME25, Anomaly Grounding, Arabic, Claude Opus 4, Complex Reasoning, DeepSeek R1, EpBench
+Keywords: personalization, Reinforcement Learning with Verifiable Rewards, Spectrum-to-Signal Principle, Two-Stage Diversity-Exploring Distillation, MaxEnt-Guided Policy Optimization, VibeThinker-1.5B, DeepSeek R1, Kimi k2
 
 ---
 

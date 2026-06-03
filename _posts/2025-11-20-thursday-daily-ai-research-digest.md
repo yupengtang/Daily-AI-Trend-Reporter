@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, November 20, 2025"
 date: 2025-11-20
 ---
 
-Keywords: 10-second video synthesis, AI research agents, AR/VR, ASR transcripts, ATLAS, CUDA kernel, DINOv3, F1 score
+Keywords: foundation models, high-resolution image synthesis, 10-second video synthesis, image generation models, text-to-video models, image-to-video models, multi-stage training pipeline, self-supervised fine-tuning
 
 ---
 

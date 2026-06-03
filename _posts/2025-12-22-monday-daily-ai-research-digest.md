@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, December 22, 2025"
 date: 2025-12-22
 ---
 
-Keywords: 4D Video Question Answering, 4D representations, 4D-RGPT, Big Questions, E2E-3M, Egocentric2Embodiment, Egocentric2Embodiment dataset, Fate-H
+Keywords: Scientific General Intelligence, SGI, Practical Inquiry Model, PIM, deep research, idea generation, dry experiments, wet experiments
 
 ---
 

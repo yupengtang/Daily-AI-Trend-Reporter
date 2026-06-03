@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, September 29, 2025"
 date: 2025-09-29
 ---
 
-Keywords: AI feedback, AIME, ALFWorld, AMC, Captioning Reinforcement Learning, DAPO, GRPO, INT8-quantized inference
+Keywords: Reinforcement Learning with Verifiable Rewards, GRPO, state-of-the-art performance, frame-level autoregressive, diffusion models, diffusion-forcing models, bidirectional attention, causal attention
 
 ---
 

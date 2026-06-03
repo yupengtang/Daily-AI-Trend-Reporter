@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, September 08, 2025"
 date: 2025-09-08
 ---
 
-Keywords: 3D-printed leader arms, 6-DoF, 7-DoF, Behavioral Fingerprinting, CAD models, DINO, Diagnostic Prompt Suite, HDR environment maps
+Keywords: reinforcement learning, LLMs, hallucinations, binary classification, uncertain responses, trustworthy AI systems, autoregressive next token prediction, masked token prediction
 
 ---
 

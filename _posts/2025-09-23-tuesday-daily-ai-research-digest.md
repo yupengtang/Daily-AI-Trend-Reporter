@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, September 23, 2025"
 date: 2025-09-23
 ---
 
-Keywords: ARE, Agency, Agency Efficiency Principle, Chain-of-Thought training, Condition-Specific Feature Injection, Context-Aware Rephraser, Deep Learning Recommendation Models (DLRMs), GPT-4o-Transcribe
+Keywords: diffusion models, multimodal model, Thinker-Talker MoE architecture, audio tasks, audio-visual benchmarks, open-source SOTA, closed-source models, Gemini-2.5-Pro
 
 ---
 

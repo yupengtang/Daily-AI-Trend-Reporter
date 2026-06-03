@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, February 05, 2026"
 date: 2026-02-05
 ---
 
-Keywords: AIME tasks, AIME24, Balanced-Information Score, CoT reasoning, F1 score, Hybrid Sparse Attention, KL divergence, KV cache memory footprint
+Keywords: Large Language Models, reinforcement learning, autoregressive foundation model, unified multimodal understanding, unified next-group-of-tokens prediction objective, mixture-of-experts, modality-agnostic expert routing, elastic training paradigm
 
 ---
 

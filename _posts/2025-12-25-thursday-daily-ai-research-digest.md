@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, December 25, 2025"
 date: 2025-12-25
 ---
 
-Keywords: 3D trajectories, 4D-aware training, DSR-Bench, DSR-Train, Geometry Selection Module, LLM-based labeling, Qwen2.5-VL-7B, RTX 5090 GPU
+Keywords: vision-language models, SageAttention, Sparse-Linear Attention, rCM, W8A8 quantization, diffusion generation, video generation, RTX 5090 GPU
 
 ---
 

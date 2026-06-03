@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, August 12, 2025"
 date: 2025-08-12
 ---
 
-Keywords: AIME, ARMs, Action Reasoning Models, Agent System, BRIGHT leaderboard, BrowseComp, BrowseComp-Plus, Chain-of-Thought supervised fine-tuning
+Keywords: reinforcement learning, Large Language Model, listwise ranking, Large Reasoning Models, step-by-step reasoning, DeepSeek-R1, self-consistency data filtering, cold-start supervised fine-tuning
 
 ---
 

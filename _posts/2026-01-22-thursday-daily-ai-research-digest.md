@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, January 22, 2026"
 date: 2026-01-22
 ---
 
-Keywords: Brascamp-Lieb theorem, Chain-of-Thought prompting, Claude Code, Claude Opus, Formula-LLM Adaptive Evaluation, LLMs, Large Language Models, Lean
+Keywords: reinforcement learning, supervised fine-tuning, vision-language models, large language models, agentic reasoning, autonomous agents, planning, tool use
 
 ---
 

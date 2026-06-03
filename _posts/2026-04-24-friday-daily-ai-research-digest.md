@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, April 24, 2026"
 date: 2026-04-24
 ---
 
-Keywords: Chain-of-Thought, Coding Agent, Completeness Verifier, GUI agentic framework, Gemini 3.1 Pro, Grounding Agent, Large Language Models, Loop Breaker
+Keywords: large language models, Time Series Reasoning, TSRM, Chain-of-Thought, Vision-Language Models, multi-stage curriculum fine-tuning, interactive video generation models, world models
 
 ---
 

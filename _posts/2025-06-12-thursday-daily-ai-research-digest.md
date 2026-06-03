@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, June 12, 2025"
 date: 2025-06-12
 ---
 
-Keywords: 1280x720 resolution, 24fps, 4D scene, 736x416 resolution, AI art creation, AIME benchmark, AIME24, AIME25
+Keywords: reinforcement learning, reasoning models, Reinforcement Learning, Large language models, self-confidence, RLSC, diffusion modeling, multi-source data curation
 
 ---
 

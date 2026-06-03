@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, May 08, 2026"
 date: 2026-05-08
 ---
 
-Keywords: ALFWorld, BEIR datasets, BrowseComp-Plus, EMA smoothing, GPT-4o-mini, Group Relative Policy Optimization, IR benchmarks, LLM-based agents
+Keywords: reinforcement learning, retrieval systems, lexical retrieval, semantic retrieval, corpus interaction, agentic search, direct corpus interaction, terminal tools
 
 ---
 

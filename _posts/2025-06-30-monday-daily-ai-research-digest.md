@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, June 30, 2025"
 date: 2025-06-30
 ---
 
-Keywords: ACT, AI agents, AI-assisted video generation, AI-driven cinematic understanding, Ascend NPUs, Automated LLM Speedrunning Benchmark, Dense models, DenseDiT
+Keywords: Vision-Language Models, large language models, diffusion model, source masking, simulated object jittering, token compression strategy, Semantic Connected Components (SCC), spatio-temporal token compression strategy
 
 ---
 

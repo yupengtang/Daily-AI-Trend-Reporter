@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, May 07, 2026"
 date: 2026-05-07
 ---
 
-Keywords: 3D scene understanding, BEV representation, BRIGHT, BRIGHT-Pro, CreativityBench, Current-to-Future Link, GRPO, Gaussian prior
+Keywords: diffusion models, distribution matching distillation, student-teacher model, rollout, video reward score, gradient saliency, spatiotemporal-element, reward-guided mechanism
 
 ---
 

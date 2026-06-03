@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, April 21, 2026"
 date: 2026-04-21
 ---
 
-Keywords: Agent-as-a-Judge, Build Health, Debug Skill, Dynamic Coefficient Rectification, Game Skill, GameCoder-27B, Global State Encoder, Group Advantage Learning
+Keywords: supervised fine-tuning, Model Context Protocol, continual pre-training, MeanFlow, text-conditioned synthesis, LLM-based text encoders, semantic properties, diffusion model
 
 ---
 

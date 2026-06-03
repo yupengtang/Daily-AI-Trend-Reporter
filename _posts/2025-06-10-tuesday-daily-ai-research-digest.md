@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, June 10, 2025"
 date: 2025-06-10
 ---
 
-Keywords: 3D object detection, 3D point cloud, 4D features, 4D spatial-temporal encoder, Best-of-N Sampling, BitCPM, CPM.cu, HMMs
+Keywords: LLMs, multimodal LLM, Reinforcement Pre-Training (RPT), next-token prediction, reasoning task, reinforcement learning (RL), verifiable rewards, language modeling accuracy
 
 ---
 

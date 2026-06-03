@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, November 05, 2025"
 date: 2025-11-05
 ---
 
-Keywords: 3D reasoning, Acting with Visual Tools, BIT, Brain Interaction Transformer, CoT methods, CodeVQA, Intern-VL3, LLM-based audio model
+Keywords: multimodal large language models, Vision-Language-Action models, Vision-Language Models, VLA fine-tuning, visual representations, attention maps, out-of-distribution scenarios, SVG
 
 ---
 

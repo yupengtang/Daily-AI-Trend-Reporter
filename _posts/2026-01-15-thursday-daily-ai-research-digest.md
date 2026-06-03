@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, January 15, 2026"
 date: 2026-01-15
 ---
 
-Keywords: DeepSearch benchmark, EffiBench-X, Fitzpatrick17k benchmark, LLM agents, LLM backbones, LLM-based agents, Large Vision-Language Models, Multi-modal Large Language Models
+Keywords: automated framework, deep research task construction, agentic evaluation, persona-driven pipeline, task qualification, search necessity, adaptive point-wise quality evaluation, active fact-checking
 
 ---
 

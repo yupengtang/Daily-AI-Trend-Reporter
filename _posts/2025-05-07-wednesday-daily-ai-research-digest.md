@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, May 07, 2025"
 date: 2025-05-07
 ---
 
-Keywords: 360World dataset, 4D Gaussian Splatting, 4D scene reconstruction, Apache 2.0 license, CPU memory, FAE, FlexiAct, GPT-4o
+Keywords: LLMs, multimodal, reinforcement learning with verifiable rewards, zero setting, self-evolving training curriculum, code executor, verifiable reward, open-ended learning
 
 ---
 

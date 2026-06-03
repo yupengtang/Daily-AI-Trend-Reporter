@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, June 25, 2025"
 date: 2025-06-25
 ---
 
-Keywords: 2D pose maps, ALOHA manipulation, Agent-to-Lightroom Protocol, BIRD-CRITIC, BIRD-CRITIC-Multi, BIRD-CRITIC-PG, Bird-Fixer, CALVIN
+Keywords: Matrix-Game, interactive world foundation model, large-scale unlabeled pretraining, action-labeled training, contrrollable image-to-world generation, Matrix-Game-MC, motion context, character actions
 
 ---
 

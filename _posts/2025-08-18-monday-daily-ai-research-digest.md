@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, August 18, 2025"
 date: 2025-08-18
 ---
 
-Keywords: 3D Morphable Model, 3D graphics, 3D vision, 3DMM, Adaptive Temperature Sampling, BeyondWeb, BrowseComp, Cosmopedia
+Keywords: self-supervised learning, DINOv3, data preparation, design, optimization, Gram anchoring, dense feature maps, post-hoc strategies
 
 ---
 

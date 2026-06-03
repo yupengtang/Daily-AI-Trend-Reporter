@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, July 07, 2025"
 date: 2025-07-07
 ---
 
-Keywords: Bradley Terry, COCO, Claude 3.5 Sonnet, Claude-3.7-Sonnet, EKA-EVAL, GPT-4o, Gemini 1.5 Pro, Gemini 2.0 Flash
+Keywords: multimodal foundation models, GPT-4o, o4-mini, Gemini 1.5 Pro, Gemini 2.0 Flash, Claude 3.5 Sonnet, Qwen2-VL, Llama 3.2
 
 ---
 

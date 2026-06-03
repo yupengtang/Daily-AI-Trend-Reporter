@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, June 16, 2025"
 date: 2025-06-16
 ---
 
-Keywords: 3D completion, CRAFT, Claude 3.7, Codeforces, DAN prompts, Discrete Consistency Distillation, FlashFourierAttention, FourierAttention
+Keywords: LLMs, large language models, feedback generation, solver models, math reasoning, knowledge reasoning, scientific reasoning, state-of-the-art language models
 
 ---
 

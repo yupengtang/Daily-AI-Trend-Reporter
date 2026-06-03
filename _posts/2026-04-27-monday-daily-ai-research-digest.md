@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, April 27, 2026"
 date: 2026-04-27
 ---
 
-Keywords: 3D Gaussians, 3D perceptual supervision, AI-driven scientific discovery, CHAI, Critique-based Human-AI Oversight, DPO, GUI agents, L1 Predictor
+Keywords: world model, levels x laws taxonomy, L1 Predictor, L2 Simulator, L3 Evolver, predictive environment models, model-based reinforcement learning, video generation
 
 ---
 

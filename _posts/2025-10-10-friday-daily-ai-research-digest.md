@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, October 10, 2025"
 date: 2025-10-10
 ---
 
-Keywords: AIME25, Adaptive Hybrid Policy Optimization, GPQA-Diamond, GRPO, In-Context Conditioning (ICC), KL divergence, Long-Context Language Models, Low-probability Regularization
+Keywords: reinforcement learning, early experience, implicit world modeling, self-reflection, out-of-domain generalization, Multimodal Large Language Models, long-chain reflective reasoning, MM-HELIX
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, February 26, 2026"
 date: 2026-02-26
 ---
 
-Keywords: ARLArena, CoT reasoning, GUI agents, Hit Rate, Hybrid Attention, KL regularization, KL trust region, KV-Cache
+Keywords: diffusion models, video editing, Hybrid Attention, linear attention, softmax attention, long-term stable preferences, short-term intent spikes, temporal-aware delta network
 
 ---
 

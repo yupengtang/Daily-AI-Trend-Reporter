@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, August 20, 2025"
 date: 2025-08-20
 ---
 
-Keywords: 3D Gaussian Splatting, 3D Gaussians, 3D priors, ACE, AFMs, Agent Foundation Models, CSS-like styling system, ChatDiT
+Keywords: large language models, multi-agent systems, deep research, vibe coding, mathematical reasoning, prompt/workflow engineering, agent frameworks, chain-of-agents
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, June 09, 2025"
 date: 2025-06-09
 ---
 
-Keywords: 3D diffusion transformer (DiT), 3D generative model, AI agents, AssetOpsBench, Attention Confidence Estimator (ACE), CLAP-based audio encoder, Causal Discrepancy Estimator (CDE), Difficulty-aware Replacement Module (DRM)
+Keywords: Large Language Models, evergreen, mutable, temporality, Multilingual QA dataset, EG-E5, lightweight multilingual classifier, SoTA performance
 
 ---
 

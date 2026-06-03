@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, May 06, 2026"
 date: 2026-05-06
 ---
 
-Keywords: 2D Gaussian surfels, Best-of-N, BrowseComp, BrowseComp-ZH, FVD, Gaussian Splatting, Gaussian primitives, HeavySkill
+Keywords: supervised fine-tuning, reinforcement learning, visual grounding, LLMs, agent systems, model weights, research harness, cross-model adversarial collaboration
 
 ---
 

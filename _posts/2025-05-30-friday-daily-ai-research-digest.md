@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, May 30, 2025"
 date: 2025-05-30
 ---
 
-Keywords: 3D Gaussian primitives, 3D structure features, AI-generated content (AIGC), AndroidLab, CLIP-based visual encoders, DeepCAD benchmark, DeepSeek-R1, Diffusion via Autoregressive models
+Keywords: reinforcement learning, GRPO, supervised fine-tuning, distillation, verifiable rewards, RLVR, reasoning traces, DeepSeek-R1
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, May 11, 2026"
 date: 2026-05-11
 ---
 
-Keywords: BiMamba-Transformer, Diffusion Transformers, Flow Matching, GPT-2, GRPO, GenEval score, Guidance-Free Training, Listwise Policy Optimization
+Keywords: on-policy distillation, large language models, diffusion transformers, mean-dominated collapse, mean mode screaming, residual updates, softmax Jacobian, layer scaling
 
 ---
 

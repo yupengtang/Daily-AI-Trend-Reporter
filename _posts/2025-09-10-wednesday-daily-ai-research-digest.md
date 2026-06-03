@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, September 10, 2025"
 date: 2025-09-10
 ---
 
-Keywords: DPGBench, DeepSeek-R1-Zero, GEdit, GRPO, GenEval, Group Relative Policy Optimization, HICRA, HIerarchy-Aware Credit Assignment
+Keywords: reinforcement learning, GRPO, large language models, post-training, language models, DeepSeek-R1-Zero, Swarm sAmpling Policy Optimization, SAPO
 
 ---
 

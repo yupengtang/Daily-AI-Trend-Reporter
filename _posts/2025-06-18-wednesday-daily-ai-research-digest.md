@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, June 18, 2025"
 date: 2025-06-18
 ---
 
-Keywords: AIME'24, AIME'25, ASR transcriptions, CTC-based layer-dimension mapping, CoT-Pass@K, EnglishOCR, F1 score, Franka arms
+Keywords: LLMs, large language models, Pass@K, financial NLP, multilingual, multimodal, benchmark, domain-specific tasks
 
 ---
 

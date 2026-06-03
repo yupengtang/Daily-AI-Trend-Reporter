@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, February 24, 2026"
 date: 2026-02-24
 ---
 
-Keywords: LIBERO, LIBERO-plus, Mobile Conditioning Projector, NDCG@10, OpenVLA, RT-2, Reinforcement Learning, VLA design space
+Keywords: reinforcement learning, Vision-Language-Action models, video reasoning, spatiotemporal consistency, emergent generalization, video reasoning benchmark, video reasoning dataset, compound AI systems
 
 ---
 

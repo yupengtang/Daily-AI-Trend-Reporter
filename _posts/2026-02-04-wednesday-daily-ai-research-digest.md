@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, February 04, 2026"
 date: 2026-02-04
 ---
 
-Keywords: 3D estimation, Chain-of-Thought, CoT dynamics, Docker-free framework, GAIA, LLM-based environment feedback, Large Language Models, MCTS
+Keywords: Large Language Models, test-time scaling, Multimodal LLMs, source code understanding, token compression, visual cues, syntax highlighting, code completion
 
 ---
 

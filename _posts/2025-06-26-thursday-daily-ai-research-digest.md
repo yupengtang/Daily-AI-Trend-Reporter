@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, June 26, 2025"
 date: 2025-06-26
 ---
 
-Keywords: AI2-THOR, Command-A, Common Crawl, DDIM inversion, DualTHOR, FineWeb, FineWeb2, LLM deployment
+Keywords: large language models, diffusion models, pre-training datasets, FineWeb, multilingual LLMs, filtering, deduplication, pipeline design
 
 ---
 

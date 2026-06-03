@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, November 17, 2025"
 date: 2025-11-17
 ---
 
-Keywords: 3D inputs, AIME2025, BeyondAIME, Corrector, Denoising Positional Encoding (DoPE), FlashAttention, Gaussian distribution, Ionic Liquids (ILs)
+Keywords: visual reasoning, Rotary Position Embedding (RoPE), Transformer models, attention map, positional encoding, Denoising Positional Encoding (DoPE), truncated matrix entropy, Gaussian distribution
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, May 27, 2026"
 date: 2026-05-27
 ---
 
-Keywords: AnswerSheet protocol, ArcFace, CLIP, Chain-of-Thought reasoning, DINO-v2, Depth Anything 3 benchmark, DiT, Dual-Bridge Consistency
+Keywords: vision-language models, visual grounding, detection, coordinate-token generation, box geometry, parallel box decoding, geometric coherence, decoding throughput
 
 ---
 

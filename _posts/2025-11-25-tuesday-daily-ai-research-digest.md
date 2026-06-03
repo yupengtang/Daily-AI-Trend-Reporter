@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, November 25, 2025"
 date: 2025-11-25
 ---
 
-Keywords: 2D appearance, 3D geometry, 4K resolution, AUI-Gym, Aesthetic-Eval, AutoEnv, AutoEnv-36, BATS
+Keywords: language models, general agentic memory, GAM, just-in time compilation, JIT compilation, memorizer, researcher, universal page-store
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, April 29, 2026"
 date: 2026-04-29
 ---
 
-Keywords: AI agents, AutoResearchBench, Chain-of-Thought, CoT-Editing Consistency Reward, DPGBench, Deep Research, Geneval, LLMs
+Keywords: Chain-of-Thought, recursive language models, multi-agent systems, latent-space recursive computation, RecursiveLink module, inner-outer loop learning, gradient-based credit assignment, runtime complexity
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, July 10, 2025"
 date: 2025-07-10
 ---
 
-Keywords: AI systems, AIME24, Automated Theorem Proving, Core, Double Entropy Loss, Episodic, FR3E, GRPO
+Keywords: Large Language Models, agentic super-resolution, Profiling, Perception Agent, Restoration Agent, recursive execution-reflection, quality-driven mixture-of-expert policy, face restoration pipeline
 
 ---
 

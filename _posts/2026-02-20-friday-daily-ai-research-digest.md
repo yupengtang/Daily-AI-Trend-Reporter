@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, February 20, 2026"
 date: 2026-02-20
 ---
 
-Keywords: Calibrate-Then-Act framework, Counterfactual Regret Minimization, FID, FLOPs, FVD, GUI agent model, Large Language Models, MRPO
+Keywords: reinforcement learning, large language models, diffusion prior, diffusion model, latent representations, training objective, latent bitrate, FID
 
 ---
 

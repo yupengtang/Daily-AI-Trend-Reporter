@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, September 05, 2025"
 date: 2025-09-05
 ---
 
-Keywords: BFloat16, Chain-of-Thought, Code without Comments, Consistency Models, Counter-intuitive Ability, Counterfactual Answering, DeepResearch Arena, DepthAnything
+Keywords: large language models, Large Language Models, Drivelology, LLMs, natural language processing, NLP, benchmark dataset, Drivelological text
 
 ---
 

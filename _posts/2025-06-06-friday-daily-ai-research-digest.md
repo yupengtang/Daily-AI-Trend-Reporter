@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, June 06, 2025"
 date: 2025-06-06
 ---
 
-Keywords: 3D memory mechanisms, 3D-aware VLM, AIME 24, Common Pile v0.1, Diagonal Batching, Dynamic Memory Sparsification (DMS), GPQA, GPU inference
+Keywords: Qwen3 Embedding series, GTE-Qwen series, Qwen3 LLMs, multilingual text understanding, unsupervised pre-training, supervised fine-tuning, model merging, embedding
 
 ---
 

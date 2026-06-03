@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, February 09, 2026"
 date: 2026-02-09
 ---
 
-Keywords: AUC, Acc@1, Audio Spectrogram Transformer, CISPO, DAPO, EEG activity, ELBO maximisation, Focal loss
+Keywords: GRPO, reinforcement learning, Whisper, large language model, verifiable rewards, group sampling, advantage estimation, policy updates
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, October 07, 2025"
 date: 2025-10-07
 ---
 
-Keywords: ACE, Adam optimizer, Agentic Context Engineering, AppWorld leaderboard, Distributed Scion (Disco), Dynamic Cheatsheet, LLM training dynamics, LLMs
+Keywords: Large language model, context adaptation, Dynamic Cheatsheet, ACE, Agentic Context Engineering, generation, reflection, curation
 
 ---
 

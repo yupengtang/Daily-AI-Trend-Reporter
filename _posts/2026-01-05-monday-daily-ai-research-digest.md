@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, January 05, 2026"
 date: 2026-01-05
 ---
 
-Keywords: 4D reconstruction, 4D world model, D$^2$-Align, DPO, Delta Operator, Directional Decoupling Alignment, Distributional Creative Reasoning, DivGenBench
+Keywords: 4D world model, 4D reconstruction, novel-trajectory video generation, monocular videos, pose-free, feed-forward, degradation pattern simulation, diffusion forcing
 
 ---
 

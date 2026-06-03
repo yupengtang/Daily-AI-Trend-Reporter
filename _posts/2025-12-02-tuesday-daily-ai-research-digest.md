@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, December 02, 2025"
 date: 2025-12-02
 ---
 
-Keywords: 3D Rotary Positional Embedding, 3D-RoPE, AriGraph, Block-Relativistic RoPE, CPUs, Claude, Code LLaMA, Deep Research Agents
+Keywords: supervised fine-tuning, reinforcement learning, multimodal models, large language models, Transformer-based architectures, HumanEval, prompting paradigms, code pre-training
 
 ---
 

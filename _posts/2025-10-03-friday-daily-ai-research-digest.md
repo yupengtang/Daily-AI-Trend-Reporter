@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, October 03, 2025"
 date: 2025-10-03
 ---
 
-Keywords: 3D Gaussian Splatting, AI agents, AIME25, Claude-4, ExGRPO, Experiential Group Relative Policy Optimization, GLM-4.5, GPT-5
+Keywords: question answering, Large Language Models, code LLMs, context pruning, LLMLingua, conditional perplexity, function-level chunks, fine-grained compression
 
 ---
 

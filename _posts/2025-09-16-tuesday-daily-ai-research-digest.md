@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, September 16, 2025"
 date: 2025-09-16
 ---
 
-Keywords: 3D objects, 3D scene datasets, 4D geometric reconstruction, 4D world modeling, AITW, AndroidWorld, Chains-of-Thought (CoT), Collaborative Emotional Modeling
+Keywords: 4D world modeling, spatial geometry, temporal dynamics, large-scale generative models, multimodal learning, OmniWorld, OmniWorld-Game, 4D geometric reconstruction
 
 ---
 

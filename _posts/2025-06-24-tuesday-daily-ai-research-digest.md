@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, June 24, 2025"
 date: 2025-06-24
 ---
 
-Keywords: 3D geometry, AIME, Arena-Write, Best-of-N test-time scaling, DyCheck benchmark, GPQA-Diamond, Gaussian splatting, General-Reasoner
+Keywords: reinforcement learning, photometric stereo, deep coupling, surface normals, illumination conditions, intensity variations, self-shadowing, inter-reflections
 
 ---
 

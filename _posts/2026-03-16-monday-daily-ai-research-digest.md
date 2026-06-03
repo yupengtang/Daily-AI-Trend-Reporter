@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, March 16, 2026"
 date: 2026-03-16
 ---
 
-Keywords: Chain-of-Thought, Composer, Docker environments, GUI navigation, GUI trajectories, Identity RoPE constraint, LLM agent reliability, LLM-based Transformer
+Keywords: memory embeddings, memory-augmented systems, text embedding benchmarks, long-horizon memory retrieval, embedding models, passage retrieval, memory types, episodic memory
 
 ---
 

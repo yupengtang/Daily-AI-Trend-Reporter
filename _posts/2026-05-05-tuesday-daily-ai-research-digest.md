@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, May 05, 2026"
 date: 2026-05-05
 ---
 
-Keywords: CL-bench, Challenger, ComboStoc, Cross-time Replay, Feed-Forward Network, GUI agents, Judge, KV-cache conditioning
+Keywords: Vision-Language-Action models, VLM backbone, spatial reasoning, embodied reasoning, action tokenizer, flow-matching, continuous-action expert, discrete-token VLM
 
 ---
 

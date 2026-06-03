@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, August 11, 2025"
 date: 2025-08-11
 ---
 
-Keywords: 3D meshes, 4D feature field reconstruction, AIME 24, ALFWorld, Adaptive Exploration Policy Optimization, Adaptive Exploration Reward, Build, Chain-of-Thought
+Keywords: Mixture-of-Experts, hybrid reasoning method, multi-stage training, expert model iteration, reinforcement learning, TAU-Bench, AIME 24, SWE-bench Verified
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, June 11, 2025"
 date: 2025-06-11
 ---
 
-Keywords: 3D datasets, 3D recognition, 3D rendering, A-roll, GUI automation, GUI-Critic-R1, GUI-Critic-Test, GUI-Critic-Train
+Keywords: LLMs, geopolitical biases, historical events, national narratives, debiasing prompts, autoregressive supervision, large vision-language models (LVLMs), visual modality
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, July 15, 2025"
 date: 2025-07-15
 ---
 
-Keywords: AIME, AMC, Gaussian primitives, JudgerBenchV2, KMMLU-Pro, KMMLU-Redux, KV sharing, Korean National Professional Licensure exams
+Keywords: large language models, reinforcement learning, Qwen2.5, MATH-500, AMC, AIME, Llama, pretraining
 
 ---
 

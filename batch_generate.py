@@ -167,30 +167,36 @@ async def generate_daily_post(target_date: datetime.date) -> Optional[str]:
         print(f"✅ Using real abstract for paper {i}")
     
     if paper_summaries:
-        # Generate keywords via AI API
-        keywords_prompt = (
-            f"Based on these {len(paper_summaries)} research papers, generate exactly 8 relevant keywords.\n"
-            f"Return ONLY a comma-separated list, nothing else.\n\n"
-        )
-        for i, paper in enumerate(paper_summaries, 1):
-            keywords_prompt += f"{i}. {paper['title']}\n"
+        # Extract keywords from HF ai_keywords, ranked by frequency
+        from collections import Counter
+        kw_counter = Counter()
+        for paper in papers:
+            for kw in paper.get('ai_keywords', []):
+                kw = kw.strip()
+                if len(kw) >= 3 and not kw.startswith('$'):
+                    kw_counter[kw] += 1
+        # Take top 8 by frequency (most representative of today's papers)
+        keywords_list = [kw for kw, _ in kw_counter.most_common(8)]
 
-        keywords_response = await call_ai_api([
-            {"role": "system", "content": "You are a technical writer. Output only a comma-separated keyword list."},
-            {"role": "user", "content": keywords_prompt}
-        ], max_tokens=100, temperature=0.3)
+        # If fewer than 5, supplement with AI-generated keywords
+        if len(keywords_list) < 5:
+            keywords_prompt = (
+                f"Based on these {len(paper_summaries)} research papers, generate exactly 8 relevant keywords.\n"
+                f"Return ONLY a comma-separated list, nothing else.\n\n"
+            )
+            for i, paper in enumerate(paper_summaries, 1):
+                keywords_prompt += f"{i}. {paper['title']}\n"
+            keywords_response = await call_ai_api([
+                {"role": "system", "content": "Output only a comma-separated keyword list."},
+                {"role": "user", "content": keywords_prompt}
+            ], max_tokens=100, temperature=0.3)
+            if keywords_response and keywords_response.status_code == 200:
+                ai_kw = keywords_response.json().get("choices", [{}])[0].get("message", {}).get("content", "").strip()
+                keywords_list = [k.strip() for k in ai_kw.split(",")][:8]
 
-        if keywords_response and keywords_response.status_code == 200:
-            keywords_data = keywords_response.json()
-            keywords = keywords_data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
-        else:
-            # Fallback to HF ai_keywords
-            all_kw = set()
-            for paper in papers:
-                for kw in paper.get('ai_keywords', []):
-                    if len(kw) >= 3:
-                        all_kw.add(kw)
-            keywords = ", ".join(sorted(all_kw)[:8]) or "AI research, machine learning, deep learning"
+        if not keywords_list:
+            keywords_list = ["AI research", "machine learning", "deep learning"]
+        keywords = ", ".join(keywords_list)
 
         # Create content
         date_str = target_date.strftime("%Y-%m-%d")

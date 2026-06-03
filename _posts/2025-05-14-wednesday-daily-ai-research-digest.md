@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, May 14, 2025"
 date: 2025-05-14
 ---
 
-Keywords: AIME, ARBERTv2, Adversarial Relativistic-Contrastive (ARC) post-training, ArabicRD, Claude 3.7 Sonnet, DeepSeek-R1, Flow-VAE, GPT-4o
+Keywords: reinforcement learning, autoregressive Transformer, Text-to-Speech, TTS, learnable speaker encoder, timbre features, zero-shot, one-shot voice cloning
 
 ---
 

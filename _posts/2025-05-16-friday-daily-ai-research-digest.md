@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, May 16, 2025"
 date: 2025-05-16
 ---
 
-Keywords: CoT Encyclopedia, CogCom, GPT-4.1, LVLMs, Large Language Models (LLMs), Large Vision-Language Models, OpenThinkIMG, Pairwise-J1
+Keywords: reinforcement learning, large reasoning models, long chain-of-thought reasoning, outcome-based reinforcement learning, self-correction, backtracking, verification, meta-abilities
 
 ---
 

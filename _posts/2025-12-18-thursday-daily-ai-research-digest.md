@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, December 18, 2025"
 date: 2025-12-18
 ---
 
-Keywords: 3D spatial cues, 3DV experts, AR-level generation quality, ARC-AGI, AndroidDaily, AndroidWorld, Calibrated Step Reward System, Cross-Video Reasoning
+Keywords: multimodal large language models, parallel decoding, GUI automation, self-evolving training pipeline, Calibrated Step Reward System, trajectory-level calibration, Step-GUI, GUI performance
 
 ---
 

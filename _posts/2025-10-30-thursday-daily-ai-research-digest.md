@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, October 30, 2025"
 date: 2025-10-30
 ---
 
-Keywords: Artificial General Intelligence (AGI), BigQuery, CG-Bench-Reasoning, Canvas, Claude-4.5-Sonnet, DeepSeek-V3.2-Exp, GRPO, Google Calendar
+Keywords: Group Relative Policy Optimization, Looped Language Models, LoopLM, iterative computation, latent space, entropy-regularized objective, learned depth allocation, chain-of-thought
 
 ---
 

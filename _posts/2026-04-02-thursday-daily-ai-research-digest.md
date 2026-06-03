@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, April 02, 2026"
 date: 2026-04-02
 ---
 
-Keywords: 3D Gaussians, 3D rotary positional embedding, AIGC models, GUI agent verifier, GaussianGPT, LiveCodeBench, Model Context Protocol, TSF regimes
+Keywords: foundation models, autonomous agent runtime, tool integration, local file access, shell command execution, security vulnerabilities, privilege escalation, malicious third-party skill execution
 
 ---
 

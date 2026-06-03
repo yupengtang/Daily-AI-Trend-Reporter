@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, December 29, 2025"
 date: 2025-12-29
 ---
 
-Keywords: 4D aware mask generation, 4D scene understanding, Chain-of-Thought dataset, LLM-based RAG systems, O3-Bench, ROSE++, Retrieval-Augmented Generation, VLM generated reference image
+Keywords: Retrieval-Augmented Generation, LLM-based RAG systems, global context awareness, hierarchical summarization, mindscape, query embeddings, coherent global representation, long-context retrieval
 
 ---
 

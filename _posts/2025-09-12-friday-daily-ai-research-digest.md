@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, September 12, 2025"
 date: 2025-09-12
 ---
 
-Keywords: ALFWorld, Auto-Encoder, Bridge Attention, Deep Search, Entropy-Modulated Policy Gradients (EMPG), FLUX-Reason-6M, Generation Chain-of-Thought (GCoT), LIBERO
+Keywords: VLA models, reinforcement learning, Vision-Language Model (VLM), robotic data, VL conditions, Policy module, Bridge Attention, parameter backbone
 
 ---
 

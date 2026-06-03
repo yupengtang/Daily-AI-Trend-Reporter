@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, January 19, 2026"
 date: 2026-01-19
 ---
 
-Keywords: 3D detection algorithms, 3D shape generation, ACoT, BFCL V3 Multi-turn benchmark, Chamfer distance, Diffusion architecture, Docker sandbox, Explicit Action Reasoner
+Keywords: large language models, Reinforcement Learning from Verifier Rewards, group-based methods, GRPO, advantage estimation, bias correction, adaptive reweighting, difficulty weighting
 
 ---
 

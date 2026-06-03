@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, May 25, 2026"
 date: 2026-05-25
 ---
 
-Keywords: 3D spatial understanding, Blender scenes, DMD2 distillation, Diffusion Transformers, Diffusion-Adaptive Routing, Director-Reviewer-Reflector agent, Distribution Matching Distillation, FID
+Keywords: agent skills, skill training, text-space optimizer, rollouts, add/delete/replace edits, validation score, textual learning-rate budget, rejected-edit buffer
 
 ---
 

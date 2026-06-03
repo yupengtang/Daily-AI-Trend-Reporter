@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, August 08, 2025"
 date: 2025-08-08
 ---
 
-Keywords: 3D-aware automated scoring system, Challenger, CoAct-1, DeepPHY, DeepSeek R1, Direct Preference Optimization, Double-Bench, Dynamic Fine-Tuning
+Keywords: Supervised Fine-Tuning, reinforcement learning, LLMs, Large Language Models, Large Language Model, gradient updates, token probability, Dynamic Fine-Tuning
 
 ---
 

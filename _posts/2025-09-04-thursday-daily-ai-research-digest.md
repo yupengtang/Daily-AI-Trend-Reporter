@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, September 04, 2025"
 date: 2025-09-04
 ---
 
-Keywords: 3D spatial understanding, Camera Depth Models, Conjunctive Normal Form, Diffusion Transformers, Elo score, HCSPs, Hierarchical Constraint Satisfaction Problems, Large Language Models
+Keywords: Hierarchical Constraint Satisfaction Problems, HCSPs, dual-agent system, Research Tree, natural language questions, reasoning trajectories, reject sampling, compound reward design
 
 ---
 

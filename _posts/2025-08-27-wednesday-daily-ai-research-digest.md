@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, August 27, 2025"
 date: 2025-08-27
 ---
 
-Keywords: 3D consistency, 3D latent space, CLIP, Condensed Matter Physics, DAVIS17, Edit3D-Bench, Encodec, FFN-based value processing
+Keywords: next-token diffusion, continuous speech tokenizer, Encodec, audio fidelity, computational efficiency, long-form speech, multi-speaker synthesis, conversational vibe
 
 ---
 

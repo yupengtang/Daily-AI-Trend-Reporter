@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, April 01, 2026"
 date: 2026-04-01
 ---
 
-Keywords: 4D reconstruction, AIME 2024, AirSim, CARLA, Discrete Native Any-resolution Visual Transformer, FactIP, Group Relative Policy Optimization, Latent Geometry Model
+Keywords: Group Relative Policy Optimization, reinforcement learning, policy optimization, discounted future-KL divergence, policy update, dense advantage formulation, chain-of-thought reasoning, AIME 2024
 
 ---
 

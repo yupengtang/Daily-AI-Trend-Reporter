@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, November 21, 2025"
 date: 2025-11-21
 ---
 
-Keywords: 3D data barrier, 3D object reconstruction, Affordance Prediction, Chain-of-Frames reasoning, CoT/RL fine-tuning, Driving Planning, Environmental Perception, Joint-GRPO
+Keywords: benchmark, generative model, 3D object reconstruction, geometry, texture, layout, human-in-the-loop, object shape
 
 ---
 

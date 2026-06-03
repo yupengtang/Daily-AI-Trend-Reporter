@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, August 21, 2025"
 date: 2025-08-21
 ---
 
-Keywords: 3D shape understanding, Blender Python APIs, CPA-QKA, Certified Public Accountant, FinCDM, LLM agents, LLMs, Large Language Models
+Keywords: LLMs, large language models, Reinforcement Learning with Verifiable Rewards, dual learning, primal task, dual task, self-supervised reward, translation quality
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, July 09, 2025"
 date: 2025-07-09
 ---
 
-Keywords: 2D part masks, 3D part bounding boxes, 3D-aware token pruning, Agent KB, CriticLean, CriticLeanBench, CriticLeanGPT, DINO similarity score
+Keywords: fine-tuning, supervised fine-tuning, reinforcement learning, Low-Rank Adaptation, LoRA, SingLoRA, low-rank matrix, parameter-efficient fine-tuning
 
 ---
 

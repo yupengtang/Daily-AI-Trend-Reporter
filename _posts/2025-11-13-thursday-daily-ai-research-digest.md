@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, November 13, 2025"
 date: 2025-11-13
 ---
 
-Keywords: 3D open-world environments, ACEBench, BFCL-v3, Dream, Error-Driven Data Expansion, GPU compute density, Greedy Capability Probing, Grouped Differential Attention (GDA)
+Keywords: vision-language model, end-to-end, 3D open-world environments, human-like interaction, real-time, zero-shot cross-game generalization, diffusion language models, autoregressive models
 
 ---
 

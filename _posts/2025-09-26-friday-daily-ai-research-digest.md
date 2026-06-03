@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, September 26, 2025"
 date: 2025-09-26
 ---
 
-Keywords: 3D-native generative models, DAPO, GRPO, GSPO, Group Relative Policy Optimization, LLM-as-a-judge, Large Language Models, Llama-3.1-70B-Instruct
+Keywords: reinforcement learning, reward variance, mathematical reasoning benchmarks, large language models, policy-based reinforcement learning, rollout-based reinforcement learning, GRPO, DAPO
 
 ---
 

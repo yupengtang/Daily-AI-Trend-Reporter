@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, October 31, 2025"
 date: 2025-10-31
 ---
 
-Keywords: AndroidWorld, AsyncThink, AutoDeco, Chain-of-Frame (CoF) reasoning, Diagonal-Plus-Low-Rank, Discrete Diffusion Adaptation, Flappy Bird, Gated DeltaNet
+Keywords: large language models, mathematical reasoning, linear attention, Kimi Delta Attention, Gated DeltaNet, finite-state RNN memory, chunkwise algorithm, Diagonal-Plus-Low-Rank
 
 ---
 

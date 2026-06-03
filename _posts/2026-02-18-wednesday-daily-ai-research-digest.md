@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, February 18, 2026"
 date: 2026-02-18
 ---
 
-Keywords: ACL, AI agent societies, AI agents, ARC capabilities, ATBench, AgentDoG-Qwen3-4B, Aristotelian Representation Hypothesis, Claude Code
+Keywords: autonomous agents, neural networks, DSA, asynchronous reinforcement learning, agentic engineering, vibe coding, ARC capabilities, post-training efficiency
 
 ---
 

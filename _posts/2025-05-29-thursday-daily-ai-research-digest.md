@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, May 29, 2025"
 date: 2025-05-29
 ---
 
-Keywords: AIME24, AIME25, Chain-of-Thought, Chain-of-Zoom, Clip-Cov, DeepSeek-R1-Distill, FP16, FP8
+Keywords: reinforcement learning, LLMs, GRPO, MathVista, We-Math, policy entropy, entropy intervention, transformation equation
 
 ---
 

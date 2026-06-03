@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, February 11, 2026"
 date: 2026-02-11
 ---
 
-Keywords: Agentic Supervised Fine-Tuning, Agentic Variance-Reduced Preference Optimization, Algorithmic mindset, AndroidCode, AndroidWorld navigation, Boltzmann sampling, Chain of Mindset, CoM
+Keywords: reinforcement learning, data selection, optimizer-induced update space, effective updates, stable in-distribution proxy, Ghost technique, CountSketch, Boltzmann sampling
 
 ---
 

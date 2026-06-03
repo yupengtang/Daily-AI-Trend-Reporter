@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, October 24, 2025"
 date: 2025-10-24
 ---
 
-Keywords: AI hallucination, Checker agents, Countdown, Diffusion Transformer models, Dynamic Position Extrapolation (DyPE), FLUX, Game of 24, KL divergence
+Keywords: benchmark, multi-agent system, narrative planning, multimodal content generation, interactive rendering, AI hallucination, Checker agents, human checkpoints
 
 ---
 

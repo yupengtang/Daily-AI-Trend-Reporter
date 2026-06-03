@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, February 25, 2026"
 date: 2026-02-25
 ---
 
-Keywords: AI-assisted programming, DREAM, Deep Research Agents, KV binding, Likert-scale supervision, LoCoMo benchmark, Mirage of Synthesis, Nemotron-Terminal
+Keywords: long-horizon planning, diffusion transformer, large language models, terminal agents, data engineering practices, synthetic task generation, Terminal-Task-Gen, Terminal-Corpus
 
 ---
 

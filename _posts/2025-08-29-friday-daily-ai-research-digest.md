@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, August 29, 2025"
 date: 2025-08-29
 ---
 
-Keywords: AIME24, AIME25, Arc, CoT, DeepSeek-R1, DexYCB, GAIA benchmark, GRPO
+Keywords: reinforcement learning, large language models, agentic reinforcement learning, CoT, Python coding tools, GRPO-RoC, Resample-on-Correct, SFT
 
 ---
 

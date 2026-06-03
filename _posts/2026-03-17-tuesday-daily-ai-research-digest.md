@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, March 17, 2026"
 date: 2026-03-17
 ---
 
-Keywords: 3D reconstruction, bi-directional optimization, contact stability, embodied AI, environment creators, gravitational stability, human-scene interactions, humanoid robots
+Keywords: 3D reconstruction, human-scene interactions, physics engine, bi-directional optimization, reinforcement learning, simulation feedback, gravitational stability, contact stability
 
 ---
 

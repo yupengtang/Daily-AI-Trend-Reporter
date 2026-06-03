@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, July 24, 2025"
 date: 2025-07-24
 ---
 
-Keywords: Anti-Artifact Mechanism, DSPy-powered compiler, Dafny, DafnyComp, GRPO algorithm, HFS-SDEdit, Large Language Models, Masked Video Diffusion Transformer
+Keywords: camera motion quantization, Masked Video Diffusion Transformer, memory module, autoregressive generation, Anti-Artifact Mechanism, Time Travel Sampling, Stochastic Differential Equations, adversarial distillation
 
 ---
 

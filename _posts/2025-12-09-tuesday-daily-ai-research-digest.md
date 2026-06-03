@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, December 09, 2025"
 date: 2025-12-09
 ---
 
-Keywords: AG2, AssistantBench, CLIP, CLIP-IQA, DINO, Distribution-Matching VAE (DMVAE), DoVer, EgoEdit
+Keywords: Large Language Models, Native Parallel Reasoner, self-evolve, parallel reasoning, self-distilled progressive training, cold-start format discovery, topological constraints, Parallel-Aware Policy Optimization
 
 ---
 

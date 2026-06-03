@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, March 04, 2026"
 date: 2026-03-04
 ---
 
-Keywords: Breadth-CoT, Chain-of-Thought, DMLab, DeepMind Control Suite, Depth-CoT, DiT-based framework, G2U evaluation, Generate-then-Answer inference
+Keywords: representation space, point transformer encoder, self-supervised learning, cross-domain transfer, embodied reasoning, multimodal reasoning, vision-language-action policies, robotic manipulation
 
 ---
 

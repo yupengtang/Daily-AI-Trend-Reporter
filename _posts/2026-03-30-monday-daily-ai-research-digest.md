@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, March 30, 2026"
 date: 2026-03-30
 ---
 
-Keywords: 3D generation, 3D volumes, ASR hallucinations, KV-cache, Large Language Model agents, RoPE discontinuity indicator, Speech Language Models, Temporal RoPE Adjustment
+Keywords: video world models, hybrid memory, dynamic subjects, static backgrounds, spatiotemporal relevance-driven retrieval, tokenized memory, motion continuity, occlusion handling
 
 ---
 

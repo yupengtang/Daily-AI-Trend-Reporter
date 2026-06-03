@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, August 14, 2025"
 date: 2025-08-14
 ---
 
-Keywords: BLIP3-o, Bagel, DeepSeek-R1, Dream, Echo-4o, Execution Agent, Explicit Long Chain-of-Thought, GAIA leaderboard
+Keywords: reinforcement learning, GPT-4o, Latent Panel Anchoring, Reciprocal Attention Value Mixing, diffusion models, Rich Storyboard Benchmark, Scene Diversity metric, multimodal agent
 
 ---
 

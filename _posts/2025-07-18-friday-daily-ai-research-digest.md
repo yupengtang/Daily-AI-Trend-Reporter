@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, July 18, 2025"
 date: 2025-07-18
 ---
 
-Keywords: 4D diffusion models, ACD, ACM, ActorsHQ, AnyCapDataset, AnyCapEval, AnyCapModel, Apache 2.0 license
+Keywords: vision-language models, reinforcement learning, Large Language Models, Context Engineering, context retrieval, context generation, context processing, context management
 
 ---
 

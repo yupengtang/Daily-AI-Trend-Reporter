@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, May 14, 2026"
 date: 2026-05-14
 ---
 
-Keywords: DSA attention, DiT, EVA-A, EVA-X, Euler rollout, GRPO, Global Skip Connections, LLM-as-Observer
+Keywords: Low-Rank Adaptation, LoRA, post-training, online serving, base-model deployments, full checkpoint, adapter revisions, distributed training
 
 ---
 

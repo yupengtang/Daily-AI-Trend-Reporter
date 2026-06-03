@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, December 12, 2025"
 date: 2025-12-12
 ---
 
-Keywords: 3D joint trajectories, AI for geometry, AIME2025, AR3D-R1, AlphaGeometry 2, BEAVER, BVH, CAMoCap
+Keywords: reinforcement learning, Reinforcement Learning with Verifiable Rewards (RLVR), outcome-based verifiers (OVs), process-based verifiers (PVs), iterative active learning, Rejection Fine-Tuning (RFT), DeepSeek-R1-Distill-Qwen-32B, AIME2025
 
 ---
 

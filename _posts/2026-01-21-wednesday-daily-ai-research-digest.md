@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, January 21, 2026"
 date: 2026-01-21
 ---
 
-Keywords: 3D chain-of-thought process, 3D reasoning, 3D reconstruction models, Alignment, Capability, Chain-of-Thought, Efficiency, Interpretable Objects
+Keywords: large language models, reinforcement learning, Vision-Language-Action, cross-embodiment generalization, human-centric learning, multimodal data, Unified Action Space, Mixture-of-Transformers
 
 ---
 

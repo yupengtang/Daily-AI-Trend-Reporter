@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, February 10, 2026"
 date: 2026-02-10
 ---
 
-Keywords: AI Research Science Benchmark, Anchor Alignment, BigCodeBench, Centroid Alignment, Chain-of-Thought prompting, Fixed-frame Modality Gap Theory, Generator-Critic protocol, HumanEval+
+Keywords: post-training optimization, large language models, saturation bottleneck, weak checkpoints, entropy dynamics, compensatory learning, learning gaps, instruction tuning
 
 ---
 

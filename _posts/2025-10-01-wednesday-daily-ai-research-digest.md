@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, October 01, 2025"
 date: 2025-10-01
 ---
 
-Keywords: AE-Adapt-V, AI agents, AIME24, CRUD operations, Chain-of-Thought (CoT) distillation, DC-VideoGen, Deep Compression Video Autoencoder, Error-Uncertainty (EU) Plane
+Keywords: LLMs, reinforcement learning, supervised fine-tuning, large language models, pre-training, Large Language Model, scale-free network, Hebbian learning
 
 ---
 

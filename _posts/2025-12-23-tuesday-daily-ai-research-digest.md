@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, December 23, 2025"
 date: 2025-12-23
 ---
 
-Keywords: 2D generative refiner, 2D latent space, 3D cache, 3D camera rotations, 3D structural anchor, DataFlow, DataFlow-Agent, EM gains
+Keywords: DataFlow, Large Language Models (LLMs), data preparation pipelines, system-level abstractions, PyTorch-style pipeline construction API, reusable operators, domain-general pipelines, Text-to-SQL
 
 ---
 

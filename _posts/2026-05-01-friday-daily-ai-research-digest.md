@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, May 01, 2026"
 date: 2026-05-01
 ---
 
-Keywords: CPU offloading, Co-Evolving Policy Distillation, FD-loss, FID, Fréchet Distance, GRPO, GSM8K, Group Contrastive Preference Optimization
+Keywords: post-training, reinforcement learning, agentic framework, domain-specific foundation models, language-model-based reasoning, non-linguistic data modalities, predictive foundation models, multi-agent systems
 
 ---
 

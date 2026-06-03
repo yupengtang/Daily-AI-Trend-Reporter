@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, October 29, 2025"
 date: 2025-10-29
 ---
 
-Keywords: 3D integration, ADP, AI agents, API/tool use, ASR-based baselines, AgentFrontier Engine, AgentFrontier-30B-A3B, BrowseComp
+Keywords: Humanity's Last Exam, BrowseComp, BrowseComp-ZH, agentic large language model, end-to-end training framework, agentic mid-training, agentic post-training, scalable reasoning
 
 ---
 

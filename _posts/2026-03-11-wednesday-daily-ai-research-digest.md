@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, March 11, 2026"
 date: 2026-03-11
 ---
 
-Keywords: 3D editing, 3D foundation model, Chain-of-Thought, CourtSI, CourtSI-Bench, CourtSI-Ext, GSM8K, Group Relative Policy Optimization
+Keywords: multimodal large language models, reinforcement learning, Large Language Models, diffusion models, 3D editing, multi-view consistency, supervised fine-tuning, VGGT
 
 ---
 

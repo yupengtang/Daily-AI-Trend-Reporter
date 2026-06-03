@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, November 10, 2025"
 date: 2025-11-10
 ---
 
-Keywords: AgileThinker, Chain-of-Thought, CompMo, Complex Motion Dataset, CritiCal, DEMO, Deceitful, DeepEyesV2
+Keywords: Large Language Models, supervised fine-tuning, reinforcement learning, Moral RolePlay benchmark, moral alignment scale, role-playing fidelity, safety principles, Deceitful
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, September 03, 2025"
 date: 2025-09-03
 ---
 
-Keywords: 32B-parameter, AIME24, Agentic Reinforcement Learning with Tool use, AndroidWorld, Baichuan-M2, BigBenchHard, Clinical Rubrics Generator, DPO strategy
+Keywords: reinforcement learning, self-improvement, visual reasoning, agentic reinforcement learning, LLM RL, Markov Decision Processes, POMDPs, planning
 
 ---
 

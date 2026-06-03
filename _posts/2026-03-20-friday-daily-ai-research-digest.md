@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, March 20, 2026"
 date: 2026-03-20
 ---
 
-Keywords: 1-frame optimization, 3D structural priors, 3D-aware video customization, 3Dapter, 3DreamBooth, Cascade RL, FID, LLM agent system
+Keywords: multimodal large language models, spatial blindness, 3D structural priors, physical laws, video diffusion model, latent world simulator, spatiotemporal features, token-level adaptive gated fusion
 
 ---
 

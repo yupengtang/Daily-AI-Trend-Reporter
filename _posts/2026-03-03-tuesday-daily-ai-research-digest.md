@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, March 03, 2026"
 date: 2026-03-03
 ---
 
-Keywords: AIME, Best-of-N, Chain-of-Thought, CoVe-4B, Compositional Multimodal Instruction, GPQA-Diamond, HMMT, Humanity's Last Exam
+Keywords: reinforcement learning, supervised fine-tuning, large language models, Lottie, tokenizer, vision language models, multi-modal interleaved instructions, vector animations
 
 ---
 

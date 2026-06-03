@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, July 22, 2025"
 date: 2025-07-22
 ---
 
-Keywords: 3D mask generation, 3D reasoning, 3D-GALP, AIME24, AIME25, Bagel model, Bagel-NHR-Edit, ByteMini
+Keywords: RLVR, reasoning language models, mathematical reasoning, GPT-o3, Qwen-2.5, SFT, Context-Aware Multi-Stage Policy Optimization, length-progressive training
 
 ---
 

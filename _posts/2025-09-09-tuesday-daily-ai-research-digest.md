@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, September 09, 2025"
 date: 2025-09-09
 ---
 
-Keywords: 2D/3D classification, 3D reconstruction, AI agents, AlphaGenome, BLINK, BiomedCLIP, BrowseComp-en/zh, CARVE
+Keywords: reinforcement learning, supervised fine-tuning, deep reasoning, instruction distillation, REER, gradient-free, DeepWriting-20K, DeepWriter-8B
 
 ---
 

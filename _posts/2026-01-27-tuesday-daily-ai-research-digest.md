@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, January 27, 2026"
 date: 2026-01-27
 ---
 
-Keywords: CriticAgent, DirectorAgent, ImgCoder, Kimi-Dev, Large Language Model, Large Multimodal Models, LlamaGen-REPA, RGB-D cameras
+Keywords: data preparation, large language models, prompt-driven workflows, agentic workflows, data cleaning, data integration, data enrichment, entity matching
 
 ---
 

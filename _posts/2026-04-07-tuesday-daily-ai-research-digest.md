@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, April 07, 2026"
 date: 2026-04-07
 ---
 
-Keywords: ASR, Cross-Model Consistency Verification, Curriculum Textual Frequency Training, Data Engine, Diversity-and-Difficulty-Aware Sampling, GRPO alignment, Judge-and-Refine pipeline, KV cache compression
+Keywords: Textual Frequency Law, Textual Frequency Distillation, Curriculum Textual Frequency Training, Large Language Models, prompting, fine-tuning, sentence-level frequency, input paraphraser
 
 ---
 

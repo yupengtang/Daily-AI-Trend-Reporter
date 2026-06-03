@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, November 24, 2025"
 date: 2025-11-24
 ---
 
-Keywords: 3D generative AI, A-Mem, CLIP metrics, DINO, GPT-5, GRPO-based RL, Gemini-2.5-flash, GeoBench
+Keywords: reinforcement learning, Segment Anything Model, Promptable Concept Segmentation, concept prompts, segmentation masks, unique identities, scalable data engine, image-level detector
 
 ---
 

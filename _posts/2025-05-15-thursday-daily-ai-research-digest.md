@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, May 15, 2025"
 date: 2025-05-15
 ---
 
-Keywords: BLIP3-o, CAPT, CLIP, CLIP image features, DINO, FP8 mixed-precision training, FigCodifier, GPT-based model
+Keywords: reinforcement learning, diffusion transformer, CLIP image features, VAE-based representations, sequential pretraining, image understanding, image generation, BLIP3-o
 
 ---
 

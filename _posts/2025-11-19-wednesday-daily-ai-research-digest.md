@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, November 19, 2025"
 date: 2025-11-19
 ---
 
-Keywords: Chain-of-Frames, Chain-of-Thought, LLM Agents, LLMS, LLMs, LVLMs, Large Vision-Language Models, LoRA
+Keywords: large language models, Reinforcement fine-tuning, supervised fine-tuning, reinforcement learning, large video language models, VideoP2R, perception, reasoning
 
 ---
 

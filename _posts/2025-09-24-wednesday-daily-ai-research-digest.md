@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, September 24, 2025"
 date: 2025-09-24
 ---
 
-Keywords: 3D Gaussian Splatting, 3D scene generation, 3D voxel grid, 3D-Resampler, 3DGS, AIME24, AIME25, Arabic document OCR
+Keywords: Multimodal Large Language Models, vision-language model, decoder-only fine-tuning, Misraj-DocOCR, WER, Arabic document OCR, Reinforcement Learning on Pre-Training data, RLPT
 
 ---
 

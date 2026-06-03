@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, January 16, 2026"
 date: 2026-01-16
 ---
 
-Keywords: AIME2025, AUC@K, GEdit benchmark, Hierarchical Cognitive Caching, ImgEdit benchmark, LLM-based agents, LLM-based song generation model, Large Language Models
+Keywords: reinforcement learning, diffusion models, multimodal tokens, Perception Encoder, Qwen3-8B decoder, vision-language synergy, Parallel Coordinated Reasoning, test-time compute
 
 ---
 

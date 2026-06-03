@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, September 19, 2025"
 date: 2025-09-19
 ---
 
-Keywords: 4D latent space, 4D rotary position embeddings, AIME24, AIME25, ActionVAE, Complex Historical Investigation, Dual-Path Self-Corrective Guidance, EVOL-RL
+Keywords: GRPO, FlowRL, reward distribution, flow balancing, reinforcement learning, reward-maximizing methods, PPO, normalized target distribution
 
 ---
 

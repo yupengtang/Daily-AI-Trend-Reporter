@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, May 21, 2025"
 date: 2025-05-21
 ---
 
-Keywords: 3D manipulation, Blackwell GPUs, Budget Relative Policy Optimization (BRPO), Chain of Thought examples, DPO, Deepseek-R1-Zero, Direct Preference Optimization, FP4 Tensor Cores
+Keywords: reinforcement learning, large language models, multimodal understanding, multimodal generation, foundational model, decoder-only model, trillions of tokens, large-scale interleaved data
 
 ---
 

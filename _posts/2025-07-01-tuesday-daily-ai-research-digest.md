@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, July 01, 2025"
 date: 2025-07-01
 ---
 
-Keywords: DPG-Bench, DeepSeek-R1-Distill-Qwen-7B, DoRA, FLOPs, Fl-all error, GEdit-Bench-EN, GPU memory, GRPO
+Keywords: reinforcement learning, diffusion-based visual decoder, bidirectional token refiner, unified training, multimodal understanding, text-to-image generation, image editing, OpenCompass Multi-modal Academic Benchmark
 
 ---
 

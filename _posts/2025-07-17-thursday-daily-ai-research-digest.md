@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, July 17, 2025"
 date: 2025-07-17
 ---
 
-Keywords: 3D point tracking, Agentless, Ettin suite, LLMs, Large Language Model (LLM), Large Language Models, Llama 3.2, MMLU benchmark
+Keywords: Large Language Models, human-in-the-loop annotation, benchmark, Retrieval-Augmented Generation, Reasoning-Enhanced RAG, RAG-Enhanced Reasoning, Synergized RAG-Reasoning, knowledge-intensive benchmarks
 
 ---
 

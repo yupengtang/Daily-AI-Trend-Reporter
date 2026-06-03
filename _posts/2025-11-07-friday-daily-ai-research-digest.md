@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, November 07, 2025"
 date: 2025-11-07
 ---
 
-Keywords: AWS Elastic Fabric Adapter (EFA), BF16, CV-Bench, Cambrian-S, Data Evolution Flywheel, DeepEP decode latency, Eyeballing Puzzles, FP4
+Keywords: Thinking with Images, MMMU, reinforcement learning, VSI-Bench, Thinking with Text, large language models, Vision Language Models, Thinking with Video
 
 ---
 

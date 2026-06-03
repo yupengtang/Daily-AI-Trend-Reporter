@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, July 14, 2025"
 date: 2025-07-14
 ---
 
-Keywords: 3D RoPE, AR-DF, Autoregressive Discrete Diffusion Forcing, CLiFTs, COSMOS-Video2World, DL3DV datasets, GPT-4, GUIs
+Keywords: large language models, reflective generative model, self-supervised process reward model, backbone network, task-specific heads, policy model, process reward model, test time scaling
 
 ---
 

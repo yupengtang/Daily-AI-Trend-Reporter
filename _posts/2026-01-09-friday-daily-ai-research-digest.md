@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, January 09, 2026"
 date: 2026-01-09
 ---
 
-Keywords: Adam optimizer, Agent-as-a-Judge, Agentic Reinforcement Learning, Agentic Turn-based Policy Optimization, Brownian-like expansion, Chain-of-thought reasoning, Entropy-Guided Tree Expansion, Group Relative Policy Optimization
+Keywords: policy optimization, Group Relative Policy Optimization, token-level collaboration, Reinforcement learning, multi-reward setting, Group reward-Decoupled Normalization Policy Optimization, reward normalization, advantage values
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, May 28, 2026"
 date: 2026-05-28
 ---
 
-Keywords: AXPO, Embodied Vision-Language Models, GEM-4M, GEM-VLA, GRPO, KV caching, MemTraceBench, Pass@1
+Keywords: vision-language models, world models, multi-agent interaction, rotary angle space, permutation-symmetric, sparse hub attention, causal student, KV caching
 
 ---
 

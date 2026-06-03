@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, December 26, 2025"
 date: 2025-12-26
 ---
 
-Keywords: 3D scene point cloud, 3D-aware interactive editing, FID, GenEval, Janus-Pro, LlamaGen, LlamaGen-XXL, autoregressive (AR) visual generation
+Keywords: spatial memory-aware, video generation framework, 3D scene point cloud, dynamic-static disentanglement, visual SLAM, explicit camera control, 3D-aware interactive editing, autoregressive (AR) visual generation
 
 ---
 

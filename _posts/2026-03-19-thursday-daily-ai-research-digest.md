@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, March 19, 2026"
 date: 2026-03-19
 ---
 
-Keywords: 3D generation, 3D shape latent space, 3D structures, LLM evolver, LLM-based agents, Opportunistic Meta-Learning Scheduler, PRoPE camera conditioning, Reinforcement Learning
+Keywords: large reasoning models, overthinking, underthinking, confidence, reasoning dynamics, reasoning mode prototypes, steering vector, dynamic control function
 
 ---
 

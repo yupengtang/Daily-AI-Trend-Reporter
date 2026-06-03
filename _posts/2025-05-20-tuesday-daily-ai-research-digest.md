@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, May 20, 2025"
 date: 2025-05-20
 ---
 
-Keywords: 3D Gaussians, 3D-4D Gaussian Splatting, 4D Gaussian Splatting, 4D Gaussians, 4DGS, AdaCoT, Chain-of-Language-Model (CoLM), Chain-of-Model (CoM)
+Keywords: reinforcement learning, Chain-of-Model (CoM), Chain-of-Representation (CoR), sub-representations, input representations, output representations, Chain-of-Language-Model (CoLM), KV sharing mechanism
 
 ---
 

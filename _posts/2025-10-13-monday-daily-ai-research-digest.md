@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, October 13, 2025"
 date: 2025-10-13
 ---
 
-Keywords: 3D understanding, AutoCodeArena, BEAR, BEAR-Agent, Bayesian-based selection strategy, BigCodeArena, BigCodeReward, CANVAS navigation
+Keywords: Large Language Models, embodied AI, desktop environments, sensorimotor interactions, OWA Toolkit, Generalist-IDM, timestamp-based event prediction, zero-shot generalization
 
 ---
 

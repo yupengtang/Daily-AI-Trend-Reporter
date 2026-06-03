@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, November 27, 2025"
 date: 2025-11-27
 ---
 
-Keywords: 2-Wasserstein distance, Classifier-Free Guidance, CoT dataset, Correspondence Drift, Cross-Task Synergy, Diffusion Transformers, FID, GRPO
+Keywords: large language models, multimodal large language models, multi-agent systems, latent space, LatentMAS, auto-regressive latent thoughts generation, latent working memory, expressiveness
 
 ---
 

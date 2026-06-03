@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, September 30, 2025"
 date: 2025-09-30
 ---
 
-Keywords: AI scientists, APIs, Bradley-Terry assumption, Diffusion Transformer, EGPO, Effective Rank, Effective Rank Acceleration, Effective Rank Velocity
+Keywords: fine-tuning, Diffusion Transformer, attention latency, sequence length, quadratic complexity, sparse acceleration, low-rank acceleration, SLA
 
 ---
 

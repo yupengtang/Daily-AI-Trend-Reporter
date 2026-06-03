@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, August 19, 2025"
 date: 2025-08-19
 ---
 
-Keywords: 4D scene representations, 4DNeX-10M, 6D video representation, Classifier-free Guidance, ComoRAG, DPO, DeepSeek V3, FID scores
+Keywords: vision transformer, native-resolution, multimodal reasoning, linear chain-of-thought, reflection, thinking mode, five-phase curriculum, DPO
 
 ---
 

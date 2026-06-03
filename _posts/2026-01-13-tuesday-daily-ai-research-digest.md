@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, January 13, 2026"
 date: 2026-01-13
 ---
 
-Keywords: Agentic paradigm, Aha Moment phenomenon, BabyVision benchmark, Code LLMs, Computer-Using Agents, GPT-5, GlimpRouter, HMMT 2025
+Keywords: reinforcement learning, video question answering, cross-frame visual anchor extraction, interactive web retrieval, multi-hop reasoning, multimodal large language models, Workflow paradigm, Agentic paradigm
 
 ---
 

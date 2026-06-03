@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, March 27, 2026"
 date: 2026-03-27
 ---
 
-Keywords: DiT blocks, Diffusion Transformers, FFE dataset, FFE-Bench, KV cache compression, LTX-2, LoRA, Memory Interleaving
+Keywords: large language models, multimodal foundation model, reinforcement learning, parameter-efficient fine-tuning, scientific expertise, specialized tasks, general intelligence, specialized intelligence
 
 ---
 

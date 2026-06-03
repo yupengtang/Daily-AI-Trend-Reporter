@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, May 06, 2025"
 date: 2025-05-06
 ---
 
-Keywords: 2WikiMultiHopQA, AdamW, GPT-4o, GRPO, LLM, LLM rollouts, Lean4, Llama3.1-405B
+Keywords: large language models, reasoning capabilities, chain-of-thought, reinforcement learning, Transformers, NLP, factual reasoning, grokking
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, August 13, 2025"
 date: 2025-08-13
 ---
 
-Keywords: 3D world generation, ASearcher-Web-QwQ, AgentNet, Avg@4, BrowseComp-VL, Chain-of-Thought reasoning, Character4D dataset, CharacterBench benchmark
+Keywords: reinforcement learning, GSM8K, MATH500, SVAMP, multimodal, visual-language reasoning, high-quality synthetic multimodal trajectories, BrowseComp-VL
 
 ---
 

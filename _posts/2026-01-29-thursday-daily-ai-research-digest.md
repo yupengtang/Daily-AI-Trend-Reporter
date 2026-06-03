@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, January 29, 2026"
 date: 2026-01-29
 ---
 
-Keywords: 2D image understanding, AI-assisted annotation, Agent architecture, Automated Code Review, Difficulty-Aware Group Policy Optimization, GUI agents, Group Relative Policy Optimization, LLM evaluation
+Keywords: reinforcement learning, supervised fine-tuning, generalization, sample efficiency, world simulator, video generation, world model, long-term memory
 
 ---
 

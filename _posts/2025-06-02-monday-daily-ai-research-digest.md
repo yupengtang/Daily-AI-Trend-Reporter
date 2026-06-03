@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, June 02, 2025"
 date: 2025-06-02
 ---
 
-Keywords: AlphaOne, Bernoulli stochastic process, Browser-Use Openai-o3, CAPTCHA, CAPTCHA Reasoning Depth, COCO, DINO series, DINO-R1
+Keywords: reinforcement learning, ProRL, KL divergence control, reference policy resetting, pass@k evaluations, reasoning boundary improvements, task competence, long-horizon RL
 
 ---
 

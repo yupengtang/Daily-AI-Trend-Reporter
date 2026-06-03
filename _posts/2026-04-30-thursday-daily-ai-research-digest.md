@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, April 30, 2026"
 date: 2026-04-30
 ---
 
-Keywords: Claw-style environments, ClawGym-Agents, ClawGym-Bench, ClawGym-SynData, CompDemo, Eagle3, KV-Cache, Large Atomic Models
+Keywords: large language models, multimodal agents, multimodal perception, foundation models, visual tool use, hierarchical optimization, end-to-end verification, semantic SLAM
 
 ---
 

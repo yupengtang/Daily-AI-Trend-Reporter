@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, January 23, 2026"
 date: 2026-01-23
 ---
 
-Keywords: Bayesian decomposition, ConvNet, DiT, GCG, GRES, GRPO, Group Relative Policy Optimization, Information Collapse
+Keywords: reinforcement learning, computer-use agents, native computer-use agents, data generation, policy optimization, evolutionary cycle, verifiable synthesis engine, executable validators
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, March 12, 2026"
 date: 2026-03-12
 ---
 
-Keywords: EgoMAS, FlashAssign, GPU implementations, Generalist Value Models, High Bandwidth Memory, Hindsight-Guided On-Policy Distillation, ID-LoRA, In-Context LoRA
+Keywords: reinforcement learning, parameter-efficient fine-tuning, natural language feedback, scalar rewards, targeted exploration, group-level feedback, off-policy scaffolding, joint optimization
 
 ---
 

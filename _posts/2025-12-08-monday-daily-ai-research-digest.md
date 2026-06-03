@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, December 08, 2025"
 date: 2025-12-08
 ---
 
-Keywords: 3D assets, 3D pose representation, Arena-Scoring, CoT reasons, Critiquing, DAPO, DMD/DMD2, DPG-Bench
+Keywords: reinforcement learning, diffusion, flow matching, inference efficiency, Number of Function Evaluations, few-step methods, progressive distillation, consistency distillation
 
 ---
 

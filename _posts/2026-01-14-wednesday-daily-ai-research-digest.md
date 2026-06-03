@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, January 14, 2026"
 date: 2026-01-14
 ---
 
-Keywords: 3D-aware features, Feature Merger, GitHub, IoU, MUSt3R, Mixture-of-Experts, Positive IoU, RL training
+Keywords: reinforcement learning, autonomous software engineering, SWE agents, closed-world limitation, open-world experience, GitHub, experience governance, experience cards
 
 ---
 

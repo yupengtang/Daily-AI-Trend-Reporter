@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, October 22, 2025"
 date: 2025-10-22
 ---
 
-Keywords: 24 fps, 480p, AIME-2025, API calls, ARC-AGI-v1, ASystem, Atkinson-Shiffrin model, C3PO++
+Keywords: LLMs, benchmark, Gemini-2.5-Pro, Multimodal Large Language Models, core attention disaggregation, core attention, softmax(QK^T)V, data parallel
 
 ---
 

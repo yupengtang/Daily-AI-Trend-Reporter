@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, November 14, 2025"
 date: 2025-11-14
 ---
 
-Keywords: AlphaEvolve, AlphaResearch, AlphaResearchComp, Audio Flamingo 3, GRPO, GRPO-based reinforcement learning, Generative Adversarial Distillation (GAD), Generative Latent Prediction (GLP)
+Keywords: LLMs, diffusion models, latent code, VAE decoding, Swin-style backbone, pixel-shuffle heads, image-space SR, SwinIR architecture
 
 ---
 

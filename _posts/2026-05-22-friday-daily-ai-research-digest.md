@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, May 22, 2026"
 date: 2026-05-22
 ---
 
-Keywords: 3D generation, Big Five score prediction, Confabulation Rate, GPS coordinates, Grounded Personality Reasoning, Holistic-grounding Rate, Integration-failure Rate, KV cache
+Keywords: large language models, reinforcement learning from verifiable rewards, policy-gradient update, token-gradient vectors, advantage-weighted averaging, discriminative token credit assignment, self-normalized RLVR surrogate, side-wise centroids
 
 ---
 

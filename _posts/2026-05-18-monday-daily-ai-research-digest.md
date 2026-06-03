@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, May 18, 2026"
 date: 2026-05-18
 ---
 
-Keywords: Attribution Hallucination, Doc-VQA, GUI benchmarks, Group Relative Policy Optimization, HarnessAudit, HarnessAudit-Bench, Long-CoT reasoning, Multimodal Large Language Models
+Keywords: Multimodal Large Language Models, Doc-VQA, document understanding, bounding-box citations, Strict Attributed Accuracy, Attribution Hallucination, masking ablation, expert review
 
 ---
 

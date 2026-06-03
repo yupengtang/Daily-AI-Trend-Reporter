@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, October 15, 2025"
 date: 2025-10-15
 ---
 
-Keywords: AgentEval, Behavioral Cloning, DITING, DeepSeek-V3, Large Language Models, MetricAlign, RAG, Reinforcement Learning
+Keywords: Reinforcement Learning, Behavioral Cloning, language-conditioned models, large language models, machine translation, web novels, DITING, narrative fidelity
 
 ---
 

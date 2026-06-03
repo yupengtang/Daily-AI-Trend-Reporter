@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, May 12, 2026"
 date: 2026-05-12
 ---
 
-Keywords: 3D feature volume, 3D generative models, 3D-native generators, AGI-level systems, Chain-of-Frames, Gaussian Wasserstein barycenters, LLM reasoning, LaTeX
+Keywords: large language models, visual reasoning, video generation, multimodal diffusion transformer, condition encoder, joint condition-target modeling, large-scale data curation, multi-stage training pipeline
 
 ---
 

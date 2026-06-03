@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, June 02, 2026"
 date: 2026-06-02
 ---
 
-Keywords: BrowseComp, CommonsenseQA, CraftBench, Domino head, Korean contexts, LLM-judged validity signals, LLMs, MMLU-Pro
+Keywords: speculative decoding, multi-agent harness, figure generation, raster outputs, editable SVGs, CraftBench, PaperBanana-Bench, parameter-efficient fine-tuning
 
 ---
 

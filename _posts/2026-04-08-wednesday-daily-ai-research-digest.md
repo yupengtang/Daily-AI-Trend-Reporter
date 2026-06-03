@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, April 08, 2026"
 date: 2026-04-08
 ---
 
-Keywords: AUC consistency scoring, CPU-GPU bandwidth bottleneck, CUDA streams, DeepSpeed ZeRO-3, Group Relative Policy Optimization, KV-Cache eviction, LLM-based agents, LLM-generated code
+Keywords: large language models, Pass@k, video understanding, video MLLMs, progressive tri-level hierarchy, group-based non-linear evaluation, human annotation pipeline, multimodal reasoning
 
 ---
 

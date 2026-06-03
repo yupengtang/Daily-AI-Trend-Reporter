@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, July 11, 2025"
 date: 2025-07-11
 ---
 
-Keywords: 3D language field, ARKitScenes, Angular Alignment, CLIP language features, CUDA optimization, Claude-4.0-Sonnet, CoLa, CoT-SFT
+Keywords: reinforcement learning, MLLMs, vision-language models, LongVideo-Reason, chain-of-thought supervised fine-tuning, CoT-SFT, Multi-modal Reinforcement Sequence Parallelism, MR-SP
 
 ---
 

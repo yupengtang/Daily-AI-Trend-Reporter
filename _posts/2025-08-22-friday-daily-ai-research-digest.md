@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, August 22, 2025"
 date: 2025-08-22
 ---
 
-Keywords: 3D content generation, 3D representation, AIME 2025, API, Claude-4, Deep Think with Confidence, DeepConf, GPT-OSS series
+Keywords: large language models, Mixture-of-Experts (MoE), reinforcement learning (RL), Mixture-of-Rewards (MoR), molecular synthesis planning, reaction condition prediction, thermodynamic stabilities, Deep Think with Confidence
 
 ---
 

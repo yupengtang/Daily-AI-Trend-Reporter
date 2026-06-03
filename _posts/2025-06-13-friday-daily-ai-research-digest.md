@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, June 13, 2025"
 date: 2025-06-13
 ---
 
-Keywords: AniEval, Chain-of-Thought, CoT reasoning, Director Agent, Error Refiner, GPT-4.1-mini, Gemini-2.5-flash, HQ-Poster100K
+Keywords: LLMs, reasoning-based large language models, medical question answering, ReasonMed, multi-agent verification, Error Refiner, Chain-of-Thought, CoT reasoning
 
 ---
 

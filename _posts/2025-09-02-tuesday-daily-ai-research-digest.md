@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, September 02, 2025"
 date: 2025-09-02
 ---
 
-Keywords: ALLaM-34B, Arabic-focused models, Constitutional AI, Deepseek-R1, Function Calling, HUMAIN Chat, IRMA, Input-Reformulation Multi-Agent
+Keywords: large language models, LLMs, critic-free reinforcement learning, group policies, advantage reference anchor, data pre-sampling, reference model, rollout
 
 ---
 

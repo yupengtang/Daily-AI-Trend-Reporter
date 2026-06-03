@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, March 31, 2026"
 date: 2026-03-31
 ---
 
-Keywords: 2D visual cues, BIBM, DeepSeek Sparse Attention, EAGLE-2, GEditBench v2, GRPO training, GSM8K, Geometry-Guided Fusion
+Keywords: image editing, speculative decoding, draft model, autoregressive generation, acceptance length, MT-Bench, GSM8K, MATH-500
 
 ---
 

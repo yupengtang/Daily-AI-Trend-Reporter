@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, June 23, 2025"
 date: 2025-06-23
 ---
 
-Keywords: 2D foundation models, 3D diffusion models, 3D generative model, 3D scene generation, Chain-of-Thought, DreamCube, Hunyuan3D-DiT, Hunyuan3D-Paint
+Keywords: vision-language models, reinforcement learning, Parameter-Efficient Fine-Tuning, PEFT, low-rank adaptation, LoRA, large language models, prompts
 
 ---
 

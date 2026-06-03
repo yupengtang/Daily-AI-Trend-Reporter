@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, February 19, 2026"
 date: 2026-02-19
 ---
 
-Keywords: AI agents, CAD, CadQuery, DeepCAD, Finite State Machines, Fusion 360, Image2CAD, LLMs
+Keywords: sparse-linear attention, diffusion models, attention sparsity, learnable router, quantization-aware fine-tuning, attention error, direct decomposition, Finite State Machines
 
 ---
 

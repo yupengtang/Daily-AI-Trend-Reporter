@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, October 28, 2025"
 date: 2025-10-28
 ---
 
-Keywords: 2D-3D cross-modal joint embedding, 3D intra-modal self-distillation, 3D reconstruction, 3D scene, 3D scene perception, 3D-Consistent Contrastive Learning, Action Coherence Guidance (ACG), Active Model
+Keywords: 3D intra-modal self-distillation, 2D-3D cross-modal joint embedding, zero-shot visualizations, linear probing, 3D scene perception, ScanNet, mIoU, video-lifted point cloud
 
 ---
 

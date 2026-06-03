@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, May 15, 2026"
 date: 2026-05-15
 ---
 
-Keywords: 6-DoF trajectory, Architecture Mapper, CUPMem, Docker container, GRPO, Gated DeltaNet, Genie3, International Mathematical Olympiad
+Keywords: visual evidence, reasoning models, mathematical problem solving, scientific problem solving, International Mathematical Olympiad, International Physics Olympiad, reverse-perplexity curriculum, supervised fine-tuning
 
 ---
 

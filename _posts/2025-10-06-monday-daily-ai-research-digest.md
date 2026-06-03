@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, October 06, 2025"
 date: 2025-10-06
 ---
 
-Keywords: Artificial Analysis Intelligence Index, Chain-of-Thought, Conversational Spoken Language Models, ECG-QA-CoT, F1 score, GPC, GPT-4o, GPTQ
+Keywords: self-reflection, multimodal reasoning model, depth upscaling, staged continual pre-training, synthetic data generation, spatial structure, compositional understanding, fine-grained perception
 
 ---
 

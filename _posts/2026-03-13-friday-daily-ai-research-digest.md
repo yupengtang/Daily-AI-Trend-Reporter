@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, March 13, 2026"
 date: 2026-03-13
 ---
 
-Keywords: 3D spatiotemporal convolution, Base-and-Bonus reward strategy, Classical Test Theory, Consistency-Modulated Execution, DeepSeek Sparse Attention, Execution Video Reward Model, FIRM-Bench, Full layers
+Keywords: reward modeling, test-time training, fast weights, spatial evidence, long-horizon scene videos, hybrid architecture, sliding-window attention, 3D spatiotemporal convolution
 
 ---
 

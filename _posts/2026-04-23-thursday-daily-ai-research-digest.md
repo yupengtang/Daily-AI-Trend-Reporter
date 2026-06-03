@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, April 23, 2026"
 date: 2026-04-23
 ---
 
-Keywords: 2D object tracking, 3D human tracking, 3D spatial constraints, 3D-prior-guided generation, AndroidWorld, Depth Anything series, GSI-Bench, GSI-Real
+Keywords: policy optimization, multimodal large language models, image generation, discrete diffusion, large language model, multimodal understanding, multimodal generation, semantic discrete tokenizer
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, November 03, 2025"
 date: 2025-11-03
 ---
 
-Keywords: BF16, Brier score, CALM, Contextual Judge, Continuous Autoregressive Language Models, FP16, Formal Verifier, GUI grounding
+Keywords: large language models, reinforcement learning, supervised fine-tuning, multimodal reasoning, ThinkMorph, interleaved reasoning traces, text-image reasoning, visual manipulation
 
 ---
 

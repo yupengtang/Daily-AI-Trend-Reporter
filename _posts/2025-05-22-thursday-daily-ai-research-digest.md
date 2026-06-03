@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, May 22, 2025"
 date: 2025-05-22
 ---
 
-Keywords: 3D generative models, 3DTown, BOOM, Chain-of-Thought dataset, Claude 3.7 Sonnet, FC2 layer, Hunyuan3D-2, LASER
+Keywords: reinforcement learning, multimodal large language model, process reward model, web navigation, webPRM collection, webrewardbench, long-horizon sequential decision making, preference pairs
 
 ---
 

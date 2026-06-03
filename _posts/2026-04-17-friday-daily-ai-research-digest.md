@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, April 17, 2026"
 date: 2026-04-17
 ---
 
-Keywords: 3D Gaussian Splatting, 3D world representations, Bird's-Eye View, Diffusion Transformer, Flux model, GRPO-based methods, Group Relative Policy Optimization, HY-Pano 2.0
+Keywords: 3D Gaussian Splatting, reinforcement learning, multi-modal world model, HY-Pano 2.0, WorldNav, WorldStereo 2.0, WorldMirror 2.0, keyframe-based view generation
 
 ---
 

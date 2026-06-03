@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, September 25, 2025"
 date: 2025-09-25
 ---
 
-Keywords: 3D point trajectories, Automatic Speech Translation, Avengers, BLEU, CODI, Coconut, EditVerse, EditVerseBench
+Keywords: Large Language Models, LLMs, generative models, web-scale data, generative video models, zero-shot capabilities, object segmentation, edge detection
 
 ---
 

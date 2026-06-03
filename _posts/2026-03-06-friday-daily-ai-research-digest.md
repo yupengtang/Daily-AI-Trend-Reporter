@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, March 06, 2026"
 date: 2026-03-06
 ---
 
-Keywords: AI agents, ALFWorld, Augmented Reality, CIRCLE, CRPS, Cross-Modal Compensation, Cross-Modal Computational Invariance, DAgger
+Keywords: AI agents, skill consolidation, tool invocation, long-term advancement, unified mechanism, skill organization, ontology, multi-dimensional evaluation
 
 ---
 

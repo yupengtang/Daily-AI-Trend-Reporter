@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, June 27, 2025"
 date: 2025-06-27
 ---
 
-Keywords: 360° car videos, 3D Gaussian splatting, 3D asset reconstruction, A$^*$ search, Arch-Router, Deep Research systems, Eulerian background grid, LLM
+Keywords: large language models, multimodal models, retrieval-augmented generation, prompt engineered search agents, reinforcement learning, image search, text search, outcome-based reward
 
 ---
 

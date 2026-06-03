@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, October 20, 2025"
 date: 2025-10-20
 ---
 
-Keywords: 3D consistency, 3D editing datasets, Autoregressive, Completeness, Connectivity, Constrained Rotary Time Embedding, DINO features, DailyOmni
+Keywords: sampling-based test-time scaling, large language models, self-consistency, perplexity, Perplexity Consistency, Reasoning Pruning, confidence estimation, reasoning error
 
 ---
 

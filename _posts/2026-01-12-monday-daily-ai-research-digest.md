@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, January 12, 2026"
 date: 2026-01-12
 ---
 
-Keywords: 3D Gaussian Splatting, 3D multi-scale tokenizer, Acc@500m, Analytic Geometry, Cross-Frame Error Correction, Data-centric Solution Preference, Execution Bottleneck, FLAME mesh
+Keywords: reinforcement learning, large language models, vision-language model, geolocalization, chain-of-thought reasoning, agentic capabilities, agentic reinforcement learning, parallel test-time scaling
 
 ---
 

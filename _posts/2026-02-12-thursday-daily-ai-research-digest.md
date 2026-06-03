@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, February 12, 2026"
 date: 2026-02-12
 ---
 
-Keywords: AI-assisted mathematics, Adapting to Contextual Knowledge, Automated Heuristic Design, BrowseComp, Capacitated Vehicle Routing Problems, Combinatorial Optimization Problems, Executing Ad-hoc Constraints, GRPO
+Keywords: reinforcement learning, Mixture-of-Experts, sparse MoE, foundation model, active parameters, interleaved attention, sliding-window attention, full attention
 
 ---
 

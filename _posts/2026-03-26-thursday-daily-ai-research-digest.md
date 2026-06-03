@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, March 26, 2026"
 date: 2026-03-26
 ---
 
-Keywords: AndroidWorld, Atari, BigBench Extra Hard, GUI tasks, Generalized Reward Policy Optimization, Group Relative Policy Optimization, Group Relative Self-Distillation, Kahneman-Tversky Optimization
+Keywords: multimodal large language models, large language models, video understanding, computer-use agents, expert video demonstrations, continuous screen recordings, multimodal corpus, visual world models
 
 ---
 

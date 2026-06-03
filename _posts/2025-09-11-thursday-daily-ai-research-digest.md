@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, September 11, 2025"
 date: 2025-09-11
 ---
 
-Keywords: 3D point-promptable part segmentation, 3D world modeling, 4D world modeling, AggLM, Artificial SuperIntelligence, Bradley-Terry losses, CDE, CLIP-based RMs
+Keywords: Large Language Models, reinforcement learning, LLMs, Reinforcement Learning, LRMs, DeepSeek-R1, Artificial SuperIntelligence, CLIP-based RMs
 
 ---
 

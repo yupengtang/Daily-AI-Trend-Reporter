@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, May 13, 2026"
 date: 2026-05-13
 ---
 
-Keywords: 4K ultra-high resolution generation, AR-Diffusion Unified Multimodal Models, BYOWM, CascadeBench, DPG-Bench, Decompositional Verifiable Reward, Execution Quality, FLOPs
+Keywords: DPG-Bench, GenEval, vision-language models, multimodal intelligence, unified paradigm, NEO-unify, dense model, mixture-of-experts
 
 ---
 

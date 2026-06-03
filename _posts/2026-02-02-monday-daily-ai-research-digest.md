@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, February 02, 2026"
 date: 2026-02-02
 ---
 
-Keywords: BRIGHT, Chain-of-Thought, GooseReason-0.7M, GooseReason-Cyber, LLM training, Large Language Models, MS-EDEN, MTEB
+Keywords: reinforcement learning, Reinforcement Learning with Verifiable Rewards, Large Language Models, supervised fine-tuning, VLMs, image generation models, agentic framework, publication-ready illustrations
 
 ---
 

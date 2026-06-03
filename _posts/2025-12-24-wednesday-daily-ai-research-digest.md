@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, December 24, 2025"
 date: 2025-12-24
 ---
 
-Keywords: ADR-Bench, Atomic Capabilities, Bottom-up Policy Optimization, BrowseComp, Checklist-style Judger, Data Synthesis Strategy, Deep Research, EvolveLab
+Keywords: reinforcement learning, SFT, VAE space, VAE decoder, semantic space, diffusion model, semantic video features, bi-directional attention
 
 ---
 

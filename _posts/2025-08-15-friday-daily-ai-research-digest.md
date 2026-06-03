@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, August 15, 2025"
 date: 2025-08-15
 ---
 
-Keywords: 3D reconstruction, Cold-Start Fine-tuning, DeepResearch, Diffusion Language Models, LLM-style training, MLLMs, MathBook Knowledge System, MathBook-Pro
+Keywords: autoregressive models, diffusion models, vector quantization, flow matching, next-token prediction, high-fidelity image synthesis, image editing, Multimodal Large Language Models
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, October 23, 2025"
 date: 2025-10-23
 ---
 
-Keywords: AIME 2024, AIME 2025, ARMs, Autoregressive Models, Chain-of-Thought supervision, DLMs, DeepSeek-R1, DeepWideSearch
+Keywords: reinforcement learning, o3-mini, linear attention, softmax attention, hybrid architecture, FP8 operator library, SOTA performance, large language models
 
 ---
 

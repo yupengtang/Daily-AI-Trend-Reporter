@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, May 19, 2025"
 date: 2025-05-19
 ---
 
-Keywords: Automated Theorem Proving, Claude-3.7-sonnet, F1 score, FrozenLake, GRPO, GuardReasoner-VL, GuardReasoner-VLTrain, ImageNet
+Keywords: Large Language Models, reinforcement learning, large language models, dense architecture, Mixture-of-Expert, thinking mode, non-thinking mode, thinking budget mechanism
 
 ---
 

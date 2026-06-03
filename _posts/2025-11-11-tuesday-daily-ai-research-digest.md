@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, November 11, 2025"
 date: 2025-11-11
 ---
 
-Keywords: AI agents, AlphaEvolve, Codeforces, DeepSeekMoE, DimFusion, Efficiency-Aware Policy Optimization, FIBO, Group Relative Policy Optimization
+Keywords: LLMs, supervised fine-tuning, memory systems, AI agents, memory hallucinations, fabrication, errors, conflicts
 
 ---
 

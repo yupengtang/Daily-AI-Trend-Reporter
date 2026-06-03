@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, March 25, 2026"
 date: 2026-03-25
 ---
 
-Keywords: 3D engines, Action Following, DAPO, FlowGRPO, GRPO, GTA-V sequences, HR-Bench, IC-LoRA
+Keywords: reinforcement learning, GRPO, diffusion-based framework, autoregressive decoding, parallel diffusion denoising, block-wise diffusion decoder, uncertainty-driven curriculum learning, inverse rendering perspective
 
 ---
 

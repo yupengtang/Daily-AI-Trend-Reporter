@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, February 27, 2026"
 date: 2026-02-27
 ---
 
-Keywords: 3D reconstruction, API-replay sandbox, BrowseComp, CapImagine, CoW-Bench, DeepResearch Bench, GAIA, Group Based RL
+Keywords: reinforcement learning, World Models, video generation models, Unified Multimodal Model, multimodal learning, multi-frame reasoning, CoW-Bench, modal consistency
 
 ---
 

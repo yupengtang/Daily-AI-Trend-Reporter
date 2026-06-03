@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, March 23, 2026"
 date: 2026-03-23
 ---
 
-Keywords: Chain-of-Thought, Conditional Information Bottleneck, Darwin Gödel Machine, Document Understanding, GPT-4-Turbo, GPT-4o, Gemma3-12B, General VQA
+Keywords: reinforcement learning, vision-language models, multimodal capabilities, fine-grained reasoning, long CoT reasoning, multi-hop reasoning, visual evidence, verifiable rewards
 
 ---
 

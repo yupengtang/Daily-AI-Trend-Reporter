@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, October 02, 2025"
 date: 2025-10-02
 ---
 
-Keywords: ACON, Agent Context Optimization, Bash scripts, Coder, Critic, DeepSeek-V2.5, Direct Preference Optimization, EnvBench-Python
+Keywords: RLVR, reinforcement learning, mathematical reasoning benchmarks, large language models, Large Language Models, Reinforcement Learning with Verifiable Rewards, rollouts, Monte Carlo Tree Search
 
 ---
 

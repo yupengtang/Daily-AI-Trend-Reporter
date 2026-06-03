@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, December 04, 2025"
 date: 2025-12-04
 ---
 
-Keywords: 7-DOF robot, BLINK, BOP-ASK, CodeVision, DIRL, DeepStack, EMA-GRPO, Image Difference Captioning
+Keywords: Multimodal Large Language Models, Reinforcement Learning, vision-language model, interleaved contexts, multimodal benchmarks, dense variants, mixture-of-experts, pure-text understanding
 
 ---
 

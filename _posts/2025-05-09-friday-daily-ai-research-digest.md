@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, May 09, 2025"
 date: 2025-05-09
 ---
 
-Keywords: 3D Gaussians, 3D LLMs, 3D asset, 3D geometric relationships, 3D vision, Barrett-Lennard Relationship Inventory, Contrastive Language-Image Pre-training (CLIP), Denoising Reduction
+Keywords: Multimodal Reasoning Models, LMRMs, multimodal LLMs, Multimodal Chain-of-Thought, multimodal reinforcement learning, OpenAI O3, OpenAI O4-mini, native large multimodal reasoning models
 
 ---
 

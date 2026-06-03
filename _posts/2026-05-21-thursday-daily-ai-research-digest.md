@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, May 21, 2026"
 date: 2026-05-21
 ---
 
-Keywords: Acoustic-to-Semantic Progressive Supervised Fine-Tuning, BOOM benchmark, CUDA kernels, Canalized Rotation, Defense-in-Depth, Dual-Granularity WER-Gated Policy Optimization, FIFO-diffusion, FlashDecoding
+Keywords: multimodal large language models, Hierarchical Recurrent Model, Transformers, deep recurrence, MagicNorm, warmup deep credit assignment, instruction-response pairs, task-completion objective
 
 ---
 

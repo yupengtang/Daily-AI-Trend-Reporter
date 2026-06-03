@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, May 26, 2026"
 date: 2026-05-26
 ---
 
-Keywords: 3D point maps, 4-bit precision, A2UI-Bench, Advantage Combination, Blackwell GPUs, Dynamic Variance-adaptive Advantage Optimization, FP16 precision, FP4 inference
+Keywords: multimodal models, reinforcement learning, Reinforcement Learning, Large Language Models, Group Relative Policy Optimization, Proximal Policy Optimization, Reward Combination, Advantage Combination
 
 ---
 

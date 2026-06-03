@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, September 18, 2025"
 date: 2025-09-18
 ---
 
-Keywords: 360-degree vision, Arabic-centric benchmarks, CLMs, Code Language Models, CodeEraser, CodeGen-Mono, CodeParrot, FP8
+Keywords: translate-and-tune pipeline, FP8, bilingual supervision, lightweight language model, fine-tuning, slerp merging, Arabic-centric benchmarks, nano category
 
 ---
 

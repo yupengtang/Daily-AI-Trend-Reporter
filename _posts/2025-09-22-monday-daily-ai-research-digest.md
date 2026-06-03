@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, September 22, 2025"
 date: 2025-09-22
 ---
 
-Keywords: 3D indoor scenes, 3D layout, 4D reconstruction, ArcFace, BTL Reward, BTL-UI, Blink Data Generation, Blink-Think-Link
+Keywords: reinforcement learning, Repository Planning Graph, RPG, ZeroRepo, graph-driven framework, proposal-level planning, implementation-level refinement, graph-guided code generation
 
 ---
 

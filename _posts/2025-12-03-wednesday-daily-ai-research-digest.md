@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, December 03, 2025"
 date: 2025-12-03
 ---
 
-Keywords: 3D-aware space, DSA, Deep Research, DeepSeek Sparse Attention, EPDMS, FRAMES, FVQA, Gemini 2.5 Flash
+Keywords: reinforcement learning, supervised fine-tuning, DeepSeek Sparse Attention, DSA, reinforcement learning framework, agentic task synthesis pipeline, computational efficiency, long-context scenarios
 
 ---
 

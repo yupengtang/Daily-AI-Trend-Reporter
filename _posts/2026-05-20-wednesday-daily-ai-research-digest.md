@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, May 20, 2026"
 date: 2026-05-20
 ---
 
-Keywords: AI Scientist v2, ARC-Bench, Adaptive Computation Allocation, Agentic Reinforcement Learning, BFCLv3, Best-of-N reasoning, Best-of-N selection, Beta belief
+Keywords: reinforcement learning, self-distillation, privileged context, pointwise mutual information, entropy-triggered gate, GRPO baseline, language model, multi-agent autonomous research
 
 ---
 

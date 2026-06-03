@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, October 17, 2025"
 date: 2025-10-17
 ---
 
-Keywords: AEPO, AI glasses, AI4Service, Agentic Reinforcement Learning, Alpha-Service, Arithmetic Logic Unit, BitDistill, BitNet Distillation
+Keywords: vision-language model, VLM, NaViT-style dynamic resolution visual encoder, ERNIE, element recognition, page-level document parsing, element-level recognition, large language models
 
 ---
 

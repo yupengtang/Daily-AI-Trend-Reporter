@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, January 06, 2026"
 date: 2026-01-06
 ---
 
-Keywords: 256K-token context window, AutoRegressive, FlashAttention, Group Relative Policy Optimization, IDBench-V, Identity-Anchored Video Synthesizer, Identity-Coherence Reinforcement Learning, Image Face Swapping
+Keywords: reinforcement learning, visual generation, Mixture-of-Experts, 256K-token context window, multilingual language model, parameter-efficient fine-tuning, decoder-only autoregressive transformer, interleaved text-image discrete tokens
 
 ---
 

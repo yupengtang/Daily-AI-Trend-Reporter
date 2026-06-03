@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, January 26, 2026"
 date: 2026-01-26
 ---
 
-Keywords: Asymmetric Mixture-of-Transformers, BF16 precision, DORA, DPO, DRA Failure Taxonomy, Deep Research Agents, DeepVerifier, DiT backbone
+Keywords: multi-turn interactions, test-time scaling, supervised fine-tuning, reinforcement learning, large language models, Mixture-of-Experts, agentic reasoning, domain-parallel expert training
 
 ---
 

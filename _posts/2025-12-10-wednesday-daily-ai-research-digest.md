@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, December 10, 2025"
 date: 2025-12-10
 ---
 
-Keywords: 3D Gaussian Splatting, 3DGS, 4D reconstruction, 4DGS, AIME24, Adaptive Conditioner, Arbitrage, Arbitrage Oracle
+Keywords: motion control, video generative models, dense point trajectories, latent space, spatiotemporal feature map, motion guidance, image-to-video model, auxiliary motion encoders
 
 ---
 

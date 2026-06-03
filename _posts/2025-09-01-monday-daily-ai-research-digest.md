@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, September 01, 2025"
 date: 2025-09-01
 ---
 
-Keywords: 3D domain, AI code generation, Bi-mode Policy Optimization, Droplet3D, Droplet3D-4M, GRPO framework, GUI agents, GUI perception
+Keywords: large language models, LLMs, training data, AI code generation, security evaluation, repository-level evaluation, secure coding, reasoning budget
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, March 09, 2026"
 date: 2026-03-09
 ---
 
-Keywords: 4D scene reconstruction, Band-constrained Policy Optimization, Chain-of-thought monitoring, CoT controllability, CoTControl evaluation suite, DiT, Diffusion Transformers, FID
+Keywords: computational efficiency, Vision Language Model, contrastive learning, vision encoder, text-only LLM, multimodal understanding, dense captioning, visual reasoning
 
 ---
 

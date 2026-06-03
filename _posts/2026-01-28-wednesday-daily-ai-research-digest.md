@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, January 28, 2026"
 date: 2026-01-28
 ---
 
-Keywords: AI Town, Diagnostic Guardrail framework, Highway-style connections, IoU-based reward, Multimodal Large Language Models, Post-LayerNorm, Pre-LayerNorm, Reinforcement Learning
+Keywords: multimodal large language models, reinforcement learning, multimodal models, large language models, agentic guardrail, three-dimensional taxonomy, agentic safety benchmark, Diagnostic Guardrail framework
 
 ---
 

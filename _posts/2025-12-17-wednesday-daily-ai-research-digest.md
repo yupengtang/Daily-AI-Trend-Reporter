@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, December 17, 2025"
 date: 2025-12-17
 ---
 
-Keywords: 2D Spatial, 3D Spatial, 3D-aware VLM, ARC-AGI, ASMR, Abstract Reasoning, Cascade RL, Context Forcing
+Keywords: Frechet Video Distance (FVD), MMGR, Multi-Modal Generative Reasoning Evaluation and Benchmark, Physical, Logical, 3D Spatial, 2D Spatial, Temporal
 
 ---
 

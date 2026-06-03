@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, July 04, 2025"
 date: 2025-07-04
 ---
 
-Keywords: 2-simplicial Transformer, AlphaFold3, BrowseComp, Chain-of-Thought (CoT), ControlNet, ControlNet++, DUPO, DeepResearch
+Keywords: LLM, DeepResearch, BrowseComp, reasoning pattern, high-uncertainty tasks, structured sampling, information obfuscation, RFT cold start
 
 ---
 

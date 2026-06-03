@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, February 13, 2026"
 date: 2026-02-13
 ---
 
-Keywords: DeepVerifier module, DiT representations, Domain-Specific Language, Dual-Branch Injection, Explore-Verify-Memorize strategy, Global Semantic Anchor, In-Context Exploration, Length-Incentivized Exploration
+Keywords: reinforcement learning, multi-agent systems, large language models, self-evolution, safety alignment, information-theoretic framework, anthropic value distributions, statistical blind spots
 
 ---
 

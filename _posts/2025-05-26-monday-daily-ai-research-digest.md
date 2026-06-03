@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, May 26, 2025"
 date: 2025-05-26
 ---
 
-Keywords: AIME, ANSE, Active Noise Selection for Generation, BANSA, Bayesian Active Noise Selection via Attention, Blackwell architecture, CUDA kernels, Claude-3.7-Sonnet-Thinking
+Keywords: large language models, reinforcement learning, TabSTAR, foundation tabular model, semantically target-aware representations, transfer learning, pretrained text encoder, target tokens
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, December 01, 2025"
 date: 2025-12-01
 ---
 
-Keywords: Attention Interaction Alignment (AIA) loss, Brownian Bridge Models, CFG Augmentation (CA), CMO, CaptionQA, DiT, Diffusion Transformer, Distribution Matching Distillation (DMD)
+Keywords: Scalable Single-Stream Diffusion Transformer, S3-DiT, diffusion transformer, omni-pre-training, instruction-following capabilities, photorealistic image generation, bilingual text rendering, distillation scheme
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, January 20, 2026"
 date: 2026-01-20
 ---
 
-Keywords: Anchor-Adapter circuit, Assistant Axis, Bi-directional Preference Optimization, Chain-of-Thought, CoDanceBench, Direct Preference Optimization, ECE scores, Functional Anchor
+Keywords: Large Language Models, fine-tuning, agentic backend coding, executable workflow, development lifecycle, containerized services, end-to-end API tests, Chain-of-Thought
 
 ---
 

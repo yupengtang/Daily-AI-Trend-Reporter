@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, November 26, 2025"
 date: 2025-11-26
 ---
 
-Keywords: 3D Gaussian Splatting, 3D generative modeling, Adam-based optimizers, AlphaEvolve, Chain-of-Thought, Condition-Reconciliation Mechanism, FP8-precision, GRPO
+Keywords: reinforcement learning, large language models, temporal coherence, LLM-guided evolutionary computation, AlphaEvolve, MAP-Elites, quality-diversity algorithms, asynchronous DAG-based evaluation
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, May 13, 2025"
 date: 2025-05-13
 ---
 
-Keywords: 3D-native architecture, 7B-parameter dense model, AGIEval-en, AIME 2024, AIME 2025, AIMO 2025, AttentionInfluence, Best-of-N inference
+Keywords: multimodal understanding, reinforcement learning, fine-tuning, vision-language foundation model, vision encoder, Mixture-of-Experts (MoE), LLM, multimodal reasoning
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, May 05, 2025"
 date: 2025-05-05
 ---
 
-Keywords: Amazon datasets, Background Consistency Guidance, CelebA-HQ, FFHQ, GPT-4o, Graph Neural Networks (GNN), Knowledge Checklist Score, LLM-based evaluation
+Keywords: neural architecture search, knowledge distillation, supervised fine-tuning, reinforcement learning, dynamic reasoning toggle, latent categories guidance, diffusion-based model, PixelHacker
 
 ---
 

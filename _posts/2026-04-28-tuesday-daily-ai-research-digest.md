@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, April 28, 2026"
 date: 2026-04-28
 ---
 
-Keywords: 3D priors, Best-of-N inference, Explore-Execute-Review (E²R) tree search, Flow-GRPO, Large Language Models, Process Reward Models, Reinforcement Learning, SVG overlays
+Keywords: vision-language models, multi-agent systems, organizational layer, agent identities, Talent Market, Explore-Execute-Review (E²R) tree search, task decomposition, hierarchical loop
 
 ---
 

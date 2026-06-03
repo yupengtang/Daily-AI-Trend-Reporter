@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, July 08, 2025"
 date: 2025-07-08
 ---
 
-Keywords: Artificial General Intelligence, BMMR-Eval, BMMR-Train, BMMR-Verifier, CALVIN ABC-D benchmarks, Causal Language Modeling, LLM ecosystem, LMMs
+Keywords: large language models, human-in-the-loop, Large Language Models, Artificial General Intelligence, memory management, long-context reasoning, continual personalization, knowledge consistency
 
 ---
 

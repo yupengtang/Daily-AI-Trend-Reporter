@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, August 28, 2025"
 date: 2025-08-28
 ---
 
-Keywords: AudioStory, AudioStory-10K, Chain-of-Thought, CoT, DLMs, Dream-7B, GRPO, LIBERO
+Keywords: reinforcement learning, logit lens, linear probing, activation patching, encoder-decoder interactions, repetition hallucinations, semantic biases, vision-language models
 
 ---
 

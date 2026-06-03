@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, March 05, 2026"
 date: 2026-03-05
 ---
 
-Keywords: 4D reconstruction, Deep Research tasks, I2V, KV-cache, LLM memory benchmarks, Large Language Models, Large Multimodal Models, Reinforcement Learning
+Keywords: reinforcement learning, heterogeneous agents, collaborative optimization, on-policy optimization, multi-agent reinforcement learning, rollout sharing, sample utilization, cross-agent knowledge transfer
 
 ---
 

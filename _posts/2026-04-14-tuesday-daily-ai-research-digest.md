@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, April 14, 2026"
 date: 2026-04-14
 ---
 
-Keywords: Attention Sink, AudioEdit, Capability Refinement, Cirq, CodeTraceBench, Decoupled-Then-Joint Training, Diffusion Transformer, GUI automation
+Keywords: large language models, multimodal models, reinforcement learning, sampling diversity, entropy regularization, reward shaping, memory-enhanced dynamic reward shaping, historical behavioral signals
 
 ---
 

@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, January 01, 2026"
 date: 2026-01-01
 ---
 
-Keywords: 128k context window, CoLog, Commonsense-STEM-Agent Curriculum, GaMO, Hyper-Connections (HC), Interaction-based Policy Alignment (IPA), LPIPS, Manifold-Constrained Hyper-Connections (mHC)
+Keywords: Hyper-Connections (HC), Manifold-Constrained Hyper-Connections (mHC), residual connections, residual stream width, connectivity patterns, identity mapping property, training instability, memory access overhead
 
 ---
 

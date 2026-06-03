@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, May 04, 2026"
 date: 2026-05-04
 ---
 
-Keywords: 3D editing, 3D generative model, 3D world generation, Adjoint Matching, Distributional Implicit Value Learning, FID score, GFN, Generative Flow Networks
+Keywords: video diffusion models, multimodal graphics tasks, conditional generation, stochastic condition masking, decoupled gated LoRA, cross-modal self-attention, modality-specific distributions, omnidirectional conditional generation
 
 ---
 

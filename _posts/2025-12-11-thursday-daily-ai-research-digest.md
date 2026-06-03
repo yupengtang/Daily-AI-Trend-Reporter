@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, December 11, 2025"
 date: 2025-12-11
 ---
 
-Keywords: BrowseComp-Plus, CALVIN ABC-D benchmarks, Centralized, Decentralized, Diffusion Transformers, Diversify-and-Absorb Mechanism, Finance-Agent, FlashAttention-2
+Keywords: stereo video, monocular-to-stereo, pretrained video generator, geometry-aware regularization, spatio-temporal tiling, high-definition stereo video dataset, natural human interpupillary distance (IPD), visual fidelity
 
 ---
 

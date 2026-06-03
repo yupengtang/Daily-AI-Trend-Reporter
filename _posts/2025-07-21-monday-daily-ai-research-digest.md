@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Monday, July 21, 2025"
 date: 2025-07-21
 ---
 
-Keywords: AudioSet, Augmented Key-Value memory, CSD-100 dataset, CUDA kernel, DIJA, EViP, EViP++, Endogenous Visual Pre-training
+Keywords: large language models, diffusion-based large language models, dLLMs, autoregressive LLMs, parallel decoding, bidirectional modeling, adversarial prompts, DIJA
 
 ---
 

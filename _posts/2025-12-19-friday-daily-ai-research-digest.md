@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, December 19, 2025"
 date: 2025-12-19
 ---
 
-Keywords: ADE20K, BokehNet, DINOv3-Large, DPO, DeblurNet, Deep360, Diffusion Transformer, EXIF metadata
+Keywords: generative framework, multimodal visual language inputs, end-to-end, video generation, editing, intelligent reasoning, unified multimodal representation, cinematic-quality
 
 ---
 

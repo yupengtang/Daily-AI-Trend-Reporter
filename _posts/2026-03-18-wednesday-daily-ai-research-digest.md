@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, March 18, 2026"
 date: 2026-03-18
 ---
 
-Keywords: 32B-parameter, 3D consistency, 4D generative robotic simulator, 4D robot control trajectory, Chain-of-Frames, Chain-of-Steps, Diffusion Transformers, Dual-Track GRPO
+Keywords: generative model, diffusion models, video generation, Chain-of-Frames, Chain-of-Steps, working memory, self-correction, perception before action
 
 ---
 

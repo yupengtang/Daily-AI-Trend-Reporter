@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Thursday, June 05, 2025"
 date: 2025-06-05
 ---
 
-Keywords: 3D point-cloud sequences, AIME, AMD RDNA3, AmbiK, CASS, CASS-Bench, CUDA, Chain-of-Thought
+Keywords: multimodal reasoning, Chain-of-Thought, LLMs, vision-language models, four-stage pre-training, Mixed On-policy Reinforcement Learning, MORL, reproducibility
 
 ---
 

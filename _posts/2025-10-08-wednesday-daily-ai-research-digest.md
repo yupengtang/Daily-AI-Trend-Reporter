@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, October 08, 2025"
 date: 2025-10-08
 ---
 
-Keywords: AIME, AIME-25, ARC-AGI, ASR, CRUD, Caco-1.3M dataset, Chain-of-Thought, CoT prompting
+Keywords: large language models, reinforcement learning, diffusion language models, Hierarchical Reasoning Model, HRM, Tiny Recursive Model, TRM, recursive reasoning
 
 ---
 

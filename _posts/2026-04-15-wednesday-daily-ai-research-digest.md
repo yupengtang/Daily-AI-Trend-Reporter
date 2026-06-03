@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Wednesday, April 15, 2026"
 date: 2026-04-15
 ---
 
-Keywords: 3D scene creation, 3D-consistent video trajectories, Agent Humanization Benchmark, BERT-as-a-Judge, Chain-of-Thought, File-as-Bus workspace, GRPO, GUI agents
+Keywords: reinforcement learning, large language models, GUI agents, environment instability, closed pipelines, evaluation protocols, real-world deployment, mobile applications
 
 ---
 

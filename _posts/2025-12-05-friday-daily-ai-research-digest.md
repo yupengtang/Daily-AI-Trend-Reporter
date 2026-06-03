@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Friday, December 05, 2025"
 date: 2025-12-05
 ---
 
-Keywords: ARMBench-VL, Bundle Adjustment, DA tasks, DE tasks, Deep Forcing, Deep Sink, DynamicVerse, EMA-Sink
+Keywords: diffusion-based video generation, sequential computation, long-horizon inconsistency, real-time, streaming audio-driven avatar synthesis, Timestep-forcing Pipeline Parallelism, distributed inference paradigm, pipeline parallelism
 
 ---
 

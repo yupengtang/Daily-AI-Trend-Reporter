@@ -4,7 +4,7 @@ title: "Daily AI Research Papers - Tuesday, October 14, 2025"
 date: 2025-10-14
 ---
 
-Keywords: AIME2024/AIME2025, AVoCaDO, AVoCaDO GRPO, AVoCaDO SFT, Adaptive Quantization Noise (AQN), Chain-of-Thought, DINO, DREAM-1K
+Keywords: policy entropy, GSM8K, multimodal large language models, Reinforcement Learning with Verifiable Rewards, NVFP4 quantization, Low-Rank Adaptation (LoRA), Adaptive Quantization Noise (AQN), reinforcement learning
 
 ---
 

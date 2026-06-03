@@ -13,7 +13,7 @@ layout: default
   {%- if site.posts.size > 0 -%}
   <section class="post-feed">
     {%- for post in site.posts -%}
-    <article class="post-card">
+    <article class="post-card{% if forloop.index > 20 %} post-hidden{% endif %}">
       <div class="post-card-meta">
         {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
@@ -27,5 +27,14 @@ layout: default
     </article>
     {%- endfor -%}
   </section>
+
+  {%- if site.posts.size > 20 -%}
+  <div class="load-more-wrap">
+    <button id="load-more" class="btn-load-more">
+      Show older posts
+      <span class="post-count">({{ site.posts.size | minus: 20 }} more)</span>
+    </button>
+  </div>
+  {%- endif -%}
   {%- endif -%}
 </div>

@@ -141,6 +141,39 @@ a {
   &:last-child {
     border-bottom: none;
   }
+
+  &.post-hidden {
+    display: none;
+  }
+}
+
+.load-more-wrap {
+  text-align: center;
+  padding: 32px 0 8px;
+}
+
+.btn-load-more {
+  background: none;
+  border: 1px solid $grey-color-light;
+  border-radius: 6px;
+  padding: 10px 28px;
+  font-family: $base-font-family;
+  font-size: 14px;
+  font-weight: 500;
+  color: $grey-color;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  .post-count {
+    color: lighten($grey-color, 15%);
+    font-weight: 400;
+  }
+
+  &:hover {
+    color: $brand-color;
+    border-color: $brand-color;
+    background: rgba($brand-color, 0.04);
+  }
 }
 
 .post-card-meta {

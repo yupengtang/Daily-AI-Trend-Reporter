@@ -29,5 +29,16 @@ document.addEventListener('DOMContentLoaded', function () {
       window.print();
     });
   }
+
+  // ── Load more posts ──
+  var loadBtn = document.getElementById('load-more');
+  if (loadBtn) {
+    loadBtn.addEventListener('click', function () {
+      document.querySelectorAll('.post-hidden').forEach(function (el) {
+        el.classList.remove('post-hidden');
+      });
+      loadBtn.parentElement.remove();
+    });
+  }
 });
 </script>

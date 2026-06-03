@@ -1,37 +1,393 @@
 ---
 ---
 
+$base-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$base-font-size: 16px;
+$base-font-weight: 400;
+$base-line-height: 1.7;
+$spacing-unit: 32px;
+$content-width: 760px;
+
+$text-color: #1A1A2E;
+$background-color: #FAF9F6;
+$brand-color: #C4704B;
+$grey-color: #64748B;
+$grey-color-light: #E8E3DB;
+$grey-color-dark: #374151;
+
 @import "minima";
 
+// ── Base ──
+
+body {
+  background: $background-color;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: darken($brand-color, 12%);
+  }
+}
+
+::selection {
+  background: rgba($brand-color, 0.15);
+}
+
+// ── Header ──
+
 .site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
-  min-height: 55.95px;
-  position: relative;
+  border-top: none;
+  border-bottom: 1px solid $grey-color-light;
+  background: $background-color;
+  min-height: auto;
+  padding: 20px 0;
 }
 
 .site-title {
-  font-size: 26px;
-  font-weight: 300;
-  line-height: 54px;
-  letter-spacing: -1px;
-  margin-bottom: 0;
-  float: left;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: $text-color;
+  line-height: 1.4;
+
+  &,
+  &:visited {
+    color: $text-color;
+  }
 }
 
 .site-nav {
-  float: right;
-  line-height: 54px;
+  line-height: 1.4;
+  padding-top: 2px;
+
+  .page-link {
+    color: $grey-color;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding: 4px 0;
+    background: none;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
 }
 
-.page-link {
-  color: #111;
-  background: none;
-  padding: 5px 10px;
-  text-decoration: none;
+// ── Hero ──
+
+.hero {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid $grey-color-light;
+  margin-bottom: 40px;
 }
 
-.page-link:hover {
-  color: #0085a1;
-  text-decoration: underline;
-} 
+.hero-title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: $text-color;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 17px;
+  color: $grey-color;
+  margin: 0;
+  line-height: 1.5;
+}
+
+// ── Home content ──
+
+.home > p,
+.home > ul,
+.home > ol {
+  color: $grey-color-dark;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.home > p strong {
+  color: $text-color;
+  font-weight: 600;
+}
+
+// ── Post feed ──
+
+.post-feed {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-card {
+  padding: 20px 0;
+  border-bottom: 1px solid $grey-color-light;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.post-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+
+  time {
+    font-size: 13px;
+    color: $grey-color;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.post-card-category {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $brand-color;
+  background: rgba($brand-color, 0.08);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+.post-card-title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: -0.2px;
+
+  a {
+    color: $text-color;
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}
+
+// ── Post page ──
+
+.post-header {
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid $grey-color-light;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+
+  time {
+    font-size: 14px;
+    color: $grey-color;
+  }
+}
+
+.post-category {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $brand-color;
+  background: rgba($brand-color, 0.08);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+.post-title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+// ── Post content ──
+
+.post-content {
+  font-size: 16px;
+  line-height: 1.75;
+  color: $grey-color-dark;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Source Serif 4", Georgia, serif;
+    color: $text-color;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    letter-spacing: -0.3px;
+  }
+
+  h2 { font-size: 24px; }
+  h3 { font-size: 20px; }
+
+  p {
+    margin-bottom: 1.25em;
+  }
+
+  strong {
+    color: $text-color;
+    font-weight: 600;
+  }
+
+  a {
+    color: $brand-color;
+    text-decoration: underline;
+    text-decoration-color: rgba($brand-color, 0.3);
+    text-underline-offset: 2px;
+
+    &:hover {
+      text-decoration-color: $brand-color;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid $grey-color-light;
+    margin: 2em 0;
+  }
+
+  blockquote {
+    border-left: 3px solid $brand-color;
+    padding-left: 20px;
+    margin-left: 0;
+    color: $grey-color;
+    font-style: italic;
+  }
+
+  code {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.88em;
+    background: rgba($grey-color-light, 0.6);
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    border-radius: 6px;
+    padding: 20px 24px;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.6;
+
+    code {
+      background: none;
+      padding: 0;
+      border-radius: 0;
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+
+  ul, ol {
+    padding-left: 24px;
+  }
+
+  li {
+    margin-bottom: 0.4em;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 6px;
+  }
+}
+
+// ── Post footer ──
+
+.post-footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid $grey-color-light;
+
+  a {
+    font-size: 14px;
+    color: $grey-color;
+    font-weight: 500;
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}
+
+// ── Footer ──
+
+.site-footer {
+  border-top: 1px solid $grey-color-light;
+  padding: 32px 0;
+  background: $background-color;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: $grey-color;
+  margin-bottom: 4px;
+}
+
+.footer-meta {
+  font-size: 13px;
+  color: lighten($grey-color, 12%);
+  margin: 0;
+
+  a {
+    color: $grey-color;
+    text-decoration: underline;
+    text-decoration-color: rgba($grey-color, 0.3);
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}
+
+// ── Responsive ──
+
+@media screen and (max-width: 600px) {
+  .hero {
+    padding: 36px 0 28px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+  .post-title {
+    font-size: 24px;
+  }
+
+  .post-card-title {
+    font-size: 17px;
+  }
+}

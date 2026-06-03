@@ -176,7 +176,7 @@ async def generate_daily_post(target_date: datetime.date) -> Optional[str]:
         for i, paper in enumerate(paper_summaries, 1):
             keywords_prompt += f"{i}. {paper['title']}\n"
         
-        keywords_prompt += "\nGenerate keywords in this format: keyword1, keyword2, keyword3, keyword4, keyword5, keyword6, keyword7, keyword8"
+        keywords_prompt += "\nReturn ONLY a comma-separated list of keywords, no numbering or extra text: keyword1, keyword2, keyword3, keyword4, keyword5, keyword6, keyword7, keyword8"
         
         # Call API for keywords
         keywords_response = await call_ai_api([
@@ -192,23 +192,24 @@ async def generate_daily_post(target_date: datetime.date) -> Optional[str]:
         
         # Create content
         date_str = target_date.strftime("%Y-%m-%d")
-        content = f"**🔑 Keywords**: {keywords}\n\n"
-        
+        content = f"**Keywords**: {keywords}\n\n---\n\n"
+
         for i, paper in enumerate(paper_summaries, 1):
-            content += f"**{i}. {paper['title']}**  \n"
-            content += f"🔗 [Read Paper]({paper['url']})  \n"
-            content += f"📋 Summary: {paper['summary']}\n\n"
+            content += f"### {i}. {paper['title']}\n\n"
+            content += f"[Read Paper]({paper['url']})\n\n"
+            content += f"{paper['summary']}\n\n"
         
     else:
         # Fallback to general topic generation
         prompt = (
             "Generate a concise technical digest (max 300 words) about a frontier topic in MLE or SDE.\n"
             "Focus on the latest cutting-edge research and practical applications.\n"
+            "Do NOT use any emojis. Write in a professional, academic tone.\n"
             "Format exactly as follows:\n"
-            "🗓️ Date: <today's date>\n"
-            "🎯 Topic: <Short Title>\n"
-            "📌 Summary: <150 words max technical summary>\n"
-            "🔑 Keywords: keyword1, keyword2, keyword3"
+            "Date: <today's date>\n"
+            "Topic: <Short Title>\n"
+            "Summary: <150 words max technical summary>\n"
+            "Keywords: keyword1, keyword2, keyword3"
         )
         
         date_str = target_date.strftime("%Y-%m-%d")
@@ -277,18 +278,19 @@ async def generate_technical_deep_dive(week_start: datetime.date, week_end: date
         f"5. **Practical Applications**: Show real-world use cases\n"
         f"6. **Future Implications**: Discuss the broader impact\n\n"
         f"Requirements:\n"
-        f"- Choose the MOST exciting and practical research from the weekly report\n"
+        f"- Choose the most significant and practical research from the weekly report\n"
         f"- Include detailed Python code with comprehensive comments\n"
         f"- Make the code educational and implementable\n"
         f"- Focus on cutting-edge techniques (transformers, diffusion models, RL, etc.)\n"
         f"- Include mathematical formulations where relevant\n"
-        f"- Make it highly engaging and attractive to readers\n\n"
+        f"- Do NOT use any emojis. Write in a professional, academic tone.\n"
+        f"- Use clean markdown formatting with proper headings\n\n"
         f"Weekly Report Content:\n{week_content}\n"
     )
-    
+
     # Call API for technical deep dive
     deep_dive_response = await call_ai_api([
-        {"role": "system", "content": "You are a senior AI researcher and technical writer with deep expertise in machine learning, deep learning, and AI systems. You write engaging, technically accurate content with detailed code examples and comprehensive explanations. You focus on the most cutting-edge and practical research, making complex concepts accessible while maintaining technical depth."},
+        {"role": "system", "content": "You are a senior AI researcher and technical writer. You write precise, technically accurate content with code examples. Never use emojis. Write in a professional academic tone."},
         {"role": "user", "content": deep_dive_prompt}
     ], max_tokens=3000, temperature=0.4)
     
@@ -369,17 +371,18 @@ async def generate_weekly_report(week_start: datetime.date, week_end: datetime.d
         f"7. **Technical Recommendations**: Provide specific recommendations for researchers and practitioners\n"
         f"8. **Conclusion**: End with your overall assessment of the field's direction\n\n"
         f"Use natural language, personal insights, and expert judgment throughout. "
-        f"Express genuine excitement about promising work, concern about challenges, and thoughtful analysis of implications. "
-        f"Make it sound like a senior researcher sharing weekly thoughts with colleagues.\n\n"
+        f"Express genuine interest in promising work, concern about challenges, and thoughtful analysis of implications. "
+        f"Write like a senior researcher sharing weekly thoughts with colleagues.\n"
+        f"Do NOT use any emojis. Write in a professional, academic tone with clean markdown.\n\n"
         f"Weekly Posts:\n"
     )
-    
+
     for i, post in enumerate(week_posts, 1):
         weekly_prompt += f"\n--- Day {i} ({post['date']}) ---\n{post['content']}\n"
-    
+
     # Call API for weekly report
     weekly_response = await call_ai_api([
-        {"role": "system", "content": "You are a very senior research scientist with 20+ years of experience in AI/ML who has published extensively in top-tier conferences and journals. You write in a natural, conversational style that reflects deep expertise and personal insights. You use first-person perspective, share genuine thoughts about research, express enthusiasm for promising developments, show concern about challenges, and provide thoughtful analysis of implications. Your writing style is like a senior researcher sharing weekly thoughts with colleagues - natural, insightful, and personally engaged with the research. Do NOT include a main title at the beginning - start directly with the Executive Summary section."},
+        {"role": "system", "content": "You are a senior research scientist with deep expertise in AI/ML. You write in a natural, conversational style reflecting personal insights and first-person perspective. Never use emojis. Write in a professional academic tone. Start directly with the Executive Summary section, no main title."},
         {"role": "user", "content": weekly_prompt}
     ], max_tokens=2000, temperature=0.4)
     

@@ -1,6 +1,7 @@
 title: "Daily AI Trend Reporter"
-description: "Automatically updated daily AI research digest"
+description: "Automated daily digest of frontier AI research"
 url: "https://yupengtang.github.io"
 baseurl: "/Daily-AI-Trend-Reporter"
 theme: minima
 markdown: kramdown
+show_excerpts: false

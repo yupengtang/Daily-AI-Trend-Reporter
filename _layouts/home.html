@@ -3,27 +3,29 @@ layout: default
 ---
 
 <div class="home">
+  <section class="hero">
+    <h1 class="hero-title">{{ site.title | escape }}</h1>
+    <p class="hero-subtitle">{{ site.description | escape }}</p>
+  </section>
 
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+  <section class="post-feed">
+    {%- for post in site.posts -%}
+    <article class="post-card">
+      <div class="post-card-meta">
+        {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+        {%- if post.category -%}
+        <span class="post-card-category">{{ post.category | replace: "-", " " }}</span>
         {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+      </div>
+      <h2 class="post-card-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h2>
+    </article>
+    {%- endfor -%}
+  </section>
   {%- endif -%}
-
-</div> 
+</div>

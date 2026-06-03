@@ -11,6 +11,7 @@ on:
         options:
           - saturdays
           - sundays
+          - both
 
 permissions:
   contents: write
@@ -21,6 +22,8 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-python@v4
         with:
@@ -29,28 +32,34 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Generate Saturday weekly reports
-        if: ${{ inputs.type == 'saturdays' }}
+        if: ${{ inputs.type == 'saturdays' || inputs.type == 'both' }}
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          DATES=(
-            2026-01-17 2026-01-24 2026-01-31
-            2026-02-07 2026-02-14 2026-02-21 2026-02-28
-            2026-03-07 2026-03-14 2026-03-21 2026-03-28
-            2026-04-04 2026-04-11 2026-04-18 2026-04-25
-            2026-05-02 2026-05-09 2026-05-16 2026-05-23 2026-05-30
-          )
+          DATES=(2026-05-09 2026-05-16 2026-05-23 2026-05-30)
           for d in "${DATES[@]}"; do
             echo "=== Saturday $d ==="
             python3 batch_generate.py --start "$d" --end "$d" || echo "Failed $d"
-            sleep 5
+            sleep 6
           done
 
+      - name: Commit Saturday reports
+        if: ${{ inputs.type == 'saturdays' || inputs.type == 'both' }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _posts/
+          if ! git diff --staged --quiet; then
+            git commit -m "Backfill missing Saturday weekly reports"
+            git push
+          fi
+
       - name: Generate Sunday deep dives
-        if: ${{ inputs.type == 'sundays' }}
+        if: ${{ inputs.type == 'sundays' || inputs.type == 'both' }}
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
+          git pull || true
           DATES=(
             2026-01-18 2026-01-25 2026-02-01
             2026-02-08 2026-02-15 2026-02-22 2026-03-01
@@ -72,6 +81,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No new files"
           else
-            git commit -m "Backfill weekend reports (${{ inputs.type }})"
+            git commit -m "Backfill weekend reports"
             git push
           fi

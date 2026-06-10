@@ -241,12 +241,12 @@ async def generate_technical_deep_dive(week_start: datetime.date, week_end: date
     week_content = ""
     if os.path.exists(weekly_report_filename):
         with open(weekly_report_filename, 'r', encoding='utf-8') as f:
-            week_content = f.read()
+            week_content = _extract_post_summary(f.read(), max_chars=4000)
             print(f"  📄 Found weekly report: {weekly_report_filename}")
     else:
         print(f"  ⚠️ Missing weekly report: {weekly_report_filename}")
         return None
-    
+
     # Create technical deep dive prompt based on weekly report
     deep_dive_prompt = (
         f"You are a senior AI researcher and technical writer with deep expertise in machine learning, deep learning, and AI systems. "
@@ -300,42 +300,59 @@ async def generate_technical_deep_dive(week_start: datetime.date, week_end: date
         print(f"❌ Technical deep dive generation failed: {deep_dive_response.status_code if deep_dive_response else 'No response'}")
         return None
 
+def _extract_post_summary(content: str, max_chars: int = 2000) -> str:
+    """Extract key content from a daily post, stripping frontmatter and truncating."""
+    lines = content.split('\n')
+    in_frontmatter = False
+    body_lines = []
+    for line in lines:
+        if line.strip() == '---':
+            in_frontmatter = not in_frontmatter
+            continue
+        if not in_frontmatter:
+            body_lines.append(line)
+    body = '\n'.join(body_lines).strip()
+    if len(body) > max_chars:
+        body = body[:max_chars] + '\n[...truncated]'
+    return body
+
+
 async def generate_weekly_report(week_start: datetime.date, week_end: datetime.date, publish_date: Optional[datetime.date] = None) -> Optional[str]:
     """Generate weekly report, published on publish_date (Saturday)"""
     if publish_date is None:
         publish_date = week_end + datetime.timedelta(days=1)
     print(f"📊 Generating weekly report for {week_start} to {week_end}...")
-    
+
     # Get posts from this week
     week_posts = []
-    
+
     current_date = week_start
     while current_date <= week_end:
         weekday = current_date.strftime("%A").lower()
         filename = f"_posts/{current_date.strftime('%Y-%m-%d')}-{weekday}-daily-ai-research-digest.md"
-        
+
         if os.path.exists(filename):
             with open(filename, 'r', encoding='utf-8') as f:
                 content = f.read()
                 week_posts.append({
                     'date': current_date.strftime('%Y-%m-%d'),
-                    'content': content
+                    'content': _extract_post_summary(content)
                 })
                 print(f"  📄 Found daily post: {current_date.strftime('%Y-%m-%d')} ({weekday})")
         else:
             print(f"  ⚠️ Missing daily post: {current_date.strftime('%Y-%m-%d')} ({weekday})")
-        
+
         current_date += datetime.timedelta(days=1)
-    
+
     if not week_posts:
         print("⚠️ No posts found for this week")
         return None
-    
+
     # Check if we have enough posts for a meaningful weekly report
     if len(week_posts) < 3:
         print(f"⚠️ Only {len(week_posts)} posts found for the week, skipping weekly report")
         return None
-    
+
     # Create weekly report prompt
     weekly_prompt = (
         f"You are a very senior research scientist with 20+ years of experience in AI/ML who has published extensively in top-tier conferences and journals. "

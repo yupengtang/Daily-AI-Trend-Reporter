@@ -3,7 +3,14 @@ name: 🌱 Daily AI Frontier - Daily Generation
 on:
   schedule:
     - cron: '0 14 * * *'  # Run daily at 14:00 UTC (7:00 AM PDT, 10:00 PM CST)
-  workflow_dispatch:      # Allow manual trigger too
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: 'Start date (YYYY-MM-DD), leave empty for today'
+        required: false
+      end_date:
+        description: 'End date (YYYY-MM-DD), leave empty for today'
+        required: false
 
 # Add permissions for the workflow
 permissions:
@@ -47,7 +54,13 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           echo "📝 Generating today's AI research digest..."
-          python3 batch_generate.py
+          START="${{ github.event.inputs.start_date }}"
+          END="${{ github.event.inputs.end_date }}"
+          if [ -n "$START" ] && [ -n "$END" ]; then
+            python3 batch_generate.py --start "$START" --end "$END"
+          else
+            python3 batch_generate.py
+          fi
           if [ $? -eq 0 ]; then
             echo "✅ Daily digest generated successfully"
           else

@@ -54,7 +54,7 @@ schedule:
   - cron: '0 14 * * *'
 ```
 
-**Model** — change the `MODEL` variable in `batch_generate.py`. Currently `openai/gpt-5` via GitHub Models.
+**Model** — change the `MODEL` variable in `batch_generate.py`. Currently `openai/gpt-4o` via GitHub Models.
 
 **Papers per day** — `PAPERS_PER_DAY` in `batch_generate.py`, default 10.
 

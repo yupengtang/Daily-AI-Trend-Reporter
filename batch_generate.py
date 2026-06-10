@@ -131,6 +131,10 @@ async def call_ai_api(messages, max_tokens=1024, temperature=0.3):
             return response
         else:
             print(f"❌ GitHub Models API failed with status {response.status_code}")
+            try:
+                print(f"❌ Response: {response.text[:500]}")
+            except Exception:
+                pass
             return None
             
     except Exception as e:

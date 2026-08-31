@@ -11,16 +11,26 @@ on:
       end_date:
         description: 'End date (YYYY-MM-DD), leave empty for today'
         required: false
+      heal_weeks:
+        description: 'Also backfill weekend posts missing from the last N weeks'
+        required: false
+        default: '4'
 
 # Add permissions for the workflow
 permissions:
   contents: write
   actions: read
 
+env:
+  # Swap the backend by changing these two values; no code change needed.
+  # Supported providers: groq, openai, huggingface, together.
+  LLM_PROVIDER: groq
+  LLM_MODEL: openai/gpt-oss-120b
+
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 30   # Reduced timeout since we only generate once
+    timeout-minutes: 60   # backfills pace requests to respect rate limits
 
     steps:
       - name: Checkout repository
@@ -34,75 +44,61 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Check HF_TOKEN
+      - name: Check API key
         run: |
-          if [ -z "${{ secrets.HF_TOKEN }}" ]; then
-            echo "❌ HF_TOKEN is not set in repository secrets"
+          if [ -z "${{ secrets.GROQ_API_KEY }}" ]; then
+            echo "❌ GROQ_API_KEY is not set in repository secrets"
             exit 1
-          else
-            echo "✅ HF_TOKEN is configured"
           fi
+          echo "✅ GROQ_API_KEY is configured"
 
-      - name: Test API connection
+      # A failing preflight check stops the run here, so a dead backend is
+      # reported loudly instead of producing an empty, falsely-green run.
+      - name: Preflight - papers feed and LLM backend
         env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: |
-          python3 test_api.py || echo "⚠️ API test failed, but continuing..."
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python3 test_api.py
 
       - name: Generate daily AI research digest
         env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
-          echo "📝 Generating today's AI research digest..."
+          set -euo pipefail
           START="${{ github.event.inputs.start_date }}"
           END="${{ github.event.inputs.end_date }}"
-          if [ -n "$START" ] && [ -n "$END" ]; then
-            python3 batch_generate.py --start "$START" --end "$END"
-          else
-            python3 batch_generate.py
-          fi
-          if [ $? -eq 0 ]; then
-            echo "✅ Daily digest generated successfully"
-          else
-            echo "❌ Daily digest generation failed"
-            exit 1
-          fi
+          HEAL="${{ github.event.inputs.heal_weeks }}"
+          HEAL="${HEAL:-4}"
 
-      - name: Check for generated files
-        run: |
-          echo "📁 Checking for generated files..."
-          ls -la _posts/ || echo "No _posts directory found"
-          find _posts/ -name "*.md" -newer .github/workflows/daily_blog.yml 2>/dev/null || echo "No new files found"
+          echo "📝 Generating today's AI research digest (heal window: ${HEAL} weeks)..."
+          if [ -n "$START" ] && [ -n "$END" ]; then
+            python3 batch_generate.py --start "$START" --end "$END" --heal-weeks "$HEAL"
+          else
+            python3 batch_generate.py --heal-weeks "$HEAL"
+          fi
 
       - name: Commit and push changes
         run: |
+          set -euo pipefail
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
-          # Add all changes in _posts directory
-          git add _posts/ || echo "No new posts to add"
-          
-          # Check if there are any changes to commit
+
+          git add _posts/
+
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            # Get list of new files for commit message
-            NEW_FILES=$(git diff --staged --name-only | grep "_posts/" | head -5)
-            COMMIT_MSG="Auto-generated daily AI research digest"
-            if [ ! -z "$NEW_FILES" ]; then
-              COMMIT_MSG="Auto-generated: $(echo "$NEW_FILES" | tr '\n' ' ')"
-            fi
-            
-            git commit -m "$COMMIT_MSG"
-            echo "✅ Changes committed: $COMMIT_MSG"
-            
-            # Push changes
-            git push
-            echo "✅ Changes pushed to repository"
+            exit 0
           fi
 
-      - name: Verify deployment
-        run: |
-          echo "🔍 Verifying deployment..."
-          echo "Generated files should now be available on the website"
-          echo "Check the Actions tab for any errors"
+          NEW_FILES=$(git diff --staged --name-only | grep "_posts/" | head -5)
+          COMMIT_MSG="Auto-generated daily AI research digest"
+          if [ -n "$NEW_FILES" ]; then
+            COMMIT_MSG="Auto-generated: $(echo "$NEW_FILES" | tr '\n' ' ')"
+          fi
+
+          git commit -m "$COMMIT_MSG"
+          echo "✅ Committed: $COMMIT_MSG"
+
+          # Rebase before pushing so a concurrent commit does not fail the run.
+          git pull --rebase origin main
+          git push
+          echo "✅ Changes pushed to repository"

@@ -1,20 +1,30 @@
 name: Backfill Weekend Reports
 
+# Manual repair tool. The old version hardcoded a fixed list of early-2026
+# dates and referenced a 'sundays-full' option that was never in the choice
+# list, so it could not fill any gap that appeared later. This version simply
+# asks the generator which weekend posts are missing and regenerates those.
+
 on:
   workflow_dispatch:
     inputs:
-      type:
-        description: 'What to generate'
+      weeks_back:
+        description: 'How many weeks back to scan for missing weekend posts'
         required: true
-        default: 'sundays-remaining'
-        type: choice
-        options:
-          - saturdays
-          - sundays-remaining
-          - both
+        default: '8'
+      start_date:
+        description: 'Optional explicit start date (YYYY-MM-DD) - overrides the scan'
+        required: false
+      end_date:
+        description: 'Optional explicit end date (YYYY-MM-DD) - overrides the scan'
+        required: false
 
 permissions:
   contents: write
+
+env:
+  LLM_PROVIDER: groq
+  LLM_MODEL: openai/gpt-oss-120b
 
 jobs:
   backfill:
@@ -31,45 +41,40 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Generate Sunday deep dives (remaining 7)
-        if: ${{ inputs.type == 'sundays-remaining' || inputs.type == 'both' }}
+      - name: Preflight - papers feed and LLM backend
         env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: |
-          DATES=(2026-01-18 2026-01-25 2026-02-01 2026-02-08 2026-02-15 2026-02-22 2026-03-01 2026-03-08 2026-03-15 2026-03-22 2026-03-29 2026-04-05 2026-04-12)
-          for d in "${DATES[@]}"; do
-            echo "=== Sunday $d ==="
-            python3 batch_generate.py --start "$d" --end "$d" || echo "Failed $d"
-            sleep 10
-          done
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python3 test_api.py
 
-      - name: Generate all 20 Sundays (full)
-        if: ${{ inputs.type == 'sundays-full' }}
+      - name: Backfill missing weekend posts
         env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
-          DATES=(
-            2026-01-18 2026-01-25 2026-02-01
-            2026-02-08 2026-02-15 2026-02-22 2026-03-01
-            2026-03-08 2026-03-15 2026-03-22 2026-03-29
-            2026-04-05 2026-04-12 2026-04-19 2026-04-26
-            2026-05-03 2026-05-10 2026-05-17 2026-05-24 2026-05-31
-          )
-          for d in "${DATES[@]}"; do
-            echo "=== Sunday $d ==="
-            python3 batch_generate.py --start "$d" --end "$d" || echo "Failed $d"
-            sleep 8
-          done
+          set -euo pipefail
+          START="${{ github.event.inputs.start_date }}"
+          END="${{ github.event.inputs.end_date }}"
+
+          if [ -n "$START" ] && [ -n "$END" ]; then
+            echo "Regenerating explicit range $START .. $END"
+            python3 batch_generate.py --start "$START" --end "$END"
+          else
+            echo "Scanning the last ${{ github.event.inputs.weeks_back }} weeks for gaps"
+            python3 batch_generate.py --heal-only --heal-weeks "${{ github.event.inputs.weeks_back }}"
+          fi
 
       - name: Commit and push
         run: |
+          set -euo pipefail
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+
           git add _posts/
+
           if git diff --staged --quiet; then
             echo "No new files"
-          else
-            git commit -m "Backfill weekend reports"
-            git pull --rebase origin main
-            git push
+            exit 0
           fi
+
+          git commit -m "Backfill weekend reports"
+          git pull --rebase origin main
+          git push

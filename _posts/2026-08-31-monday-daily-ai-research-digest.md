@@ -50,20 +50,20 @@ J-Zero enables self-improving language models across verifiable and unverifiable
 
 ABot-Recon achieves stable long-horizon streaming 3D reconstruction by using only local temporal context and frame-independent predictions composed sequentially, reducing drift via a lightweight temporal refiner and composition-aware pose loss.
 
-### 8. LayerRecall: A State-Conditioned Memory Router for Long-Horizon Consistency in Video Generation
+### 8. Puro-2B: Poor Lab's Qwen2-1.5B Trained on RTX 5090 within $5090
+
+[Read Paper](https://huggingface.co/papers/2608.27370)
+
+A cost-efficient open-source pretraining recipe trains 2B-parameter models on consumer GPUs for under $7K, yielding performance near larger baselines while deriving cost scaling laws and studying data curricula.
+
+### 9. LayerRecall: A State-Conditioned Memory Router for Long-Horizon Consistency in Video Generation
 
 [Read Paper](https://huggingface.co/papers/2608.28460)
 
 LayerRecall selectively routes long-range historical memory into specific video diffusion layers to improve long-video consistency, supervised by cross-horizon prediction matching.
 
-### 9. ContextPilot: Teaching Agents for Proactive Context Management via Fine-grained RL
+### 10. ContextPilot: Teaching Agents for Proactive Context Management via Fine-grained RL
 
 [Read Paper](https://huggingface.co/papers/2608.28476)
 
 ContextPilot improves long-horizon agent reasoning by expanding context-editing tools and using reinforcement learning with branch sampling to identify critical context decisions.
-
-### 10. Act with Intent: Distilling Behavior Intent for Vision-Language-Action Models
-
-[Read Paper](https://huggingface.co/papers/2608.23478)
-
-Vision-Language-Action (VLA) models can turn multimodal context into robot actions, but their action decoders are still trained largely by behavior cloning. This supervises which motor command was demonstrated while leaving implicit the local objective served by the behavior under the instruction. Future-based supervision enriches action learning with frames, latent observations, trajectories, or motion representations, but these signals capture particular realizations of what may happen rather than the shared semantic objective of the forthcoming behavior. We propose Intention Distillation (INDI), which distills behavior-level intent into the action decoder. During training, a frozen teacher VLM interprets a demonstrated segment from the current observation, instruction, coarse action summary, and corresponding execution video. From its standard inputs, the deployed VLA recovers the resulting multimodal intent representation at an intermediate decoder layer and uses it to organize action prediction together with representations of how the behavior unfolds and what it achieves. On SimplerEnv-Bridge, INDI improves GR00T-N1.7 from 64.3% to 84.7%, and on RoboCasa Kitchen it improves the controlled GR00T-N1.7 baseline from 64.1% to 70.3%, with consistent gains on π_{0.5} across both benchmarks. In real-world tasks, INDI improves average success from 62.0% to 68.7%, with gains of up to 12.0 pp on longer-horizon tasks. Further analyses show that the recovered latent is used by the decoder, captures behavior objective and execution progress, and organizes downstream predictions in an objective-dependent manner. These results show that action decoders benefit from explicitly modeling the semantic objective of the behavior they generate.

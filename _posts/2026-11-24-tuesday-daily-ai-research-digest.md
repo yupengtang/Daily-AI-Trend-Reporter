@@ -4,69 +4,66 @@ title: "Daily AI Research Papers - Tuesday, November 24, 2026"
 date: 2026-11-24
 ---
 
-Keywords: AI research, machine learning, deep learning
+Keywords: planning, vision-language models, reinforcement learning, frontier multimodal models, robot policies, closed-loop robotic harnesses, frontier-model-as-policy, prompting
 
 ---
 
-### 1. StereoVLM: Binocular Vision-Language Models for Metric 3D Spatial Reasoning
+### 1. Motion Mamba 2.0: Autoregressive Diffusion Mamba for Long-Horizon Humanoid Control
 
-[Read Paper](https://huggingface.co/papers/2611.27915)
+[Read Paper](https://huggingface.co/papers/2611.29897)
 
-StereoVLM is a geometry-aware binocular vision-language model trained with hierarchical supervision from calibrated stereo to enable metric 3D spatial reasoning, evaluated by Stereo3D-Bench.
+Long-horizon, real-time controllable motion generation is essential for interactive animation and humanoid robotics, where an agent must respond to changing instructions and spatial goals while moving. Existing autoregressive diffusion methods generate motion incrementally, but bounded attention caches limit access to distant history, while repeated denoising introduces substantial inference overhead. We present Motion Mamba 2.0, a Mamba-based root-body diffusion architecture that integrates local attention, resumable recurrent states, and persistent content memory (PCM) for long-horizon controllable motion generation. PCM transforms compressed motion history from Mamba recurrent states, together with state changes and text-conditioned features, into dynamically updated content slots accessible to local attention. To enable efficient inference, we further develop an execution scheme tailored to this architecture, combining CUDA Graph replay, fused kernels, and execution-flow simplification while preserving the canonical history update. Evaluations on retargeted HiPHI demonstrate accurate terminal control over rollouts of up to 39.52 s, while short-horizon comparisons on BONES Seed and retargeted HumanML3D show that the model also retains strong spatial control and text-motion matching. On an RTX 4090, the optimized execution reduces median complete-window latency from 1685.35 to 276.14 ms, achieving a median paired speedup of 6.138times while preserving identical outputs and committed states in the tested rollouts. Moreover, we conduct extensive real-world evaluation on the Unitree G1, demonstrating sequential text-guided action composition, expressive motion, and interactive locomotion through keyboard and mouse control.
 
-### 2. Taking Apart and Putting Together: Tracking Objects Through Physical Transformations
+### 2. Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness
 
-[Read Paper](https://huggingface.co/papers/2611.27398)
+[Read Paper](https://huggingface.co/papers/2611.31201)
 
-A training-free framework tracks objects through physical assemblies and disassemblies by generating and evaluating split/merge proposals and querying a multimodal large language model for verification and labeling, achieving state-of-the-art accuracy and faster performance on a new benchmark.
+A systematic framework shows that frontier multimodal models can serve as robot policies when harnessed with interfaces favoring native visual reasoning and tool use, achieving high success in simulated and real manipulation tasks.
 
-### 3. Optimal Linear Regression Without a Variance
+### 3. WorldLeague: Benchmarking Physical Agency
 
-[Read Paper](https://huggingface.co/papers/2611.27983)
+[Read Paper](https://huggingface.co/papers/2611.30989)
 
-We study high-probability linear regression in the infinite variance regime, wherecthe regression noise has only a finite conditional α-moment ν for some unknown αin(1,2), and the covariates may only have finite moments up to a given order (e.g., 4th moment). We give a black-box reduction that converts finite-variance regression procedures into weak-moment procedures. The reduction is based on empirical residual pruning and is agnostic to the moment exponent, the noise scale, the covariance, and the design moment. Under a finite fourth-moment condition on the covariates, any finite-variance subroutine attaining the sub-Gaussian rate yields the following when the number of samples n is above a suitably defined threshold: Without knowing α or ν, we have with probability at least 1-δ that  |widehatθ-θ^*|_Σ
-  lesssim_α
-  ν^{1/α}
-  big(d+log(1/δ){n}big)^{α-1α},  where d is the dimension, Σ is the covariate covariance matrix, and |v|_Σ:=(v^topΣv)^{1/2}. We further prove a matching minimax lower bound that holds under the same conditions. The reduction is computationally efficient whenever the finite-variance subroutine is. We also obtain a distribution-free prediction guarantee under a bounded raw α-moment assumption on the response, and give an analogous α-agnostic reduction for mean estimation.
+WorldLeague benchmarks 13 AI systems on 60 simulated robot tasks spanning exploration, rearrangement, and adaptation, measuring progress and success to compare autonomous physical goal achievement.
 
-### 4. A Methodologically Rigorous Benchmark of Linear Regression,RNN, and LSTM for S&P 500 Forecasting:Identifying Sources of Performance Inflation in Financial DeepLearning
+### 4. 3AGameFactory-Motion: Agentic Rigging and Reliable Complex Motion Generation for Diverse 3D Assets
 
-[Read Paper](https://huggingface.co/papers/2611.27978)
+[Read Paper](https://huggingface.co/papers/2611.30013)
 
-A corrected evaluation protocol shows that common deep-learning stock-prediction practices inflate results, and benchmarks linear, RNN, and LSTM models against a naive persistence baseline.
+A new benchmark evaluates rigging and motion generation across six 3D morphology categories, compares specialized, video-based, and agent-driven paradigms, and proposes an agentic framework that writes compact parametric skeleton and motion programs executed deterministically for reliable control.
 
-### 5. MemOnce: A Scalable Memory Architecture for Large Language Models
+### 5. A Glimpse of Training VLMs as Foundation Models for Robotic Manipulation
 
-[Read Paper](https://huggingface.co/papers/2611.27973)
+[Read Paper](https://huggingface.co/papers/2611.29338)
 
-Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear GPU memory growth and quadratic computational complexity as the context expands. In contrast, linear-time architectures compress history into fixed-size states, but struggle to retain fine-grained details. We introduce MemOnce, a foundation architecture that learns scalable memory states for language models. MemOnce is based on two core designs: (a) Memory encoder-decoder: it caches only a small subset of final-layer hidden states as compact memory representations and dynamically decodes them back into KV caches for attention layers; (b) Memory sparse attention: for each continual input, MemOnce adaptively retrieves relevant memory representations, with the sparse indices computed only once across layers. Coupling these two designs enables efficient on-the-fly memory loading and KV cache decoding, drastically reducing the GPU memory footprint and achieving linear-time complexity. We conduct extensive experiments to show that MemOnce outperforms Transformers and other architectures across varying model sizes, context lengths, and training paradigms (pretraining and post-training adaptation). In particular, adapting Qwen3.5-4B with MemOnce reduces memory state cache by 1313times and prefill latency by 6.9times at 1M context, and improves throughput by 3.5times and overall memory performance by +5.77%. Finally, MemOnce generalizes zero-shot to downstream representation tasks, achieving competitive results against specialized models.
+nanoAstra combines semantic action modeling with capability-preserving supervised fine-tuning to train vision-language models for generalizable robot manipulation, achieving strong zero-shot success and faster streaming execution.
 
-### 6. Non-penetrating World Models
+### 6. WeMM-Ecom: Advancing Multimodal Content Understanding for WeChat E-Commerce
 
-[Read Paper](https://huggingface.co/papers/2611.27963)
+[Read Paper](https://huggingface.co/papers/2611.30662)
 
-A benchmark and lightweight framework leverage hidden states from frozen diffusion transformers to detect and prevent object penetration in interactive video world models, reducing physical violations and generalizing zero-shot.
+WeMM-Ecom, a family of multimodal large language models spanning dense and mixture-of-experts sizes, is trained with continued pre-training and hybrid-thinking post-training to achieve strong e-commerce and general-purpose results and is deployed in WeChat.
 
-### 7. Hy-MT3: More Accurate, Robust and Practical Multilingual Translation Models in the Wild
+### 7. Let the Fixer Decide: Training a Code Localizer from the Fixer's Likelihood
 
-[Read Paper](https://huggingface.co/papers/2611.27673)
+[Read Paper](https://huggingface.co/papers/2611.12164)
 
-Hy-MT3, a multilingual translation model family with up to 30B parameters and MoE variants, improves translation accuracy, completeness, constraint adherence, and language coverage, and is optimized for game localization and image translation while releasing a rubric-based evaluation suite.
+A code localizer is trained with scores from a frozen fixer via weighted supervised fine-tuning, improving bug localization and patch success for a small coding agent without tests or reinforcement learning.
 
-### 8. GeoScaffold: From Latent to Realized Geometry in Collaborative Detection
+### 8. ViDecide: Teaching Video Diffusion Models to Reason and Plan Step by Step
 
-[Read Paper](https://huggingface.co/papers/2611.27667)
+[Read Paper](https://huggingface.co/papers/2611.26389)
 
-A training-only auxiliary foreground-mask objective supplies dense spatial supervision to collaborative BEV 3D detectors, improving localization ranking and detection accuracy without changing inference cost.
+ViDecide trains video diffusion models to make causal state-transition and stopping decisions, using Corrective Fine-tuning to improve multi-step planning success without policy gradients.
 
-### 9. Potential emergence in LLM agents: a statistical physics perspective
+### 9. AutoPILOT: A Visual Agent Harness for Real-Time Gameplay
 
-[Read Paper](https://huggingface.co/papers/2611.27618)
+[Read Paper](https://huggingface.co/papers/2611.28202)
 
-Agent states act as intermediate variables for quantifying and predicting how post-training organizes LLM agent reasoning, with a statistical-physics framework linking global potential, reward, and entropy.
+A harness that lets multimodal foundation models emit primitive actions, open-loop macros, or closed-loop controllers improves real-time game performance and reduces API cost.
 
-### 10. PromptTTSD: Controllable Text to Spoken Dialogue Synthesis with Open-Ended Text Descriptions
+### 10. Plan4D: Generative Plannable 4D Worlds
 
-[Read Paper](https://huggingface.co/papers/2611.27601)
+[Read Paper](https://huggingface.co/papers/2611.26516)
 
-A scalable audiobook-based pipeline and a prompt-aware fine-tuned spoken dialogue synthesis model enable zero-shot voice cloning and natural-language style control while improving contextual appropriateness in multi-turn conversations.
+Most world models for future prediction prioritize aestetic quality of generated videos, but offer only weak physical grounding and limited geometric consistency over time, due to the lack of explicit 4D modeling. In this paper, we introduce plan4d, a possible next milestone towards building a generative plannable 4D world model that predicts future RGB videos together with dense 4D geometry, including depth, cameras, point clouds, and scene flow from an observed scene context and text-specified actions. Since training data with paired actions and dense 4D annotations is inherently scarce, plan4d leverages the complementary priors of foundational video generators and 3D reconstructors. Specifically, we propose a model-stitching architecture that couples Depth Anything 3 with LongCat-Video and augments it with an auxiliary DPT head for scene-flow prediction. The resulting model allows us to plan and generate complex, long-horizon, and fine-grained actions in a dynamic 3D scenes, while substantially improving both visual fidelity and geometric accuracy of the generated future videos. Extensive experiments on both synthetic and real-world datasets demonstrate that plan4d achieves state-of-the-art performance in generative 4D modeling of environmental reactions. Project Page: https://fogradio.github.io/plan4d-project
